@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
-order: 1
+title: Research Interests
+permalink: /research/
+order: 3
 ---
 <table>
     <tr>

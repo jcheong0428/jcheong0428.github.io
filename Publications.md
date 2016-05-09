@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
-order: 1
+title: Publications
+permalink: /publications/
+order: 4
 ---
 <table>
     <tr>

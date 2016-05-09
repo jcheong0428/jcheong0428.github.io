@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About
-permalink: /about/
-order: 1
+title: CV
+permalink: /CV/
+order: 2
 ---
 <table>
     <tr>
