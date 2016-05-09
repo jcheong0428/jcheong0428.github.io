@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "My name is Jin Hyun Cheong"
 date:   2016-05-04 11:24:14 -0400
 categories: jekyll update
 ---
