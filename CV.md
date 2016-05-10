@@ -2,7 +2,7 @@
 layout: page
 title: CV
 permalink: /CV/
-order: 2
+order: 5
 ---
 <meta http-equiv="refresh" content="0; url=/assets/JinHyunCheong_CV.pdf" />
 
