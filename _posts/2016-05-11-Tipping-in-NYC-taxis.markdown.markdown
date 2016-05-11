@@ -11,7 +11,7 @@ categories: jekyll update
 </figure>
 
 This is a quick analysis on how people tipped NYC cabs in 2013. 
-The data was retrieved from [Chris Whong's blog]("http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/"). It's a sizeable dataset and an amazing visualization came out of it called [NYC Taxis: A Day in the Life]("http://nyctaxi.herokuapp.com/"). I got interested in the dataset and wanted to look at how people tip in NYC cabs. 
+The data was retrieved from [Chris Whong's blog](http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/). It's a sizeable dataset and an amazing visualization came out of it called [NYC Taxis: A Day in the Life](http://nyctaxi.herokuapp.com/). I got interested in the dataset and wanted to look at how people tip in NYC cabs. 
 
 # Tips by payment type
 
@@ -47,7 +47,7 @@ Consistent with the second idea, tip percentage tends to decrease as group size 
 
 This is consistent with findings in [restaurants](http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1036&context=articles), where larger groups tend to tip less than smaller groups.
 
-But why is this the case? It's difficult to look at the social computations going on in an individual's head in this kind of data. One possibility cited in the above article referencing (Elman(1976))[http://psp.sagepub.com/content/2/3/307.abstract] is that larger groups tend to have larger bills where the financial burden increases holding tip percentages. I find that this is not the case below.
+But why is this the case? It's difficult to look at the social computations going on in an individual's head in this kind of data. One possibility cited in the above article referencing [Elman(1976)](http://psp.sagepub.com/content/2/3/307.abstract) is that larger groups tend to have larger bills where the financial burden increases holding tip percentages. I find that this is not the case below.
 
 <br>
 
