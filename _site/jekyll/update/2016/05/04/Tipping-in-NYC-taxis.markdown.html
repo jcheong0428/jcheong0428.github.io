@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Jin Hyun Cheong</title>
-  <meta name="description" content="I am a graduate student at Psychological and Brain Sciences at Dartmouth College. This is a blog for my work and random digressions. 
-">
+  <title>Tipping in NYC taxis</title>
+  <meta name="description" content="    http://becomeanewyorker.com/  ">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://jinhyuncheong.com/">
+  <link rel="canonical" href="http://jinhyuncheong.com/jekyll/update/2016/05/04/Tipping-in-NYC-taxis.markdown.html">
   <link rel="alternate" type="application/rss+xml" title="Jin Hyun Cheong" href="http://jinhyuncheong.com/feed.xml">
 </head>
 
@@ -69,25 +68,98 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Tipping in NYC taxis</h1>
+    <p class="post-meta"><time datetime="2016-05-04T11:24:14-04:00" itemprop="datePublished">May 4, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">May 4, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <figure>
+  <img src="/assets/post01/nycab.jpeg" width="1300" />
+  <figcaption><p align="right"><i>http://becomeanewyorker.com/</i>
+  </p></figcaption>
+</figure>
 
-        <h2>
-          <a class="post-link" href="/jekyll/update/2016/05/04/Tipping-in-NYC-taxis.markdown.html">Tipping in NYC taxis</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p>This is a quick analysis on how people tipped NYC cabs in 2013. 
+The data was retrieved from <a href="http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/">Chris Whong’s blog</a>. It’s a sizeable dataset and an amazing visualization came out of it called <a href="http://nyctaxi.herokuapp.com/">NYC Taxis: A Day in the Life</a>. I got interested in the dataset and wanted to look at how people tip in NYC cabs.</p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<h1 id="tips-by-payment-type">Tips by payment type</h1>
 
-</div>
+<p>After cleaning up the dataset, I first noticed that more than half the rides were paid by credit card.</p>
+
+<figure>
+  <img src="/assets/post01/CashCreditTipPercent.png" width="1300" />
+  <figcaption><p align="right"><i></i>
+  </p></figcaption>
+</figure>
+
+<p>When people pay by cash, it turns out tip is not recorded for 99% of the rides. I’m not sure if this is because drivers can’t record tip into their meter or if they just don’t bother. One thing I do know is that there are at least 6639 cases of tip recorded when paid in cash.</p>
+
+<p>When people pay by card, the tip is automatically recorded. and it shows a nice distribution of tip percentage with about 40% of passengers paying tips of 20%.  <br />
+<br /></p>
+
+<h1 id="tips-by-group-size">Tips by group size</h1>
+<p>The main question I wanted to examine was whether people’s tip change as a function of group size.</p>
+
+<p>This is a question that one can easily see going two ways. I might be inclined to tip more in a group than alone because 1) I feel social pressure, or 2) I feel like I owe more service because the driver dealt with more people.</p>
+
+<p>Alternatively, I might tip less in a larger group because 1) diffusion of responsibility, or 2) I feel less connected to the driver since the service is distributed to the group than concentrated on me.</p>
+
+<p>Here is the result:</p>
+
+<figure>
+  <img src="/assets/post01/TipPercentByGroupSize.png" width="1300" />
+  <figcaption><p align="right"><i></i>
+  </p></figcaption>
+</figure>
+
+<p>Consistent with the second idea, tip percentage tends to decrease as group size gets larger.</p>
+
+<p>This is consistent with findings in <a href="http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1036&amp;context=articles">restaurants</a>, where larger groups tend to tip less than smaller groups.</p>
+
+<p>But why is this the case? It’s difficult to look at the social computations going on in an individual’s head in this kind of data. One possibility cited in the above article referencing <a href="http://psp.sagepub.com/content/2/3/307.abstract">Elman(1976)</a> is that larger groups tend to have larger bills where the financial burden increases holding tip percentages. I find that this is not the case below.</p>
+
+<p><br /></p>
+
+<h1 id="total-fare-by-group-size">Total Fare by group size</h1>
+
+<p>The average fare fluctuates across group sizes. For sanity, I capped the max fare at $500 but I think it’s very rare for people to travel that far. You can see that fares are higher when people travel as a group of three or four but lower when they travel alone or in a group of six.</p>
+
+<figure>
+  <img src="/assets/post01/TotalFareByGroupSize.png" width="1300" />
+  <figcaption><p align="right"><i></i>
+  </p></figcaption>
+</figure>
+
+<p><br /></p>
+
+<h1 id="tip-as-function-of-total-fare">Tip as function of total fare</h1>
+
+<p>A <a href="http://www.bloomberg.com/news/articles/2014-08-07/tipping-taxi-drivers-data-analysis-cant-explain-these-puzzles">Bloomberg article</a> explored an interesting phenomenon. That is, people tend to tip less on whole numbers when fares end in 5s or 0s. I also find that this is the case, with a slight caveat that it occurs right before the numbers end in 0s or 5s. For instance, if your bill is $27 you are more likely to pay just $3 to round up your total cost to a whole number than to tip the customary 20%.</p>
+
+<p>Also in the article, they note that tip rates drop drastically when the total fare is $100. I don’t see that in my data but I suspect that might be due to some filtering or averaging artifact.</p>
+
+<figure>
+  <img src="/assets/post01/TipPercentByFare.png" width="1300" />
+  <figcaption><p align="right"><i></i>
+  </p></figcaption>
+</figure>
+
+<p><br /></p>
+
+<h1 id="conclusions">Conclusions</h1>
+
+<ol>
+  <li>People in larger groups tip less.</li>
+  <li>Larger groups don’t necessarily spend more.</li>
+  <li>Tips tend to decrease as total fare increases but drops more heavily near fares close to ending in 0s.</li>
+</ol>
+
+  </div>
+
+</article>
 
       </div>
     </div>
