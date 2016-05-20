@@ -145,6 +145,24 @@ pre {
     fill: #828282; }
 
 /**
+ * Sticky footer
+ */
+* {
+  margin: 0; }
+
+html, body {
+  height: 100%; }
+
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -11em; }
+
+.footer, .push {
+  height: 11em; }
+
+/**
  * Site header
  */
 .site-header {

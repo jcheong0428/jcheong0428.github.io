@@ -7,14 +7,18 @@
 
     {% include header.html %}
 
-    <div class="page-content">
+    <!-- <div class="page-content"> -->
       <div class="wrapper">
+        <div class="page-content">
         {{ content }}
+        </div> 
+        <div class="push"></div>
       </div>
-    </div>
+    <!-- </div> -->
     {% include statscounter.html %}
+    <div class="footer">
     {% include footer.html %}
-
+    </div>
   </body>
 
 </html>
