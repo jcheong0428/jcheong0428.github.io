@@ -32,7 +32,7 @@ You can purchase stimulus presentation softwares that already has integrations w
 Cut your Ethernet cable and strip the wires with a wire stripper (or pliers or scissors) on both ends.
 Each Ethernet cable gives you 8 wires so you want two sets. 
 <figure>
-  <img src="/assets/post04/Ethernet-Cable-Wires.jpg" width="1300">
+  <img src="/assets/post04/Ethernet-Cable-Wires.jpg" width="900">
   <figcaption><p align="right"><i>http://triangleframe.blogspot.com</i>
   </p></figcaption>
 </figure>
@@ -43,16 +43,16 @@ Take one cable and plug the wires into one side of your LabJack.
 Have 4 wires go each into FI04 ~ 07 and the other 4 into the Ground (GND).
 Tighten the screws to secure the wires in place.
 
-<img src="/assets/post04/IMG_02.jpg" width="367.5">
-<img src="/assets/post04/IMG_03.jpg" width="367.5">
-<img src="/assets/post04/IMG_04.jpg" width="1300">
+<img src="/assets/post04/IMG_02.jpg" width="410">
+<img src="/assets/post04/IMG_03.jpg" width="410">
+<img src="/assets/post04/IMG_04.jpg" width="900">
 
 # Step 3: Install wires to labjack 2
 
 Repeat on other side. 
 Your LabJack should now look like this.
-<img src="/assets/post04/IMG_05.jpg" width="367.5">
-<img src="/assets/post04/IMG_06.jpg" width="367.5">
+<img src="/assets/post04/IMG_05.jpg" width="410">
+<img src="/assets/post04/IMG_06.jpg" width="410">
 
 # Step 4: Install wires to BIOPAC
 
@@ -60,7 +60,7 @@ Take the free end of the wires and plug them in to appropriate slots on the back
 FI00 wire should go into DIGITAL I/O 0, FI01 to DIGITAL I/O 1 and so forth. 
 I plugged FI07 into the +5V TRIG to use that channel as the trigger. 
 Ground wires should go into the GND D. 
-<img src="/assets/post04/IMG_07.jpg" width="1300">
+<img src="/assets/post04/IMG_07.jpg" width="900">
 
 <br>  
 
@@ -75,14 +75,14 @@ The most simple method is to have one channel open, trigger the channel each tim
 
 Open AcqKnowledge software and navigate to MP150 - Set Up Data Acquisition - Digital
 Configure the values as seen here and change the sampling rate to match your recording parameter.
-<img src="/assets/post04/labjack_setup01.png" width="1300">
+<img src="/assets/post04/labjack_setup01.png" width="900">
 
 If you want additional flexibility just add more channels to your recording (more info in next section). 
-<img src="/assets/post04/labjack_digital01.png" width="1300">
+<img src="/assets/post04/labjack_digital01.png" width="900">
 
 
 If you want to trigger-start the BIOPAC, change settings at Set Up Data Acquisition - Trigger
-<img src="/assets/post04/labjack_trigger01.png" width="1300">
+<img src="/assets/post04/labjack_trigger01.png" width="900">
 
 # Sending Trigger from code
 
@@ -108,7 +108,7 @@ lj = labJack('verbose',false)
 lj.timedTTL(0,200); 
 ```
 Now when you record, you can record triggers like this. 
-<img src="/assets/post04/labjack_setup02.png" width="1300">
+<img src="/assets/post04/labjack_setup02.png" width="900">
 
 # - Use multiple channels  
 Alternatively, you can use all 8 channels to account for 2^8 conditions for each number. 
@@ -132,7 +132,7 @@ lj.setDIOValue(0,[255 255 255]);
 ```
 
 Your recording will now look like this with multiple channels turning on and off to represent values.
-<img src="/assets/post04/labjack_digital02.png" width="1300">
+<img src="/assets/post04/labjack_digital02.png" width="900">
 
 
 
