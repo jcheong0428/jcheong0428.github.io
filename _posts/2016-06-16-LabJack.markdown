@@ -5,7 +5,7 @@ date:   2016-06-16 11:24:14 -0400
 categories: jekyll update
 ---
 <figure>
-  <img src="/assets/post04/U3-labjack.jpg" width="1300">
+  <img src="/assets/post04/U3-labjack.JPG" width="1300">
   <figcaption><p align="right"><i>https://labjack.com/products/u3</i>
   </p></figcaption>
 </figure>
