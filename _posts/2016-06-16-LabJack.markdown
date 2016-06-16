@@ -1,0 +1,138 @@
+---
+layout: post
+title:  "Setting up LabJack to trigger BIOPAC with MATLAB"
+date:   2016-06-16 11:24:14 -0400
+categories: jekyll update
+---
+<figure>
+  <img src="/assets/post04/U3-labjack.jpg" width="1300">
+  <figcaption><p align="right"><i>https://labjack.com/products/u3</i>
+  </p></figcaption>
+</figure>
+
+Here is a tutorial on how to setup your LabJack to send triggers from MATLAB to BIOPAC. 
+This is an extension to [Luke's labjack tutorial](https://dubioussentiments.wordpress.com/)
+
+At [COSAN lab](www.cosanlab.com) we use BIOPAC to record Skin Conductance and respiration for many of our experiments. 
+I use MATLAB [Psychtoolbox](http://psychtoolbox.org/) to design my stimulus presentation paradigm. 
+Of utmost importance is to know when the stimulus occurred to match the physiological response with the appropriate condition. 
+
+You can purchase stimulus presentation softwares that already has integrations with BIOPAC such as E-Prime but if you want flexibility for your experiments, setting up your own recording system is pretty simple (and cheap!).
+
+# Materials needed
+- LabJack DAQ: We use the [LabJack U3-LV](https://labjack.com/products/u3) which costs $108
+- an Ethernet cable
+- [wire stripper](https://www.amazon.com/Tools-VISE-GRIP-Stripper-Crimper-2078309/dp/B000JNNWQ2/ref=lp_553398_1_1?s=power-hand-tools&ie=UTF8&qid=1466089155&sr=1-1) is handy but I used a [long nose plier](https://www.amazon.com/Stanley-84-102-8-Inch-Long-Plier/dp/B0001IW518) just fine
+- BIOPAC UIM100C
+
+### HOW-TO (Hardware prep)
+
+# Step 1: Cut your cables
+
+Cut your Ethernet cable and strip the wires with a wire stripper (or pliers or scissors) on both ends.
+Each Ethernet cable gives you 8 wires so you want two sets. 
+<figure>
+  <img src="/assets/post04/Ethernet-Cable-Wires.jpg" width="1300">
+  <figcaption><p align="right"><i>http://triangleframe.blogspot.com</i>
+  </p></figcaption>
+</figure>
+
+# Step 2: Install wires to labjack 1
+
+Take one cable and plug the wires into one side of your LabJack.
+Have 4 wires go each into FI04 ~ 07 and the other 4 into the Ground (GND).
+Tighten the screws to secure the wires in place.
+
+<img src="/assets/post04/IMG_02.jpg" width="367.5">
+<img src="/assets/post04/IMG_03.jpg" width="367.5">
+<img src="/assets/post04/IMG_04.jpg" width="1300">
+
+# Step 3: Install wires to labjack 2
+
+Repeat on other side. 
+Your LabJack should now look like this.
+<img src="/assets/post04/IMG_05.jpg" width="367.5">
+<img src="/assets/post04/IMG_06.jpg" width="367.5">
+
+# Step 4: Install wires to BIOPAC
+
+Take the free end of the wires and plug them in to appropriate slots on the backside of your BIOPAC UIM-100C.
+FI00 wire should go into DIGITAL I/O 0, FI01 to DIGITAL I/O 1 and so forth. 
+I plugged FI07 into the +5V TRIG to use that channel as the trigger. 
+Ground wires should go into the GND D. 
+<img src="/assets/post04/IMG_07.jpg" width="1300">
+
+<br>  
+
+<br>   
+
+### HOW-TO (Software prep)
+
+# Setting up Acquisition
+
+There are many ways to trigger the BIOPAC. 
+The most simple method is to have one channel open, trigger the channel each time a stimulus appears, and then record the order of the stimulus. 
+
+Open AcqKnowledge software and navigate to MP150 - Set Up Data Acquisition - Digital
+Configure the values as seen here and change the sampling rate to match your recording parameter.
+<img src="/assets/post04/labjack_setup01.png" width="1300">
+
+If you want additional flexibility just add more channels to your recording (more info in next section). 
+<img src="/assets/post04/labjack_digital01.png" width="1300">
+
+
+If you want to trigger-start the BIOPAC, change settings at Set Up Data Acquisition - Trigger
+<img src="/assets/post04/labjack_trigger01.png" width="1300">
+
+# Sending Trigger from code
+
+# Step 1: Install driver and LabJack function
+Install exodriver for libusb provided by LabJacks [here](https://labjack.com/support/software/installers/exodriver). You can also install via [homebrew](http://brew.sh/) by using Mac terminal
+'''
+brew install libusb exodriver –universal
+'''
+
+Iandol has created a useful matlab function in his github repository [here](https://github.com/iandol/opticka/blob/master/communication/labJack.m).
+Download the file to your workspace and you can either trigger or send values to BIOPAC
+
+# Step 2: Send trigger through code
+
+# - Use one channel  
+You can use one channel to record stimulus onsets and record the stimulus order independently in MATLAB. Here is the code to send a TTL pulse to trigger channel FI00
+
+```
+% initialize
+lj = labJack('verbose',false)
+% Send TTL trigger pulse
+% First argument is channel #, second value is duration in ms
+lj.timedTTL(0,200); 
+```
+Now when you record, you can record triggers like this. 
+<img src="/assets/post04/labjack_setup02.png" width="1300">
+
+# - Use multiple channels  
+Alternatively, you can use all 8 channels to account for 2^8 conditions for each number. 
+
+The value you send to BIOPAC will be converted to binary with each channel representing a digit.  
+
+For instance if you lj.setDIOValue(2,[255 255 255]);  
+The binary number is 0000010, [... FI02 FI01 FI00], so your FI01 channel will turn ON.  
+If you lj.setDIOValue(5,[255 255 255]);   
+The binary number is 0000101, [... FI02 FI01 FI00], so your FI02 and FI00 channel will turn ON.   
+
+```
+% initialize
+lj = labJack('verbose',false)
+
+% Set all channel values to 2 
+lj.setDIOValue(2,[255 255 255]);
+
+% Set all channel values back to 0
+lj.setDIOValue(0,[255 255 255]);
+```
+
+Your recording will now look like this with multiple channels turning on and off to represent values.
+<img src="/assets/post04/labjack_digital02.png" width="1300">
+
+
+
