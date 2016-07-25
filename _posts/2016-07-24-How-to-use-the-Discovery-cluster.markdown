@@ -12,7 +12,14 @@ categories: jekyll update
 
 Here is a quick memo on how to use the [Discovery Cluster](http://techdoc.dartmouth.edu/discovery/) at Dartmouth. 
 
-couple ways to check jobs  
+# How to log in 
+
+```
+ssh username@discovery.dartmouth.edu
+```
+
+
+# couple ways to check jobs  
 
 ```
 showq -u <username>
@@ -21,14 +28,21 @@ myjobs -r
 myqstat
 ```
 
-how to submit a job  
+# how to submit a job  
+You submit a job using the ```qsub``` command. 
+Couple of options
+-N : name of job
+-M : my email address
+-m : bea (sends email when job starts and ends)
+
+
 
 ```
 qsub <job script>
 qsub -N <name of job> -M <my email> -m bea -l walltime=<hh:mm:ss> <job script>
 ```
 
-how to make a job script
+# how to make a job script
 Sample bash script that calls a python script to do things  
 
 ```
