@@ -43,6 +43,12 @@ qsub -N <name of job> -M <my email> -m bea -l walltime=<hh:mm:ss> <job script>
 ```
 
 # how to make a job script
+You can either upload a job script by using rsync or create a bash script on Discovery by vim. 
+
+```
+rsync -azvPh origin/filepath/filename username@discovery.dartmouth.edu:/destination/filepath/filename 
+```
+
 Sample bash script that calls a python script to do things  
 
 ```
