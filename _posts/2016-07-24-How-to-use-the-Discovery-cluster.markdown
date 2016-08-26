@@ -18,6 +18,15 @@ Here is a quick memo on how to use the [Discovery Cluster](http://techdoc.dartmo
 ssh username@discovery.dartmouth.edu
 ```
 
+# How to make an easier way to log in by setting an alias
+Go into .bash_profile or .bashrc (using ```vim .bash_profile```) and add the following line
+
+```
+# Alias for Discovery
+alias discovery="ssh username@discovery.dartmouth.edu"
+```
+Restart your terminal or ```source .bash_profile``` and type ```discovery``` to quickly access the cluster
+
 
 # couple ways to check jobs  
 
@@ -102,3 +111,9 @@ python FNL_DRSA_bootstrap_episode.py " + str(epn) + " \n\
     subprocess.call(qsub_call, shell=True)
 
 ```
+
+# How to kill all jobs 
+```qselect -u jcheong | xargs qdel```
+
+# How to start an interactive node
+```qsub -I -l walltime=04:00:00```
