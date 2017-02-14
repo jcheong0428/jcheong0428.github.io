@@ -6,10 +6,20 @@ order: 4
 ---
 # Papers
 
-￼Oud, B., Krajbich, I., Miller, K., **Cheong, J. H.**, Botvinick, M., & Fehr, E. (2016). Irrational time allocation in￼decision-making. In *Proc. R. Soc. B*. (Vol. 283, No. 1822, p. 20151439). The Royal Society. [[link]](http://rspb.royalsocietypublishing.org/content/283/1822/20151439)
+**Cheong, J.H.**, Brooks, S., and Chang, L.J. (in prep). FaceSync: Automated video synchronization for analysis of facial expressions. 
+
+**Cheong, J.H.**, Jolly, E., and Chang, L.J. (in prep). A window into the mind: A computational approach to measuring emotions in response to naturalistic stimuli.  
+
+Momennejad, I., Russek, E.M., **Cheong, J.H.**, Botvinick, M.M., Daw, N. and Gershman, S.J. (under review). The successor representation in human reinforcement learning: evidence from retrospective revaluation. [[Link]](http://biorxiv.org/content/early/2016/10/27/083824)
+
+Oud, B., Krajbich, I., Miller, K., **Cheong, J. H.**, Botvinick, M., & Fehr, E. (2016). Irrational time allocation in￼decision-making. In *Proc. R. Soc. B*. (Vol. 283, No. 1822, p. 20151439). The Royal Society. [[link]](http://rspb.royalsocietypublishing.org/content/283/1822/20151439)
 
 
 # Posters
+
+**Cheong, J.H.**, Jolly, E., and Chang, L.J. (2017). A window into the mind: A computational approach to measuring emotions in response to naturalistic stimuli. Poster to be presented at the 2017 Social and Affective Neuroscience Society, Los Angeles, CA. 
+
+Brooks, H., **Cheong, J.H.**, Cohen, J.D., and Chang, L.J. (November, 2016). Using patterns of functional brain connectivity to classify autism spectrum disorder. Poster presented at the 2016 Annual Biomedical Research Conference for Minority Students, Tampa, FL
 
 **Cheong, J.H.**, Jolly, E., and Chang, L.J. (June, 2016). Psychophysiological Intersubject Synchrony to Naturalistic Stimuli. Poster presented at *Samsung Scholarship Academic Camp*, Muju, Korea.
 
