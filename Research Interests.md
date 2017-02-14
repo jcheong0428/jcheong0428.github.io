@@ -12,6 +12,7 @@ The global aim of my research is to uncover the computational and neurobiologica
 I enjoy expanding my toolbox and learning new techniques that enables me to address research questions from different angles. These include, but not limited to, the following: 
 
 * fMRI 
+* Facial Expressions (Emotient)
 * Eyetracking (Eyetribe, ASL)
 * Psychophys (BIOPAC)
 	* Skin conductance (EDA)
