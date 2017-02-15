@@ -4,13 +4,8 @@ title:  "Archive for articles on replication crisis"
 date:   2016-09-23 11:24:14 -0400
 categories: jekyll update
 ---
-<figure>
-  <img src="/assets/post05/Discovery.png" width="966">
-  <figcaption><p align="right"><i>http://techdoc.dartmouth.edu/discovery/</i>
-  </p></figcaption>
-</figure>
 
-
+# Articles on psychology crisis
 [Mob Rule or Wisdom of Crowds by Susan Fiske](https://www.dropbox.com/s/9zubbn9fyi1xjcu/Fiske%20presidential%20guest%20column_APS%20Observer_copy-edited.pdf)
 
 [What has happened down here is the winds have changed by Andrew Gelman](http://andrewgelman.com/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/)
