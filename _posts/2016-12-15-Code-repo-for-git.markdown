@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Code repo for Git"
-date:   2017-02-15 11:24:14 -0400
+date:   2016-12-15 11:24:14 -0400
 categories: jekyll update
 ---
 
