@@ -8,22 +8,22 @@ categories: jekyll update
 # How to leave a session open so that the job
 you started running on SSH continues even when you are disconnected. 
 
-### Start a `screen` session 
+### 1. Start a `screen` session 
 
 ```
 screen
 ```
 
-### Start the job you want to run 
+### 2. Start the job you want to run 
 ```
 python keep_it_running.py
 ```
 
-### Detach `screen` using the following key combination
+### 3. Detach `screen` using the following key combination
 Press `ctr + a` then `d`
 
 
-### To resume screen session 
+### 4. To resume screen session 
 ```
 screen -r
 ```
