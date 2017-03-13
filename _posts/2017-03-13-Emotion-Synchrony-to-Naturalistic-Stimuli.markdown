@@ -1,5 +1,4 @@
 ---
----
 layout: post
 title:  "Emotion Synchrony to Naturalistic Stimuli"
 date:   2017-03-13 11:24:14 -0400
