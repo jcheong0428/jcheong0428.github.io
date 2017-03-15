@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Scripting in mricroGL fore reproducible brain figures"
+title:  "Scripting in mricroGL for reproducible brain figures"
 date:   2017-03-16 11:24:14 -0400
 categories: jekyll update
 ---
