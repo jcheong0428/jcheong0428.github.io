@@ -25,7 +25,8 @@ BEGIN
 	CUTOUT(0,0,0,1,0.62,1);
 END.
 ```
-After running the script I usually slide overAlpha from the GUI to 0 to get rid of the masks that remain protruding the brain. I don't think it's an option in scripting yet.
+After running the script I usually slide overAlpha from the GUI to 0 to get rid of the masks that remain protruding the brain. I don't think it's an option in scripting yet*.
+*Jeroen van Baar has notified me that you can actually also script the overAlpha by adding `SHADERADJUST('overAlpha', 1.2);`
 
 The output would look something like this. 
 
