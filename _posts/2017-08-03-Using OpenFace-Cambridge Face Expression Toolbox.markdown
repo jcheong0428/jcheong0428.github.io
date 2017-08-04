@@ -42,7 +42,7 @@ The output file is a csv file in which Facial Action Units are listed in terms o
 
 Action units covered are:   
 | Action Units | Description |  
-| --- | --- |  
+| - - - | - - - |  
 | AU01 | Inner Brow Raiser |  
 | AU02 | Outer Brow Raiser |  
 | AU04 | Brow Lowerer |   
