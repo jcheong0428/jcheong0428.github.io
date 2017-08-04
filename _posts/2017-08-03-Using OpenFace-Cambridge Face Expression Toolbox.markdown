@@ -7,6 +7,7 @@ categories: jekyll update
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) is a powerful toolkit that provides facial landmark detection, pose tracking, action unit recognition, gaze tracking, and facial feature extractions. Here I share the simple way to setup OpenFace using a Docker container. 
 
 # Install Docker 
+Install docker at [https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac](https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac)
 
 # Download the Docker container 
 The Docker container is at [https://hub.docker.com/r/benbuleong/openface-cambridge/](https://hub.docker.com/r/benbuleong/openface-cambridge/) but you essentially just have to type the following command into the terminal.
