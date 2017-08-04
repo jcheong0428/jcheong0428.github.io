@@ -41,26 +41,26 @@ See the full argument and other methods [here](https://github.com/TadasBaltrusai
 The output file is a csv file in which Facial Action Units are listed in terms of presence and intensity. 
 
 Action units covered are:   
-|Action Units| Description |  
-|----------|:-------------:|  
-|AU01| Inner Brow Raiser|  
-|AU02| Outer Brow Raiser|  
-|AU04| Brow Lowerer|   
-|AU05| Upper Lid Raiser|  
-|AU06| Cheek Raiser|  
-|AU07| Lid Tightener|  
-|AU08| Lips toward|  
-|AU09| Nose Wrinkler|  
-|AU10| Upper Lip Raiser|  
-|AU12| Lip Corner Puller (smile) |  
-|AU14| Dimpler (contempt)|  
-|AU15| Lip Corner Depressor|  
-|AU17| Chin Raiser|  
-|AU20| Lip Stretcher|  
-|AU23| Lip Tightener|  
-|AU25| Lips part|  
-|AU26| Jaw Drop (surprise)|  
-|AU45| Blink|  
+| Action Units | Description |  
+| ---------- | ------------- |  
+| AU01| Inner Brow Raiser |  
+| AU02| Outer Brow Raiser |  
+| AU04| Brow Lowerer |   
+| AU05| Upper Lid Raiser |  
+| AU06| Cheek Raiser |  
+| AU07| Lid Tightener |  
+| AU08| Lips toward |  
+| AU09| Nose Wrinkler |  
+| AU10| Upper Lip Raiser |  
+| AU12| Lip Corner Puller (smile) |  
+| AU14| Dimpler (contempt) |  
+| AU15| Lip Corner Depressor |  
+| AU17| Chin Raiser |  
+| AU20| Lip Stretcher |  
+| AU23| Lip Tightener |  
+| AU25| Lips part |  
+| AU26| Jaw Drop (surprise) |  
+| AU45| Blink |  
 
 <figure>
   <img src="http://what-when-how.com/wp-content/uploads/2012/06/tmp7527313.png
