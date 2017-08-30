@@ -10,7 +10,7 @@ order: 4
 
 **Cheong, J.H.**, Jolly, E., and Chang, L.J. (in prep). A window into the mind: A computational approach to measuring emotions in response to naturalistic stimuli.  
 
-Momennejad, I., Russek, E.M., **Cheong, J.H.**, Botvinick, M.M., Daw, N. and Gershman, S.J. (Accepted). The successor representation in human reinforcement learning: evidence from retrospective revaluation. [[Preprint Link]](http://biorxiv.org/content/early/2016/10/27/083824)
+Momennejad, I., Russek, E.M., **Cheong, J.H.**, Botvinick, M.M., Daw, N. and Gershman, S.J. (2017). The successor representation in human reinforcement learning: evidence from retrospective revaluation. Nature Human Behaviour, 1. [Link](https://www.nature.com/articles/s41562-017-0180-8) [[Preprint Link]](http://biorxiv.org/content/early/2016/10/27/083824) 
 
 **Cheong, J.H.**, Jolly, E., Sul, S., & Chang, L.J. (In Press). Computational models in social neuroscience. In Computational Models of Brain and Behavior, Moustafa, A (Ed), Wiley-Blackwell.
 
