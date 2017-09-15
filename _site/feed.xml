@@ -6,96 +6,719 @@
 </description>
     <link>http://jinhyuncheong.com/</link>
     <atom:link href="http://jinhyuncheong.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 19 May 2016 22:34:42 -0400</pubDate>
-    <lastBuildDate>Thu, 19 May 2016 22:34:42 -0400</lastBuildDate>
+    <pubDate>Fri, 15 Sep 2017 14:49:08 -0400</pubDate>
+    <lastBuildDate>Fri, 15 Sep 2017 14:49:08 -0400</lastBuildDate>
     <generator>Jekyll v3.1.5</generator>
     
       <item>
-        <title>Tipping in NYC taxis</title>
-        <description>&lt;figure&gt;
-  &lt;img src=&quot;/assets/post01/nycab.jpeg&quot; width=&quot;1300&quot; /&gt;
-  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;http://becomeanewyorker.com/&lt;/i&gt;
-  &lt;/p&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
+        <title>fMRI preprocessing to glm</title>
+        <description>&lt;h1 id=&quot;preprocessing-data&quot;&gt;1. Preprocessing Data&lt;/h1&gt;
 
-&lt;p&gt;This is a quick analysis on how people tipped NYC cabs in 2013. 
-The data was retrieved from &lt;a href=&quot;http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/&quot;&gt;Chris Whong’s blog&lt;/a&gt;. It’s a sizeable dataset and an amazing visualization came out of it called &lt;a href=&quot;http://nyctaxi.herokuapp.com/&quot;&gt;NYC Taxis: A Day in the Life&lt;/a&gt;. I got interested in the dataset and wanted to look at how people tip in NYC cabs.&lt;/p&gt;
+&lt;h1 id=&quot;regressing-out-covariates-of-the-data&quot;&gt;2. Regressing out covariates of the data&lt;/h1&gt;
 
-&lt;h1 id=&quot;tips-by-payment-type&quot;&gt;Tips by payment type&lt;/h1&gt;
-
-&lt;p&gt;After cleaning up the dataset, I first noticed that more than half the rides were paid by credit card.&lt;/p&gt;
+&lt;h1 id=&quot;running-a-glm-on-data&quot;&gt;3. Running a GLM on data&lt;/h1&gt;
 
 &lt;figure&gt;
-  &lt;img src=&quot;/assets/post01/CashCreditTipPercent.png&quot; width=&quot;1300&quot; /&gt;
-  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;&lt;/i&gt;
-  &lt;/p&gt;&lt;/figcaption&gt;
+  &lt;img src=&quot;http://what-when-how.com/wp-content/uploads/2012/06/tmp7527313.png
+&quot; width=&quot;500&quot; /&gt;
 &lt;/figure&gt;
-
-&lt;p&gt;When people pay by cash, it turns out tip is not recorded for 99% of the rides. I’m not sure if this is because drivers can’t record tip into their meter or if they just don’t bother. One thing I do know is that there are at least 6639 cases of tip recorded when paid in cash.&lt;/p&gt;
-
-&lt;p&gt;When people pay by card, the tip is automatically recorded. and it shows a nice distribution of tip percentage with about 40% of passengers paying tips of 20%.  &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;tips-by-group-size&quot;&gt;Tips by group size&lt;/h1&gt;
-&lt;p&gt;The main question I wanted to examine was whether people’s tip change as a function of group size.&lt;/p&gt;
-
-&lt;p&gt;This is a question that one can easily see going two ways. I might be inclined to tip more in a group than alone because 1) I feel social pressure, or 2) I feel like I owe more service because the driver dealt with more people.&lt;/p&gt;
-
-&lt;p&gt;Alternatively, I might tip less in a larger group because 1) diffusion of responsibility, or 2) I feel less connected to the driver since the service is distributed to the group than concentrated on me.&lt;/p&gt;
-
-&lt;p&gt;Here is the result:&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;img src=&quot;/assets/post01/TipPercentByGroupSize.png&quot; width=&quot;1300&quot; /&gt;
-  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;&lt;/i&gt;
-  &lt;/p&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Consistent with the second idea, tip percentage tends to decrease as group size gets larger.&lt;/p&gt;
-
-&lt;p&gt;This is consistent with findings in &lt;a href=&quot;http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1036&amp;amp;context=articles&quot;&gt;restaurants&lt;/a&gt;, where larger groups tend to tip less than smaller groups.&lt;/p&gt;
-
-&lt;p&gt;But why is this the case? It’s difficult to look at the social computations going on in an individual’s head in this kind of data. One possibility cited in the above article referencing &lt;a href=&quot;http://psp.sagepub.com/content/2/3/307.abstract&quot;&gt;Elman(1976)&lt;/a&gt; is that larger groups tend to have larger bills where the financial burden increases holding tip percentages. I find that this is not the case below.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;total-fare-by-group-size&quot;&gt;Total Fare by group size&lt;/h1&gt;
-
-&lt;p&gt;The average fare fluctuates across group sizes. For sanity, I capped the max fare at $500 but I think it’s very rare for people to travel that far. You can see that fares are higher when people travel as a group of three or four but lower when they travel alone or in a group of six.&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;img src=&quot;/assets/post01/TotalFareByGroupSize.png&quot; width=&quot;1300&quot; /&gt;
-  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;&lt;/i&gt;
-  &lt;/p&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;tip-as-function-of-total-fare&quot;&gt;Tip as function of total fare&lt;/h1&gt;
-
-&lt;p&gt;A &lt;a href=&quot;http://www.bloomberg.com/news/articles/2014-08-07/tipping-taxi-drivers-data-analysis-cant-explain-these-puzzles&quot;&gt;Bloomberg article&lt;/a&gt; explored an interesting phenomenon. That is, people tend to tip less on whole numbers when fares end in 5s or 0s. I also find that this is the case, with a slight caveat that it occurs right before the numbers end in 0s or 5s. For instance, if your bill is $27 you are more likely to pay just $3 to round up your total cost to a whole number than to tip the customary 20%.&lt;/p&gt;
-
-&lt;p&gt;Also in the article, they note that tip rates drop drastically when the total fare is $100. I don’t see that in my data but I suspect that might be due to some filtering or averaging artifact.&lt;/p&gt;
-
-&lt;figure&gt;
-  &lt;img src=&quot;/assets/post01/TipPercentByFare.png&quot; width=&quot;1300&quot; /&gt;
-  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;&lt;/i&gt;
-  &lt;/p&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h1 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h1&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;People in larger groups tip less.&lt;/li&gt;
-  &lt;li&gt;Larger groups don’t necessarily spend more.&lt;/li&gt;
-  &lt;li&gt;Tips tend to decrease as total fare increases but drops more heavily near fares close to ending in 0s.&lt;/li&gt;
-&lt;/ol&gt;
 </description>
-        <pubDate>Wed, 04 May 2016 11:24:14 -0400</pubDate>
-        <link>http://jinhyuncheong.com/jekyll/update/2016/05/04/Tipping-in-NYC-taxis.markdown.html</link>
-        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2016/05/04/Tipping-in-NYC-taxis.markdown.html</guid>
+        <pubDate>Tue, 22 Aug 2017 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2017/08/22/fMRI-preprocessing-to-glm.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2017/08/22/fMRI-preprocessing-to-glm.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Face analysis software comparison</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/TadasBaltrusaitis/OpenFace&quot;&gt;OpenFace&lt;/a&gt; is a powerful toolkit that provides facial landmark detection, pose tracking, action unit recognition, gaze tracking, and facial feature extractions. Here I share the simple way to setup OpenFace using a Docker container.&lt;/p&gt;
+
+&lt;h1 id=&quot;install-docker&quot;&gt;Install Docker&lt;/h1&gt;
+&lt;p&gt;Install docker at &lt;a href=&quot;https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac&quot;&gt;https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;download-the-docker-container&quot;&gt;Download the Docker container&lt;/h1&gt;
+&lt;p&gt;The Docker container is at &lt;a href=&quot;https://hub.docker.com/r/benbuleong/openface-cambridge/&quot;&gt;https://hub.docker.com/r/benbuleong/openface-cambridge/&lt;/a&gt; but you essentially just have to type the following command into the terminal.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+docker pull benbuleong/openface-cambridge
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;run-the-docker-container&quot;&gt;Run the Docker container&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -dit --name openface -v /Users/jinhyuncheong/Dropbox/facecam_exp:/opt/OpenFace/build/bin/facecam_exp benbuleong/openface-cambridge
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;-dit :
+–name : rename your running image or Docker will name it for you
+-v : attach a directory for your data &lt;Your Path=&quot;&quot;&gt;:&lt;Docker Path=&quot;&quot;&gt;
+The final argument is the name of the downloaded docker container.&lt;/Docker&gt;&lt;/Your&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;access-the-docker-container&quot;&gt;Access the Docker container&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker attach openface
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;do-some-feature-extraction&quot;&gt;Do some feature extraction&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./FeatureExtraction -f facecam_exp/Data/Jin/2_720_trimmed.MP4 -outroot facecam_exp/Data/Jin -of 2_Jin_OF.csv -q
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;See the full argument and other methods &lt;a href=&quot;https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The output file is a csv file in which Facial Action Units are listed in terms of presence and intensity.&lt;/p&gt;
+
+&lt;p&gt;Action units covered are: &lt;br /&gt;
+| Action Units | Description |&lt;br /&gt;
+| - - - | - - - |&lt;br /&gt;
+| AU01 | Inner Brow Raiser |&lt;br /&gt;
+| AU02 | Outer Brow Raiser |&lt;br /&gt;
+| AU04 | Brow Lowerer | &lt;br /&gt;
+| AU05 | Upper Lid Raiser |&lt;br /&gt;
+| AU06 | Cheek Raiser |&lt;br /&gt;
+| AU07 | Lid Tightener |&lt;br /&gt;
+| AU08 | Lips toward |&lt;br /&gt;
+| AU09 | Nose Wrinkler |&lt;br /&gt;
+| AU10 | Upper Lip Raiser |&lt;br /&gt;
+| AU12 | Lip Corner Puller (smile) |&lt;br /&gt;
+| AU14 | Dimpler (contempt) |&lt;br /&gt;
+| AU15 | Lip Corner Depressor |&lt;br /&gt;
+| AU17 | Chin Raiser |&lt;br /&gt;
+| AU20 | Lip Stretcher |&lt;br /&gt;
+| AU23 | Lip Tightener |&lt;br /&gt;
+| AU25 | Lips part |&lt;br /&gt;
+| AU26 | Jaw Drop (surprise) |&lt;br /&gt;
+| AU45 | Blink |&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;http://what-when-how.com/wp-content/uploads/2012/06/tmp7527313.png
+&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+</description>
+        <pubDate>Mon, 14 Aug 2017 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2017/08/14/Face-analysis-software-comparison.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2017/08/14/Face-analysis-software-comparison.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Using OpenFace-Cambridge Face Expression Toolbox</title>
+        <description>&lt;p&gt;&lt;a href=&quot;https://github.com/TadasBaltrusaitis/OpenFace&quot;&gt;OpenFace&lt;/a&gt; is a powerful toolkit that provides facial landmark detection, pose tracking, action unit recognition, gaze tracking, and facial feature extractions. Here I share the simple way to setup OpenFace using a Docker container.&lt;/p&gt;
+
+&lt;h1 id=&quot;install-docker&quot;&gt;Install Docker&lt;/h1&gt;
+&lt;p&gt;Install docker at &lt;a href=&quot;https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac&quot;&gt;https://docs.docker.com/docker-for-mac/install/#download-docker-for-mac&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;download-the-docker-container&quot;&gt;Download the Docker container&lt;/h1&gt;
+&lt;p&gt;The Docker container is at &lt;a href=&quot;https://hub.docker.com/r/benbuleong/openface-cambridge/&quot;&gt;https://hub.docker.com/r/benbuleong/openface-cambridge/&lt;/a&gt; but you essentially just have to type the following command into the terminal.
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+docker pull benbuleong/openface-cambridge
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;run-the-docker-container&quot;&gt;Run the Docker container&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run -dit --name openface -v /Users/jinhyuncheong/Dropbox/facecam_exp:/opt/OpenFace/build/bin/facecam_exp benbuleong/openface-cambridge
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;-dit : 
+–name : rename your running image or Docker will name it for you
+-v : attach a directory for your data &lt;Your Path=&quot;&quot;&gt;:&lt;Docker Path=&quot;&quot;&gt;
+The final argument is the name of the downloaded docker container.&lt;/Docker&gt;&lt;/Your&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;access-the-docker-container&quot;&gt;Access the Docker container&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker attach openface
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;do-some-feature-extraction&quot;&gt;Do some feature extraction&lt;/h1&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;./FeatureExtraction -f facecam_exp/Data/Jin/2_720_trimmed.MP4 -outroot facecam_exp/Data/Jin -of 2_Jin_OF.csv -q
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;See the full argument and other methods &lt;a href=&quot;https://github.com/TadasBaltrusaitis/OpenFace/wiki/Command-line-arguments&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The output file is a csv file in which Facial Action Units are listed in terms of presence and intensity.&lt;/p&gt;
+
+&lt;p&gt;Action units covered are: &lt;br /&gt;
+| Action Units | Description |&lt;br /&gt;
+| - - - | - - - |&lt;br /&gt;
+| AU01 | Inner Brow Raiser |&lt;br /&gt;
+| AU02 | Outer Brow Raiser |&lt;br /&gt;
+| AU04 | Brow Lowerer | &lt;br /&gt;
+| AU05 | Upper Lid Raiser |&lt;br /&gt;
+| AU06 | Cheek Raiser |&lt;br /&gt;
+| AU07 | Lid Tightener |&lt;br /&gt;
+| AU08 | Lips toward |&lt;br /&gt;
+| AU09 | Nose Wrinkler |&lt;br /&gt;
+| AU10 | Upper Lip Raiser |&lt;br /&gt;
+| AU12 | Lip Corner Puller (smile) |&lt;br /&gt;
+| AU14 | Dimpler (contempt) |&lt;br /&gt;
+| AU15 | Lip Corner Depressor |&lt;br /&gt;
+| AU17 | Chin Raiser |&lt;br /&gt;
+| AU20 | Lip Stretcher |&lt;br /&gt;
+| AU23 | Lip Tightener |&lt;br /&gt;
+| AU25 | Lips part |&lt;br /&gt;
+| AU26 | Jaw Drop (surprise) |&lt;br /&gt;
+| AU45 | Blink |&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;http://what-when-how.com/wp-content/uploads/2012/06/tmp7527313.png
+&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+
+</description>
+        <pubDate>Thu, 03 Aug 2017 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2017/08/03/Using-OpenFace-Cambridge-Face-Expression-Toolbox.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2017/08/03/Using-OpenFace-Cambridge-Face-Expression-Toolbox.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Scripting in mricroGL for reproducible brain figures</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://www.mccauslandcenter.sc.edu/mricrogl/home&quot;&gt;mricroGL&lt;/a&gt; is a powerful program to produce high-resolution brain figures for posters and papaers. However the GUI is tricky to use and it doesn’t provide numerical feedback so it is difficult to produce the same slice of a brain using different masks.&lt;/p&gt;
+
+&lt;p&gt;One way to overcome this is to use scripting. The scripting terminal can be accessed by clicking on &lt;code class=&quot;highlighter-rouge&quot;&gt;View - Scripting&lt;/code&gt;. Then you can input in some basic information through the following code. Be sure to replace the &lt;code class=&quot;highlighter-rouge&quot;&gt;/PATH/TO/OVERLAY/OVERALY.nii.gz&lt;/code&gt; with an actual mask file.&lt;/p&gt;
+
+&lt;p&gt;Here is a code to produce a coronal slice looking at the striatum.&lt;/p&gt;
+
+&lt;h3 id=&quot;coronal-slice&quot;&gt;Coronal Slice&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;BEGIN
+	RESETDEFAULTS;
+	LOADIMAGE(&#39;mni152_2009bet&#39;);
+	BACKCOLOR(255,255,255);
+	OVERLAYLOADSMOOTH(TRUE);
+	OVERLAYLOAD(&#39;/PATH/TO/OVERLAY/OVERLAY.nii.gz&#39;);
+	OVERLAYCOLORNAME(1,&#39;red_yellow&#39;);
+	OVERLAYMINMAX(1,0.25,1);
+	COLORBARVISIBLE(FALSE);
+	AZIMUTHELEVATION(0,0);
+	CUTOUT(0,0,0,1,0.62,1);
+	SHADERADJUST(&#39;overAlpha&#39;, 0);
+END.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;After running the script I usually slide overAlpha from the GUI to 0 to get rid of the masks that remain protruding the brain. I don’t think it’s an option in scripting yet*.
+*Jeroen van Baar has notified me that you can actually also script the overAlpha by adding &lt;code class=&quot;highlighter-rouge&quot;&gt;SHADERADJUST(&#39;overAlpha&#39;, 0);&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;The output would look something like this.&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post09/coronal.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;AZIMUTHELEVATION&lt;/code&gt; controls the view angle and &lt;code class=&quot;highlighter-rouge&quot;&gt;CUTOUT&lt;/code&gt; controls the slice. 
+The slice values are in ratios from the whole brain. Thus to change the view or slice you only need to modify the values for those two functions.&lt;/p&gt;
+
+&lt;p&gt;A lateral slice can be obtained by switching the last two lines with.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	AZIMUTHELEVATION(0,90);
+	CUTOUT(0,0,1,1,1,0.4);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post09/lateral.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;A saggital slice can be obtained by switching the last two lines with. 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+	AZIMUTHELEVATION(-90,0);
+	CUTOUT(1,0,0,0.5,1,1);
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post09/saggital.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+</description>
+        <pubDate>Thu, 16 Mar 2017 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2017/03/16/Scripting-for-mricroGL.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2017/03/16/Scripting-for-mricroGL.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Emotion Synchrony to Naturalistic Stimuli</title>
+        <description>&lt;p&gt;Here we present different facial expressions of participants watching a TV show. &lt;br /&gt;
+You will need a password to view these videos.&lt;/p&gt;
+
+&lt;h2 id=&quot;joy&quot;&gt;Joy&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/Joy1.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/yhibitmxhapsplz/Joy_TomCruiseGetsScientological.mp4?dl=0&quot;&gt;Joy Scene 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;smirk&quot;&gt;Smirk&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/Smirk1.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/m7gjprckzehbnui/Smirk_SaracenComesOut.mp4?dl=0&quot;&gt;Smirk Scene 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;surprise&quot;&gt;Surprise&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/Surp1.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/7bds5trey81tr5i/Surprise_StreetGoesDown.mp4?dl=0&quot;&gt;Surprise Scene 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;surprise--joy&quot;&gt;Surprise &amp;amp; Joy&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/SurpJoy1.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/ovw2dle6x5entn6/SurpJoy_SmashJump.mp4?dl=0&quot;&gt;Surprise Joy Scene 1&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/SurpJoy2.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/cf5p66h484h2724/SurpJoy_SaracenWinningScene.mp4?dl=0&quot;&gt;Surprise Joy Scene 2&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;disgust&quot;&gt;Disgust&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/Disgust1.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/0fprylvapl7ljhs/Disgust_StreetSurgery.mp4?dl=0&quot;&gt;Disgust Scene 1&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sadness&quot;&gt;Sadness&lt;/h2&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post08/Sad1.png&quot; width=&quot;500&quot; /&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/a1z91hf60lfjkgj/Sad_StreetStretcher.mp4?dl=0&quot;&gt;Sadness Scene 1&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Wed, 15 Mar 2017 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2017/03/15/Emotion-Synchrony-To-Naturalistic-Stimuli.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2017/03/15/Emotion-Synchrony-To-Naturalistic-Stimuli.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Keeping a job alive from remote session (SSH)</title>
+        <description>&lt;h1 id=&quot;how-to-leave-a-session-open-so-that-the-job&quot;&gt;How to leave a session open so that the job&lt;/h1&gt;
+&lt;p&gt;you started running on SSH continues even when you are disconnected.&lt;/p&gt;
+
+&lt;h3 id=&quot;start-a-screen-session&quot;&gt;1. Start a &lt;code class=&quot;highlighter-rouge&quot;&gt;screen&lt;/code&gt; session&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;screen
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;start-the-job-you-want-to-run&quot;&gt;2. Start the job you want to run&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;python keep_it_running.py
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;detach-screen-using-the-following-key-combination&quot;&gt;3. Detach &lt;code class=&quot;highlighter-rouge&quot;&gt;screen&lt;/code&gt; using the following key combination&lt;/h3&gt;
+&lt;p&gt;Press &lt;code class=&quot;highlighter-rouge&quot;&gt;ctr + a&lt;/code&gt; then &lt;code class=&quot;highlighter-rouge&quot;&gt;d&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;to-resume-screen-session&quot;&gt;4. To resume screen session&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;screen -r
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The screen session can use a different bash_profile than the original computers. Source bash_profile to load the same environment. 
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+source .bash_profile
+&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 15 Feb 2017 10:24:14 -0500</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2017/02/15/Keeping-a-job-alive-from-remote-session(SSH).html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2017/02/15/Keeping-a-job-alive-from-remote-session(SSH).html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Code repo for Git</title>
+        <description>&lt;h1 id=&quot;creating-a-new-branch-for-making-pull-requests&quot;&gt;creating a new branch for making pull requests&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git stash
+
+git branch &amp;lt;branch name&amp;gt;
+
+git checkout &amp;lt;branch name&amp;gt;
+
+git push origin &amp;lt;branch name&amp;gt;
+
+git checkout master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;updating-toolbox-on-pypi&quot;&gt;Updating toolbox on PyPi&lt;/h1&gt;
+&lt;p&gt;Info from &lt;a href=&quot;http://peterdowns.com/posts/first-time-with-pypi.html&quot;&gt;http://peterdowns.com/posts/first-time-with-pypi.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# change tag version to upload to pip
+git tag 0.7 -m &quot;Adds a tag so that we can put this on PyPI.&quot;
+
+# change __version__ and tarball version on setup.py
+sublime setup.py
+git push --tags origin master
+python setup.py register -r pypitest
+python setup.py sdist upload -r pypitest
+python setup.py register -r pypi
+python setup.py sdist upload -r pypi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 15 Dec 2016 10:24:14 -0500</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2016/12/15/Code-repo-for-git.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2016/12/15/Code-repo-for-git.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Archive for articles on replication crisis</title>
+        <description>&lt;h1 id=&quot;articles-on-psychology-crisis&quot;&gt;Articles on psychology crisis&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.dropbox.com/s/9zubbn9fyi1xjcu/Fiske%20presidential%20guest%20column_APS%20Observer_copy-edited.pdf&quot;&gt;Mob Rule or Wisdom of Crowds by Susan Fiske&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://andrewgelman.com/2016/09/21/what-has-happened-down-here-is-the-winds-have-changed/&quot;&gt;What has happened down here is the winds have changed by Andrew Gelman&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.nature.com/nrn/journal/v14/n5/abs/nrn3475.html&quot;&gt;Power failure: why small sample size undermines the reliability of neuroscience by Button et al&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://rsos.royalsocietypublishing.org/content/3/9/160384&quot;&gt;Natural Selection of Bad Science by Smaldino &amp;amp; McElreath&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hardsci.wordpress.com/2016/08/11/everything-is-fucked-the-syllabus/&quot;&gt;Everything is fucked by Sanjay Srivastava&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;ego-depletion&quot;&gt;Ego Depletion&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;http://soccco.uni-koeln.de/cscm-2016-debate.html&quot;&gt;Future of Ego Depletion Research by Roy Baumeister and Michael Inzlict at SoCCCo 2016&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://psycnet.apa.org/index.cfm?fa=search.displayrecord&amp;amp;uid=2010-12718-004&quot;&gt;Ego depletion and the strength model of self-control: A meta-analysis. by Hagger et al 2010&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0109950&quot;&gt;Failure to replicate depletion of self control by Xu et al&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00823/full&quot;&gt;Publication bias and the limited strength model of self-control: has the evidence for ego depletion been overestimated? by Carter and McCullough&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0147770&quot;&gt;No Evidence of the Ego-Depletion Effect across Task Characteristics and Individual Differences: A Pre-Registered Study by Lurquin et al&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://pps.sagepub.com/content/11/4/546.abstract&quot;&gt;A Multilab Preregistered Replication of the Ego-Depletion Effect&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.psychologicalscience.org/index.php/replication&quot;&gt;APS description of RRR-Registered Replication Reports&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 23 Sep 2016 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2016/09/23/Archive-on-replication-crisis.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2016/09/23/Archive-on-replication-crisis.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>How to use the Discovery cluster at Dartmouth</title>
+        <description>&lt;figure&gt;
+  &lt;img src=&quot;/assets/post05/Discovery.png&quot; width=&quot;966&quot; /&gt;
+  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;http://techdoc.dartmouth.edu/discovery/&lt;/i&gt;
+  &lt;/p&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Here is a quick memo on how to use the &lt;a href=&quot;http://techdoc.dartmouth.edu/discovery/&quot;&gt;Discovery Cluster&lt;/a&gt; at Dartmouth.&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-log-in&quot;&gt;How to log in&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh username@discovery.dartmouth.edu
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;how-to-make-an-easier-way-to-log-in-by-setting-an-alias&quot;&gt;How to make an easier way to log in by setting an alias&lt;/h1&gt;
+&lt;p&gt;Go into .bash_profile or .bashrc (using &lt;code class=&quot;highlighter-rouge&quot;&gt;vim .bash_profile&lt;/code&gt;) and add the following line&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Alias for Discovery
+alias discovery=&quot;ssh username@discovery.dartmouth.edu&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Restart your terminal or &lt;code class=&quot;highlighter-rouge&quot;&gt;source .bash_profile&lt;/code&gt; and type &lt;code class=&quot;highlighter-rouge&quot;&gt;discovery&lt;/code&gt; to quickly access the cluster&lt;/p&gt;
+
+&lt;h1 id=&quot;couple-ways-to-check-jobs&quot;&gt;couple ways to check jobs&lt;/h1&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;showq -u &amp;lt;username&amp;gt;
+qstat -u &amp;lt;username&amp;gt;
+myjobs -r
+myqstat
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;how-to-submit-a-job&quot;&gt;how to submit a job&lt;/h1&gt;
+&lt;p&gt;You submit a job using the &lt;code class=&quot;highlighter-rouge&quot;&gt;qsub&lt;/code&gt; command. 
+Couple of options
+-N : name of job
+-M : my email address
+-m : bea (sends email when job starts and ends)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;qsub &amp;lt;job script&amp;gt;
+qsub -N &amp;lt;name of job&amp;gt; -M &amp;lt;my email&amp;gt; -m bea -l walltime=&amp;lt;hh:mm:ss&amp;gt; &amp;lt;job script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;how-to-make-a-job-script&quot;&gt;how to make a job script&lt;/h1&gt;
+&lt;p&gt;You can either upload a job script by using rsync or create a bash script on Discovery by vim.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rsync -azvPh origin/filepath/filename username@discovery.dartmouth.edu:/destination/filepath/filename 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sample bash script that calls a python script to do things&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash -l&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#PBS -N &amp;lt;name of job&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#PBS -M &amp;lt;my mail address&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#PBS -m bea&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#PBS -l nodes=1:ppn=1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#PBS -l walltime=72:00:00&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; &amp;lt;working directory&amp;gt;
+module load python/2.7.11
+python &amp;lt;python job script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Sample python script that generates multiple bash scripts to distribute jobs onto separate cores (originally by &lt;a href=&quot;cosanlab.com&quot;&gt;Luke Chang&lt;/a&gt;).
+The module designates what version of python + packages you are using.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/usr/bin/env python&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;subprocess&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;base_dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;/ihome/jcheong/FNL_bootstrap&#39;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# set parameters&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dict&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;nodes&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;cores&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;walltime&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;24:00:00&#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;email&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;jcheong0428@gmail.com&#39;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;logs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;logs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;epn&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This part generates the script for each epn&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;Execute_Bootstrap.pbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;w&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;text_file&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#!/bin/bash -l &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#PBS -N bootstrap&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;epn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#PBS -q default &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#PBS -l nodes=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;nodes&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;:ppn=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;cores&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#PBS -l walltime=&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;walltime&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#PBS -M &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;qp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;email&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;#PBS -m bea &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;cd &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;module load python/2.7.11 &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;python FNL_DRSA_bootstrap_episode.py &quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;epn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\
+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# This part executes the script for each epn&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;chmod +x &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;Execute_Bootstrap.pbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;qsub_call&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&#39;qsub &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base_dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&#39;Execute_Bootstrap.pbs&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;subprocess&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;qsub_call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shell&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&quot;how-to-kill-all-jobs&quot;&gt;How to kill all jobs&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;qselect -u jcheong | xargs qdel&lt;/code&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;how-to-start-an-interactive-node&quot;&gt;How to start an interactive node&lt;/h1&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;qsub -I -l walltime=04:00:00&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Jul 2016 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2016/07/24/How-to-use-the-Discovery-cluster.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2016/07/24/How-to-use-the-Discovery-cluster.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+        <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>Setting up LabJack to trigger BIOPAC with MATLAB or Psychopy</title>
+        <description>&lt;figure&gt;
+  &lt;img src=&quot;/assets/post04/U3-labjack.JPG&quot; width=&quot;1300&quot; /&gt;
+  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;https://labjack.com/products/u3&lt;/i&gt;
+  &lt;/p&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;Here is a tutorial on how to setup your LabJack to send triggers from MATLAB to BIOPAC. 
+This is an extension to &lt;a href=&quot;https://dubioussentiments.wordpress.com/&quot;&gt;Luke’s labjack tutorial&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;At &lt;a href=&quot;www.cosanlab.com&quot;&gt;COSAN lab&lt;/a&gt; we use BIOPAC to record Skin Conductance and respiration for many of our experiments. 
+I use MATLAB &lt;a href=&quot;http://psychtoolbox.org/&quot;&gt;Psychtoolbox&lt;/a&gt; to design my stimulus presentation paradigm. 
+Of utmost importance is to know when the stimulus occurred to match the physiological response with the appropriate condition.&lt;/p&gt;
+
+&lt;p&gt;You can purchase stimulus presentation softwares that already has integrations with BIOPAC such as E-Prime but if you want flexibility for your experiments, setting up your own recording system is pretty simple (and cheap!).&lt;/p&gt;
+
+&lt;h1 id=&quot;materials-needed&quot;&gt;Materials needed&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;LabJack DAQ: We use the &lt;a href=&quot;https://labjack.com/products/u3&quot;&gt;LabJack U3-LV&lt;/a&gt; which costs $108&lt;/li&gt;
+  &lt;li&gt;an Ethernet cable&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.amazon.com/Tools-VISE-GRIP-Stripper-Crimper-2078309/dp/B000JNNWQ2/ref=lp_553398_1_1?s=power-hand-tools&amp;amp;ie=UTF8&amp;amp;qid=1466089155&amp;amp;sr=1-1&quot;&gt;wire stripper&lt;/a&gt; is handy but I used a &lt;a href=&quot;https://www.amazon.com/Stanley-84-102-8-Inch-Long-Plier/dp/B0001IW518&quot;&gt;long nose plier&lt;/a&gt; just fine&lt;/li&gt;
+  &lt;li&gt;BIOPAC UIM100C&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-to-hardware-prep&quot;&gt;HOW-TO (Hardware prep)&lt;/h3&gt;
+
+&lt;h1 id=&quot;step-1-cut-your-cables&quot;&gt;Step 1: Cut your cables&lt;/h1&gt;
+
+&lt;p&gt;Cut your Ethernet cable and strip the wires with a wire stripper (or pliers or scissors) on both ends.
+Each Ethernet cable gives you 8 wires so you want two sets.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;/assets/post04/Ethernet-Cable-Wires.jpg&quot; width=&quot;900&quot; /&gt;
+  &lt;figcaption&gt;&lt;p align=&quot;right&quot;&gt;&lt;i&gt;http://triangleframe.blogspot.com&lt;/i&gt;
+  &lt;/p&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;h1 id=&quot;step-2-install-wires-to-labjack-1&quot;&gt;Step 2: Install wires to labjack 1&lt;/h1&gt;
+
+&lt;p&gt;Take one cable and plug the wires into one side of your LabJack.
+Have 4 wires go each into FI04 ~ 07 and the other 4 into the Ground (GND).
+Tighten the screws to secure the wires in place.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/post04/IMG_02.jpg&quot; width=&quot;410&quot; /&gt;
+&lt;img src=&quot;/assets/post04/IMG_03.jpg&quot; width=&quot;410&quot; /&gt;
+&lt;img src=&quot;/assets/post04/IMG_04.jpg&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;step-3-install-wires-to-labjack-2&quot;&gt;Step 3: Install wires to labjack 2&lt;/h1&gt;
+
+&lt;p&gt;Repeat on other side. 
+Your LabJack should now look like this.
+&lt;img src=&quot;/assets/post04/IMG_05.jpg&quot; width=&quot;410&quot; /&gt;
+&lt;img src=&quot;/assets/post04/IMG_06.jpg&quot; width=&quot;410&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;step-4-install-wires-to-biopac&quot;&gt;Step 4: Install wires to BIOPAC&lt;/h1&gt;
+
+&lt;p&gt;Take the free end of the wires and plug them in to appropriate slots on the backside of your BIOPAC UIM-100C.
+FI00 wire should go into DIGITAL I/O 0, FI01 to DIGITAL I/O 1 and so forth. 
+I plugged FI07 into the +5V TRIG to use that channel as the trigger. 
+Ground wires should go into the GND D. 
+&lt;img src=&quot;/assets/post04/IMG_07.jpg&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;how-to-software-prep&quot;&gt;HOW-TO (Software prep)&lt;/h3&gt;
+
+&lt;h1 id=&quot;setting-up-acquisition&quot;&gt;Setting up Acquisition&lt;/h1&gt;
+
+&lt;p&gt;There are many ways to trigger the BIOPAC. 
+The most simple method is to have one channel open, trigger the channel each time a stimulus appears, and then record the order of the stimulus.&lt;/p&gt;
+
+&lt;p&gt;Open AcqKnowledge software and navigate to MP150 - Set Up Data Acquisition - Digital
+Configure the values as seen here and change the sampling rate to match your recording parameter.
+&lt;img src=&quot;/assets/post04/labjack_setup01.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want additional flexibility just add more channels to your recording (more info in next section). 
+&lt;img src=&quot;/assets/post04/labjack_digital01.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If you want to trigger-start the BIOPAC, change settings at Set Up Data Acquisition - Trigger
+&lt;img src=&quot;/assets/post04/labjack_trigger01.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;sending-trigger-from-matlab&quot;&gt;Sending Trigger from MATLAB&lt;/h1&gt;
+
+&lt;h1 id=&quot;step-1-install-driver-and-labjack-function&quot;&gt;Step 1: Install driver and LabJack function&lt;/h1&gt;
+&lt;p&gt;Install exodriver for libusb provided by LabJacks &lt;a href=&quot;https://labjack.com/support/software/installers/exodriver&quot;&gt;here&lt;/a&gt;. You can also install via &lt;a href=&quot;http://brew.sh/&quot;&gt;homebrew&lt;/a&gt; by using Mac terminal
+‘’’
+brew install libusb exodriver –universal
+‘’’&lt;/p&gt;
+
+&lt;p&gt;Iandol has created a useful matlab function in his github repository &lt;a href=&quot;https://github.com/iandol/opticka/blob/master/communication/labJack.m&quot;&gt;here&lt;/a&gt;.
+Download the file to your workspace and you can either trigger or send values to BIOPAC&lt;/p&gt;
+
+&lt;h1 id=&quot;step-2-send-trigger-through-code&quot;&gt;Step 2: Send trigger through code&lt;/h1&gt;
+
+&lt;h1 id=&quot;use-one-channel&quot;&gt;- Use one channel&lt;/h1&gt;
+&lt;p&gt;You can use one channel to record stimulus onsets and record the stimulus order independently in MATLAB. Here is the code to send a TTL pulse to trigger channel FI00&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% initialize
+lj = labJack(&#39;verbose&#39;,false)
+% Send TTL trigger pulse
+% First argument is channel #, second value is duration in ms
+lj.timedTTL(0,200); 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Now when you record, you can record triggers like this. 
+&lt;img src=&quot;/assets/post04/labjack_setup02.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;use-multiple-channels&quot;&gt;- Use multiple channels&lt;/h1&gt;
+&lt;p&gt;Alternatively, you can use all 8 channels to account for 2^8 conditions for each number.&lt;/p&gt;
+
+&lt;p&gt;The value you send to BIOPAC will be converted to binary with each channel representing a digit.&lt;/p&gt;
+
+&lt;p&gt;For instance if you lj.setDIOValue(2,[255 255 255]);&lt;br /&gt;
+The binary number is 0000010, [… FI02 FI01 FI00], so your FI01 channel will turn ON.&lt;br /&gt;
+If you lj.setDIOValue(5,[255 255 255]); &lt;br /&gt;
+The binary number is 0000101, [… FI02 FI01 FI00], so your FI02 and FI00 channel will turn ON.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;% initialize
+lj = labJack(&#39;verbose&#39;,false)
+
+% Set all channel values to 2 
+lj.setDIOValue(2,[255 255 255]);
+
+% Set all channel values back to 0
+lj.setDIOValue(0,[255 255 255]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Your recording will now look like this with multiple channels turning on and off to represent values.
+&lt;img src=&quot;/assets/post04/labjack_digital02.png&quot; width=&quot;900&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;sending-trigger-from-psychopy&quot;&gt;Sending Trigger from Psychopy&lt;/h1&gt;
+
+&lt;p&gt;We are slowly transitioning to writing our paradigms in Psychopy.
+Here are the scripts used to trigger labjack from Psychopy.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# import psychopy labjack library
+from psychopy.hardware.labjacks import U3
+
+# Initialize labjack 
+lj = U3()
+
+# Get calibration info and turn FIO 0 to off (usually starts as ON)
+cal_data = lj.getCalibrationData()
+if lj.getFIOState(0) == 1:
+    lj.setFIOState(0,0) #Make sure we start with the trigger off
+
+# At onset of event toggle FIO 0 to ON
+lj.setFIOState(0,1)
+
+# At offset of event toggle FIO 0 to OFF
+lj.setFIOState(0,0)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+</description>
+        <pubDate>Thu, 16 Jun 2016 11:24:14 -0400</pubDate>
+        <link>http://jinhyuncheong.com/jekyll/update/2016/06/16/LabJack.html</link>
+        <guid isPermaLink="true">http://jinhyuncheong.com/jekyll/update/2016/06/16/LabJack.html</guid>
         
         
         <category>jekyll</category>
