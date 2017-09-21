@@ -32,6 +32,8 @@ categories: jekyll update
 
 [A Multilab Preregistered Replication of the Ego-Depletion Effect](http://pps.sagepub.com/content/11/4/546.abstract)
 
+[Pre-registered natural observation shows self-control does not diminish in later time of day](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182980)
+
 [APS description of RRR-Registered Replication Reports](http://www.psychologicalscience.org/index.php/replication)
 
 
