@@ -18,3 +18,7 @@ github_username:  jcheong0428
 instagram_username: real_sage
 # Build settings
 markdown: kramdown
+plugins:
+  - jekyll-redirect-from
+whitelist:
+  - jekyll-redirect-from
