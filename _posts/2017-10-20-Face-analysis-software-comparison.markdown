@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  "Face analysis software comparison: OpenFace vs iMotion-FACET"
+title:  "Face analysis software comparison: OpenFace vs iMotion-Emotient (FACET)"
 date:   2017-10-20 11:24:14 -0400
 categories: jekyll update
 ---
 
-# Facial expression analysis software comparison: OpenFace vs iMotions-FACET
+# Facial expression analysis software comparison: OpenFace vs iMotions-Emotient (FACET)
 
-This post provides a comparison between two facial expression analysis platforms OpenFace and iMotion-FACET.   
+This post provides a comparison between two facial expression analysis platforms OpenFace and iMotion-Emotient (FACET engine).   
 OpenFace is a open source platform available at [https://github.com/TadasBaltrusaitis/OpenFace](https://github.com/TadasBaltrusaitis/OpenFace)
-[iMotions](https://imotions.com/) provides two facial expression engines FACET and AFFECTIVA (currently only Affectiva).  
+[iMotions](https://imotions.com/) provides two facial expression engines Emotient and AFFECTIVA.  
 
 Here we compare face detection and facial expression extraction performance of the two softwares.   
 
 #### TLDR: 
-iMotions-FACET seems to provide a more accurate extraction of Action Unit features than OpenFace.   
+iMotions Emotient (FACET) seems to provide a more accurate extraction of Action Unit features than OpenFace.   
 However, OpenFace has a superior face detection algorithm and can possibly be improved in AU extractions with further training.  
 
 
