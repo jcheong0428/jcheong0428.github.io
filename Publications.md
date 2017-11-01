@@ -10,9 +10,9 @@ order: 4
 <tr>
 <div markdown="1">
 <p></p>
-**Cheong, J.H.**, Brooks, S., and Chang, L.J. (in prep). FaceSync: Automated video synchronization for analysis of facial expressions. 
-
 **Cheong, J.H.**, Jolly, E., and Chang, L.J. (in prep). A window into the mind: A computational approach to measuring emotions in response to naturalistic stimuli.  
+
+**Cheong, J.H.**, Brooks, S., and Chang, L.J. (Under Review). FaceSync: Automated video synchronization for analysis of facial expressions. [[Preprint Link]](https://psyarxiv.com/p5293/)
 
 Momennejad, I., Russek, E.M., **Cheong, J.H.**, Botvinick, M.M., Daw, N. and Gershman, S.J. (2017). The successor representation in human reinforcement learning: evidence from retrospective revaluation. Nature Human Behaviour, 1. [[Link]](https://www.nature.com/articles/s41562-017-0180-8) [[Preprint Link]](http://biorxiv.org/content/early/2016/10/27/083824) 
 
