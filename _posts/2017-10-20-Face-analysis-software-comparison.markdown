@@ -8,7 +8,8 @@ categories: jekyll update
 # Facial expression analysis software comparison: OpenFace vs iMotions-Emotient (FACET)
 
 This post provides a comparison between two facial expression analysis platforms OpenFace and iMotion-Emotient (FACET engine).   
-OpenFace is a open source platform available at [https://github.com/TadasBaltrusaitis/OpenFace](https://github.com/TadasBaltrusaitis/OpenFace), see [previous post]("http://jinhyuncheong.com/jekyll/update/2017/08/03/Using-OpenFace-Cambridge-Face-Expression-Toolbox.html") for help on how to use the OpenFace expression software on Dockers. 
+OpenFace is a open source platform available at [https://github.com/TadasBaltrusaitis/OpenFace](https://github.com/TadasBaltrusaitis/OpenFace), see [previous post]("http://jinhyuncheong.com/jekyll/update/2017/08/03/Using-OpenFace-Cambridge-Face-Expression-Toolbox.html") for help on how to use the OpenFace expression software on Dockers.   
+
 [iMotions](https://imotions.com/) provides two facial expression engines Emotient and AFFECTIVA.  
 
 Here we compare face detection and facial expression extraction performance of the two softwares.   
@@ -102,6 +103,8 @@ The reason for this is that the AU12 definitely seems more activate at 17:10 tha
 <figure>
   <img src="/assets/post10/fig5.png" width="500" align="left">
   <img src="/assets/post10/fig6.png" width="500" >
+  <figcaption><p align="right"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
+  </p></figcaption>
 </figure>
 
 ## Comparing AU17 (Chin Raiser):   
@@ -112,6 +115,8 @@ Also the tonic increase in AU17 predictions at around 35,000 frame is also puzzl
 <figure>
   <img src="/assets/post10/fig7.png" width="500" align="left">
   <img src="/assets/post10/fig8.png" width="500" >
+   <figcaption><p align="right"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
+   </p></figcaption>
 </figure>
 
 
