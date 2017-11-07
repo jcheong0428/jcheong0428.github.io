@@ -103,7 +103,7 @@ The reason for this is that the AU12 definitely seems more activate at 17:10 tha
 <figure>
   <img src="/assets/post10/fig5.png" width="500" align="left">
   <img src="/assets/post10/fig6.png" width="500" >
-  <figcaption><p align="right"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
+  <figcaption><p align="left"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
   </p></figcaption>
 </figure>
 
@@ -115,7 +115,7 @@ Also the tonic increase in AU17 predictions at around 35,000 frame is also puzzl
 <figure>
   <img src="/assets/post10/fig7.png" width="500" align="left">
   <img src="/assets/post10/fig8.png" width="500" >
-   <figcaption><p align="right"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
+   <figcaption><p align="left"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
    </p></figcaption>
 </figure>
 
