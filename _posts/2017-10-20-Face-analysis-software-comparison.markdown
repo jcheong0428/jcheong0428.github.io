@@ -100,8 +100,7 @@ AU12 prediction is important because it is indicative of a smile and experience 
 <figure>
   <img src="/assets/post10/fig5.png" width="500" align="left">
   <img src="/assets/post10/fig6.png" width="500" >
-  <figcaption><p align="left"><i>Images generated using <a href="https://github.com/jcheong0428/facesync">FaceSync</a></i>
-  </p><p>Note: OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.</p>
+  <figcaption><p align="left"><i>Images generated using <a href="https://github.com/jcheong0428/facesync">FaceSync</a>; OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.</p></i>
 </figcaption>
 
 
@@ -116,8 +115,8 @@ Also the tonic increase in AU17 predictions at around 35,000 frame is also puzzl
 <figure>
   <img src="/assets/post10/fig7.png" width="500" align="left">
   <img src="/assets/post10/fig8.png" width="500" >
-   <figcaption><p align="left"><i>Images generated using <a href="https://github.com/jcheong0428/facesync">FaceSync</a></i>
-   </p><p>Note: OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.</p></figcaption>
+   <figcaption><p align="left"><i>Images generated using <a href="https://github.com/jcheong0428/facesync">FaceSync</a>
+   ; OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.</p></i></figcaption>
 </figure>
 
 
