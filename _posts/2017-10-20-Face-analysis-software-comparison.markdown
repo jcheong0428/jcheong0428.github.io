@@ -95,33 +95,33 @@ Here is a participant smiling at two different timepoints which provides a few i
 ## Comparing AU12 (Lip Corner Puller)
 AU12 prediction is important because it is indicative of a smile and experience of joy.  
 
-*Comparing the two instances of AU12 activation at 17:10 (left image) and at 20:00 (right image), it seems like FACET provides a more accurate prediction.*   
-Note: OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.  
-
-The reason for this is that the AU12 definitely seems more activate at 17:10 than at 20:00 which is reflected by FACET predictions but the opposite in OpenFace predictions.
+*Comparing the two instances of AU12 activation at 17:10 (left image) and at 20:00 (right image), FACET seems to provide a more accurate characterization of activity as the lip corners are more pulled in the left image (at 17:10) than on the right image (at 20:00).*   
 
 <figure>
   <img src="/assets/post10/fig5.png" width="500" align="left">
   <img src="/assets/post10/fig6.png" width="500" >
   <figcaption><p align="left"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
-  </p></figcaption>
+  </p><p>Note: OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.</p>
+</figcaption>
+
+
 </figure>
 
 ## Comparing AU17 (Chin Raiser):   
-It looks clear that they do have some correspondence in the left graph where both accurately determine the chin raise.   
-*However, in the right graph, OpenFace is noisily detecting a chin raise where as FACET provides a more stable prediction of no AU17.*  
-Also the tonic increase in AU17 predictions at around 35,000 frame is also puzzling and doesn't seem as accurate as FACET's predictions.  
+Looking at the left image (at 19:39) in which the chin raise is clear, both algorithms accurately predict AU17 activation.
+ 
+*However in the right image (at 10:30), OpenFace detection is more noisy and suggests the chin is raised whereas FACET provides a more stable prediction and does not predict a chin raise which seems to be correct.*  
+Also the tonic increase in AU17 predictions at around 35,000 frame is also puzzling and seem to be less stable than FACET's predictions.  
 
 <figure>
   <img src="/assets/post10/fig7.png" width="500" align="left">
   <img src="/assets/post10/fig8.png" width="500" >
    <figcaption><p align="left"><i>Images generated using <a href="https://psyarxiv.com/p5293/">FaceSync</a></i>
-   </p></figcaption>
+   </p><p>Note: OpenFace y-axis is intensity and the FACET y-axis is the probability of activation.</p></figcaption>
 </figure>
 
 
 # Conclusion
-
 1. OpenFace has better face detection and can provide data even for profile view of faces. 
 2. FACET, however, seems to have a more accurate representation of Action Unit activations. 
 
