@@ -53,7 +53,7 @@ This is represented by the discontinued green lines between frames 100 - 200 in 
 ### Conclusion
 OpenFace provides a better face detection algorithm. 
 
-# Facial AU predictions comparison to genuine facial expressions of emotion
+# AU predictions in genuine facial expressions of emotion
 
 Here I compare the AU predictions between OpenFace and FACET on a facial expression recording we conducted while a participant watched a TV drama. 
 OpenFace provides both AU intensity (e.g., AU12_r) and AU presence (e.g., AU12_c).  
@@ -61,21 +61,19 @@ The intensity is on a **5 point scale** (0:not present to 5:maximum intensity) r
 AU presence indicates whether an AU is visible on the face as a binary outcome. 
 
 FACET deprecated providing intensity or probabilities of AUs in recent versions and now provides Action Unit Evidence (e.g., AU12 Evidence).  
-The evidence represents a **logarithmic odds of an action unit or expression being present** and can be considered as Z-scores on which statistical analyses should be performed. 
-The Z-scores can be baselined and/or be transformed to probabilities using the following softmax function:
+The evidence represents a **logarithmic odds of an action unit or expression being present** and can be considered as Z-scores on which statistical analyses should be performed. The Z-scores can be baselined and/or be transformed to probabilities using the following softmax function:
 
 $$ P(AU) = \frac{1}{ 1 + 10 ^ {Evidence}} $$
 
 With these differences in mind, we can compare how similar the AU predictions are between the two software. 
 
-First, comparing the AU prediction similarity shows that the *prediction similarity between the two softwares is low* (mean r = .28; blue bars on figure below). This however includes the average negative correlations of AU17 (Chin Raiser). The more widely used and distinct expressions AU10 (upper lip raiser), AU12 (lip corner puller), AU23 (lip tightener), AU25 (lips part) are **more highly correlated (around r = .5)**.   
+First, comparing the AU prediction similarity shows that the *prediction similarity between the two softwares is low* (mean r = .28; blue bars on figure below). This however includes the average negative correlations of AU17 (Chin Raiser). **The more widely used and distinct expressions AU10 (upper lip raiser), AU12 (lip corner puller), AU23 (lip tightener), AU25 (lips part) are more correlated around r = .5**.   
 
-But one reason for this low correlation could be that they operate on different scales as mentioned above.    
-OpenFace predictions has a minimum value of 0 whereas FACET provides continous predictions which can also decrease the covariance.   
-I recalculated the correlations after removing the bottomed-out zero values but does not result in huge correlation increases (green bars on bottom graph) and also after converting FACET's AU Evidence to Probabilities using a softmax function.
-The correspondence between the two prediction algorithms **increases substantially to r = .6** for AUs 10, 12, and 25.  
+Low correlations could result from that they operate on different scales.  
+OpenFace predictions have a minimum value of 0 while FACET provides continous predictions.   
+Recalculating the correlations after removing the bottomed-out zero values does not result in huge correlation increases (green bars on bottom graph).  
 
-For AUs 15, 17 there is no similarity between the two predictions which warrants further inspection. The result is surprising and interesting in that the two algorithms give distinct AU predictions.  
+However **converting FACET's AU Evidence to Probabilities using a softmax function increases the correspondence between the two prediction algorithms to r = .6 for AUs 10, 12, and 25.**  
 
 <figure>
   <img src="/assets/post10/fig4.png" width="1200">
