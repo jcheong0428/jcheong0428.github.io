@@ -1,19 +1,19 @@
 ---
 layout: post
-title:  "Interpreting coefficients in models with continuous X categorical variable interactions"
+title:  "Interpreting coefficients in regressions with continuous and categorical variable interactions"
 date:   2017-11-30 11:24:14 -0400
 categories: jekyll update
 ---
 
-The ability to understand and interpret linear regressions is fundamental for effective data analysis. Often however, we fail to fully understand what happens behind the scenes when we specify a model, run the model in softwares such as R, then attempt to interpret the results.
+The ability to understand and interpret the results of regressions is fundamental for effective data analysis. Often however, it is difficult to fully understand what happens behind the scenes when we specify and estimate a model in softwares such as R. Understanding how each term was represented in estimating the model is critical to interpret the model results accurately. 
 
-Once common mistake is interpreting the coefficient of a continuous variable as the average main effect when you have a categorical variable that interacts with it. Here I provide R code and results that explains why you should be careful of interpreting the result as the main effect.
+Once common mistake is interpreting the coefficient of a continuous variable as the average main effect when you have a categorical variable that interacts with the continuous variable. Here I provide the R code to demonstrate and explain why you cannot simply interpret the coefficient as the main effect unless you have specified a contrast.
 
 TLDR: You should only interpret the coefficient of a continuous variable interacting with a categorical variable as the average main effect when you have specified your categorical variables to be a contrast. You cannot interpret it as the main effect if the categorical variables are dummy coded.
 
 To illustrate, I am going to create a fake dataset with variables Income, Age, and Gender. My specification is that for Males, Income and Age have a correlation of r = .80, while for Females, Income and Age have a correlation of r = .30.
 
-From this specification, **the average effect of Age on Income, controlling for Gender should be .55 (= (.80 + .30) / 2 )**
+From this specification, **the average effect of Age on Income, controlling for Gender should be .55 (= (.80 + .30) / 2 ).**
 
 As for mean group differences, let's say Males earn on average $2, while Females earn on average $3.  
 Data for each gender is generated separately then concatenated to create a combined dataframe: `data`. Data is generated in `R` using `mvrnorm` from package `MASS`:
