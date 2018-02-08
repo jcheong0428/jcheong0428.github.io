@@ -9,23 +9,14 @@ order: 3
 <table cellpadding="10">
 	<tr><p></p>
 <div markdown="1">
-# Areas of Interest
-The global aim of my research is to uncover the computational and neurobiological foundations of human behavior, with an emphasis on people's judgments and decisions in social and affective contexts. In particular, I am interested in how people update their behavior by integrating affective and social feedback through experience or predictions. I draw upon a diverse set of research tools from psychology, neuroscience, economics, and computer science, often applying multiple methods simultaneously. 
+# Areas of Interest 
+Theories and insights on human behavior are most valid and representative of true human nature when studied in naturalistic contexts.   
+This idea sets the foundation for my projects that aim to model and understand how emotions and social contexts influence human behavior. 
+These include how empathic behaviors change our perception of pain, how social contexts change our opinions and impressions of others, and how emotions shape our value decisions and learning behavior. To investigate these questions I draw upon a diverse set of research tools such as functional neuroimaging, psychophysiology, and facial expressions while using computational modeling and machine learning algorithms to formalize and make predictions of behavior. 
+
+
+
 </div>
 	</tr>
-<tr>
-<div markdown="1">
-# Techniques 
-I enjoy expanding my toolbox and learning new techniques that enables me to address research questions from different angles. These include, but not limited to, the following: 
 
-* fMRI 
-* Facial Expressions (Emotient)
-* Eyetracking (Eyetribe, ASL)
-* Psychophys (BIOPAC)
-	* Skin conductance (EDA)
-	* Heartbeat & Respiration (EKG, PPG)
-* Thermal Stimulation (Medoc PATHWAY)
-* Motion tracking (Xsens)
-</div>
-</tr>
 </table>
