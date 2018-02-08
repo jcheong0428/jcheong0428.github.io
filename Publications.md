@@ -19,7 +19,7 @@ customjs:
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-Momennejad, I., Russek, E.M., **Cheong, J.H.**, Botvinick, M.M., Daw, N. and Gershman, S.J. (2017). The successor representation in human reinforcement learning: evidence from retrospective revaluation. Nature Human Behaviour, 1. [[Link]](https://www.nature.com/articles/s41562-017-0180-8) [[Preprint Link]](http://biorxiv.org/content/early/2016/10/27/083824) 
+Momennejad, I., Russek, E.M., **Cheong, J.H.**, Botvinick, M.M., Daw, N., and Gershman, S.J. (2017). The successor representation in human reinforcement learning: evidence from retrospective revaluation. Nature Human Behaviour, 1. [[Link]](https://www.nature.com/articles/s41562-017-0180-8) [[Preprint Link]](http://biorxiv.org/content/early/2016/10/27/083824) 
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1038/s41562-017-0180-8"></div>
