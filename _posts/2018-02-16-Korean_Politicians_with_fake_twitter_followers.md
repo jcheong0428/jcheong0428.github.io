@@ -147,5 +147,6 @@ The crucial reason NYT was able to identify those patterns was because twitter s
 based on when they started following an account. However, this is easy to trick if you are the
 bot owner by simply unfollowing and re-following an account over time. Also some of these fake accounts
 may be professionally managed by groups or companies aiming to influence public opinion
-as in the [case of Mueller indictment of meddling in the 2016 US presidential election](https://www.politico.com/story/2018/02/16/text-full-mueller-indictment-on-russian-election-case-415670).
+as in the [case of Mueller indictment of meddling in the 2016 US presidential election](https://www.politico.com/story/2018/02/16/text-full-mueller-indictment-on-russian-election-case-415670)
+during which they [created more than 50K human-coordinated fake accounts and posted more than 2 million tweets](https://www.judiciary.senate.gov/imo/media/doc/Edgett%20Appendix%20to%20Responses.pdf).
 If this is the case, it may be very difficult to confirm the genuineness of followers through this approach.
