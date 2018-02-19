@@ -128,6 +128,9 @@ in December 2011.
 Here are some other politicians with the two kinds of plots side by side.
 I rotated the histogram so it is easier to compare the streaky pattern to the histograms.
 
+#### Han Myeong-Sook (@HanMyeongSook, 240K followers)
+<iframe width="1100" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/114.embed"></iframe>
+
 #### Chun Jung-bae (@jb_1000, 202K followers)
 <iframe width="1100" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/104.embed"></iframe>
 
@@ -138,6 +141,7 @@ Just like Lee Jung-Hee, also has surge of followers created on Dec 2012.
 
 #### Won Hee-Ryong (@wonheeryong, 45.1K followers)
 <iframe width="1100" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/108.embed"></iframe>
+
 
 
 # Conclusion
