@@ -79,7 +79,7 @@ for screen_name in screen_names:
 ---
 ### Analyzing follower data
 #### Park Geun-Hye (@GH_PARK, 385K followers)
-The first politician I scraped was the former 18th president Park Geun-Hye who took office on December 19th 2012. She joined Twitter on April 2010, has 385K followers, and was possibly the most influential conservative politician on Twitter. Here is the plot of the followers' join dates.
+The first politician I scraped was the former 18th president Park Geun-Hye who took office on December 19th 2012. She joined Twitter on April 2010, has 385K followers, and was possibly the most influential conservative politician on Twitter. Here is the plot of the followers' join dates by the order in which they started following the account.
 
 <iframe width="1100" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/90.embed"></iframe>
 
@@ -95,10 +95,10 @@ There are at least four distinct peaks, first at Jul 2010 (14K followers),
 second at Jan 2012 (9K followers),third at Dec 2012 (12K followers), and fourth at Jan 2016 (8K followers).
 Although these times coincide with crucial political events for Park (she announced to run for president in Jul 2010, became head of the party in Dec 2011, and won the election in Dec 2012),
 it still seems odd that mass amounts of people would **create accounts** within a sort period of time
-to start following her over time. **It is highly likely that increase in followers happen in
-waves or in surges at times when the politician is receiving a lot of attention. HOWEVER, it is highly
-unusual that a distinct portion of your followers created their accounts at almost the same time.**
-And this is exactly the pattern we see in the histogram.
+to start following her over time. **It wouldn't be surprising to see increases in followers happen in
+waves at times when the politician is receiving a lot of attention. HOWEVER, it is
+unusual and surprising if a distinct portion of your followers created their accounts at almost the same time.**
+And this is exactly the pattern we see in the histogram. Keep in mind that the y axis is **Join Date and NOT when they started following the account.**
 
 <br><br>
 
