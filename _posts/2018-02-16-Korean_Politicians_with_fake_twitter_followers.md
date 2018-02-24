@@ -102,7 +102,7 @@ it still seems odd that mass amounts of people would **create accounts** within 
 to start following her over time. **It wouldn't be surprising to see increases in followers happen in
 waves at times when the politician is receiving a lot of attention. HOWEVER, it is
 unusual and surprising if a distinct portion of your followers created their accounts at almost the same time.**
-And this is exactly the pattern we see in the histogram. Keep in mind that the y axis is **Join Date and NOT when they started following the account.**
+And this is exactly the pattern we see in the histogram. 
 
 <br><br>
 
