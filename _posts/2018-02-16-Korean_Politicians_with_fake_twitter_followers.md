@@ -149,12 +149,17 @@ Just like Lee Jung-Hee, also has surge of followers created on Dec 2012.
 
 
 # Conclusion
-Identifying fake Twitter followers of Korean politicians did not turn out to be as obvious as the NYT article. However a closer look at the distribution of join dates among followers suggests that there may have been fake followers created during certain periods that followed the accounts over time.
+Identifying fake Twitter followers of Korean politicians did not turn out to be as obvious as the NYT article. However a closer look at the distribution of follower join dates suggests traces of fake follower activity in that thousands of accounts created within a short period  follow the account.  
 
-The crucial reason NYT was able to identify those patterns was because twitter sorts the followers
-based on when they started following an account. However, this is easy to trick if you are the
-bot owner by simply unfollowing and re-following an account over time. Also some of these fake accounts
-may be professionally managed by groups or companies aiming to influence public opinion
-as in the [case of Mueller indictment of meddling in the 2016 US presidential election](https://www.politico.com/story/2018/02/16/text-full-mueller-indictment-on-russian-election-case-415670)
-during which they [created more than 50K human-coordinated fake accounts and posted more than 2 million tweets](https://www.judiciary.senate.gov/imo/media/doc/Edgett%20Appendix%20to%20Responses.pdf).
-If this is the case, it may be very difficult to confirm the genuineness of followers through this approach.
+
+One possible reason the pattern is more distributed could be that these account
+creators may be pacing the rate at which the bots follow the account or unfollowing and re-following
+an account to avoid suspicion.  
+
+You might think that thousands of followers are not significant when it's only a fraction
+of the entire number of followers, but these fake accounts may be professionally managed
+by groups with clear aims of manipulating public opinion. This may have been
+the [case](https://www.politico.com/story/2018/02/16/text-full-mueller-indictment-on-russian-election-case-415670) in the 2016 US presidential election during which a Russian company [created more than 50K human-coordinated fake accounts and posted more than 2 million tweets](https://www.judiciary.senate.gov/imo/media/doc/Edgett%20Appendix%20to%20Responses.pdf).  
+
+While some may argue that the influence of these malicious attempts at swaying public opinion is [overrated,](https://www.nytimes.com/2018/02/13/upshot/fake-news-and-bots-may-be-worrisome-but-their-political-power-is-overblown.html)
+we should perhaps be more cautious and keep in mind that those trending people, topics, and articles on the web may be fake activity.
