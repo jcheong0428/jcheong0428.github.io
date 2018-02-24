@@ -10,12 +10,12 @@ categories: jekyll update
   </p></figcaption>
 </figure>
 
-Here is a tutorial on how to setup your LabJack to send triggers from MATLAB to BIOPAC. 
+Here is a tutorial on how to setup your LabJack to send triggers from MATLAB to BIOPAC.
 This is an extension to [Luke's labjack tutorial](https://dubioussentiments.wordpress.com/)
 
-At [COSAN lab](www.cosanlab.com) we use BIOPAC to record Skin Conductance and respiration for many of our experiments. 
-I use MATLAB [Psychtoolbox](http://psychtoolbox.org/) to design my stimulus presentation paradigm. 
-Of utmost importance is to know when the stimulus occurred to match the physiological response with the appropriate condition. 
+At [COSAN lab](www.cosanlab.com) we use BIOPAC to record Skin Conductance and respiration for many of our experiments.
+I use MATLAB [Psychtoolbox](http://psychtoolbox.org/) to design my stimulus presentation paradigm.
+Of utmost importance is to know when the stimulus occurred to match the physiological response with the appropriate condition.
 
 You can purchase stimulus presentation softwares that already has integrations with BIOPAC such as E-Prime but if you want flexibility for your experiments, setting up your own recording system is pretty simple (and cheap!).
 
@@ -30,7 +30,7 @@ You can purchase stimulus presentation softwares that already has integrations w
 # Step 1: Cut your cables
 
 Cut your Ethernet cable and strip the wires with a wire stripper (or pliers or scissors) on both ends.
-Each Ethernet cable gives you 8 wires so you want two sets. 
+Each Ethernet cable gives you 8 wires so you want two sets.
 <figure>
   <img src="/assets/post04/Ethernet-Cable-Wires.jpg" width="900">
   <figcaption><p align="right"><i>http://triangleframe.blogspot.com</i>
@@ -42,24 +42,29 @@ Each Ethernet cable gives you 8 wires so you want two sets.
 Take one cable and plug the wires into one side of your LabJack.
 Have 4 wires go each into FI04 ~ 07 and the other 4 into the Ground (GND).
 Tighten the screws to secure the wires in place.
+<div style="text-align: left; display: inline;">
+  <img src="/assets/post04/IMG_02.jpg" width="350">
+  <img src="/assets/post04/IMG_03.jpg" width="350">
+</div>
+<br>
 
-<img src="/assets/post04/IMG_02.jpg" width="410">
-<img src="/assets/post04/IMG_03.jpg" width="410">
 <img src="/assets/post04/IMG_04.jpg" width="900">
 
 # Step 3: Install wires to labjack 2
 
-Repeat on other side. 
+Repeat on other side.
 Your LabJack should now look like this.
-<img src="/assets/post04/IMG_05.jpg" width="410">
-<img src="/assets/post04/IMG_06.jpg" width="410">
+<div style="text-align: left; display: inline;">
+  <img src="/assets/post04/IMG_05.jpg" width="350">
+  <img src="/assets/post04/IMG_06.jpg" width="350">
+</div>
 
 # Step 4: Install wires to BIOPAC
 
 Take the free end of the wires and plug them in to appropriate slots on the backside of your BIOPAC UIM-100C.
-FI00 wire should go into DIGITAL I/O 0, FI01 to DIGITAL I/O 1 and so forth. 
-I plugged FI07 into the +5V TRIG to use that channel as the trigger. 
-Ground wires should go into the GND D. 
+FI00 wire should go into DIGITAL I/O 0, FI01 to DIGITAL I/O 1 and so forth.
+I plugged FI07 into the +5V TRIG to use that channel as the trigger.
+Ground wires should go into the GND D.
 <img src="/assets/post04/IMG_07.jpg" width="900">
 
 <br>  
@@ -70,14 +75,14 @@ Ground wires should go into the GND D.
 
 # Setting up Acquisition
 
-There are many ways to trigger the BIOPAC. 
-The most simple method is to have one channel open, trigger the channel each time a stimulus appears, and then record the order of the stimulus. 
+There are many ways to trigger the BIOPAC.
+The most simple method is to have one channel open, trigger the channel each time a stimulus appears, and then record the order of the stimulus.
 
 Open AcqKnowledge software and navigate to MP150 - Set Up Data Acquisition - Digital
 Configure the values as seen here and change the sampling rate to match your recording parameter.
 <img src="/assets/post04/labjack_setup01.png" width="900">
 
-If you want additional flexibility just add more channels to your recording (more info in next section). 
+If you want additional flexibility just add more channels to your recording (more info in next section).
 <img src="/assets/post04/labjack_digital01.png" width="900">
 
 
@@ -105,26 +110,26 @@ You can use one channel to record stimulus onsets and record the stimulus order 
 lj = labJack('verbose',false)
 % Send TTL trigger pulse
 % First argument is channel #, second value is duration in ms
-lj.timedTTL(0,200); 
+lj.timedTTL(0,200);
 ```
-Now when you record, you can record triggers like this. 
+Now when you record, you can record triggers like this.
 <img src="/assets/post04/labjack_setup02.png" width="900">
 
 # - Use multiple channels  
-Alternatively, you can use all 8 channels to account for 2^8 conditions for each number. 
+Alternatively, you can use all 8 channels to account for 2^8 conditions for each number.
 
 The value you send to BIOPAC will be converted to binary with each channel representing a digit.  
 
-For instance if you lj.setDIOValue(2,[255 255 255]);  
+For instance if you `lj.setDIOValue(2,[255 255 255]);`  
 The binary number is 0000010, [... FI02 FI01 FI00], so your FI01 channel will turn ON.  
-If you lj.setDIOValue(5,[255 255 255]);   
+If you `lj.setDIOValue(5,[255 255 255]);`
 The binary number is 0000101, [... FI02 FI01 FI00], so your FI02 and FI00 channel will turn ON.   
 
 ```
 % initialize
 lj = labJack('verbose',false)
 
-% Set all channel values to 2 
+% Set all channel values to 2
 lj.setDIOValue(2,[255 255 255]);
 
 % Set all channel values back to 0
@@ -145,7 +150,7 @@ Here are the scripts used to trigger labjack from Psychopy.
 # import psychopy labjack library
 from psychopy.hardware.labjacks import U3
 
-# Initialize labjack 
+# Initialize labjack
 lj = U3()
 
 # Get calibration info and turn FIO 0 to off (usually starts as ON)
@@ -158,9 +163,4 @@ lj.setFIOState(0,1)
 
 # At offset of event toggle FIO 0 to OFF
 lj.setFIOState(0,0)
-
 ```
-
-
-
-
