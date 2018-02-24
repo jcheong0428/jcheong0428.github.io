@@ -99,10 +99,12 @@ There are at least four distinct peaks, first at Jul 2010 (14K followers),
 second at Jan 2012 (9K followers),third at Dec 2012 (12K followers), and fourth at Jan 2016 (8K followers).
 Although these times coincide with crucial political events for Park (she announced to run for president in Jul 2010, became head of the party in Dec 2011, and won the election in Dec 2012),
 it still seems odd that mass amounts of people would **create accounts** within a sort period of time
-to start following her over time. **It wouldn't be surprising to see increases in followers happen in
+to start following her over time.
+
+**It wouldn't be surprising to see increases in followers happen in
 waves at times when the politician is receiving a lot of attention. HOWEVER, it is
-unusual and surprising if a distinct portion of your followers created their accounts at almost the same time.**
-And this is exactly the pattern we see in the histogram. 
+unusual and surprising if a distinct portion of your followers created their accounts at almost the same time.**  
+And this is exactly the pattern we see in the histogram.
 
 <br><br>
 
