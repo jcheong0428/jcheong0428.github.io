@@ -83,7 +83,7 @@ The first politician I scraped was the former 18th president Park Geun-Hye who t
 
 <iframe width="1100" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/90.embed"></iframe>
 
-At a first glance, I did not see much of a fake follower pattern here as seen in the [NYT article](https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html).
+At first glance, it is difficult to see much of a fake follower pattern here as seen in the [NYT article](https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html).
 Maybe you see some streaks spanning across around beginning of 2010, 2012, and 2013. There is an awkward streak of followers created around May 15, 2017 - May 29, 2017, that spans maybe 300 followers but nothing strongly evident. Perhaps all of Park's followers were legit but I thought if there is an imbalance of followers, you should be able to see it it in a histogram of followers binned by join date.
 
 <iframe width="1100" height="500" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/100.embed"></iframe>
@@ -95,9 +95,10 @@ There are at least four distinct peaks, first at Jul 2010 (14K followers),
 second at Jan 2012 (9K followers),third at Dec 2012 (12K followers), and fourth at Jan 2016 (8K followers).
 Although these times coincide with crucial political events for Park (she announced to run for president in Jul 2010, became head of the party in Dec 2011, and won the election in Dec 2012),
 it still seems odd that mass amounts of people would **create accounts** within a sort period of time
-to start following her over time. The more natural process would be to have had created Twitter
-accounts at distributed times but start following her around the same time in response to a political event.
-From this exercise, we could venture a guess that if Park's account has fake bot followers, they may have been created at those times with histogram peaks.
+to start following her over time. **It is highly likely that increase in followers happen in
+waves or in surges at times when the politician is receiving a lot of attention. HOWEVER, it is highly
+unusual that a distinct portion of your followers created their accounts at almost the same time.**
+And this is exactly the pattern we see in the histogram.
 
 <br><br>
 
@@ -106,18 +107,15 @@ Here is a look at [Lee Jung-Hee (@heenews)](https://twitter.com/heenews) who was
 one of the candidates for the 18th presidential election and was also a member of the
 National Assembly. She and her party has been removed from the assembly in December 2014
 after being criticized for being [pro-North Korean](https://en.wikipedia.org/wiki/Lee_Jung-hee).
-She joined Twitter on January 2010 and still has 271K followers.
+She joined Twitter on January 2010 and still has 271K followers. From here on I will start plotting
+the cumulative follower plot and the histogram side by side with the histogram rotated 90 degrees.
 
-<iframe width="1100" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/96.embed"></iframe>
+<iframe width="1100" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/120.embed"></iframe>
 
 Streaks of followers are more noticeable here that begins around late 2011 to
 early 2012. There is also another distinct horizontal streak around Dec 2012.
-
-<iframe width="1100" height="500" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/102.embed"></iframe>
-
-Again, the histogram confirms that there is an imbalance in the join dates of followers
-with huge peaks at Dec 2011 and Dec 2012 with 16.4K followers have created their account
-in December 2011.
+The histogram confirms that there is an imbalance in the join dates of followers
+with huge peaks at Dec 2011 and Dec 2012 that add up to 24K followers.
 
 
 <br><br>
