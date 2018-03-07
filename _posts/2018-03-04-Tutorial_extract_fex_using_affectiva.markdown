@@ -5,10 +5,12 @@ date:   2018-03-03 11:24:14 -0400
 categories: jekyll update
 ---
 [Affectiva](https://www.affectiva.com/) is one of the leaders in emotion recognition technology.
-And they generously provide a version of their emotion recognition software (Affdex) in the form of [Emotion SDKs](https://affectiva.readme.io/docs/using-the-emotion-sdk). This means that people can use their patented
-technology to develop new apps and websites free of charge.
+And they generously provide a version of their emotion recognition software (Affdex) in the form of [Emotion SDKs](https://affectiva.readme.io/docs/using-the-emotion-sdk). This means that people can use their patented technology to develop new apps and websites.
+They also have [sample apps](https://github.com/Affectiva/js-sdk-sample-apps)
+using the JavaScript SDK such as analyzing a [photo](https://jsfiddle.net/affectiva/h6p64vwg/show/)
+or a [camera stream](https://jsfiddle.net/affectiva/opyh5e8d/show/).
 
-Researchers like myself can also use their SDK to extract emotion predictions from videos we recorded in lab settings for further analyses. This tutorial is designed for those with a similar purpose.
+Researchers can also use their SDK to extract emotion predictions from videos we recorded in lab settings for further analyses. This tutorial is designed to help those with a similar purpose.
 
 To do this, I wrote a short html file that calls the Affectiva JavaScript Emotion SDK
 to extract emotion information from a video stored locally on my computer.
