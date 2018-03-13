@@ -82,7 +82,7 @@ for screen_name in screen_names:
 
 ---
 ### Analyzing follower data
-#### Park Geun-Hye (@GH_PARK, 385K followers)
+#### Park Geun-Hye ([@GH_PARK](https://twitter.com/GH_PARK), 385K followers)
 The first politician I scraped was the former 18th president Park Geun-Hye who took office on December 19th 2012. She joined Twitter on April 2010, has 385K followers, and was possibly the most influential conservative politician on Twitter. Here is the plot of the followers' join dates by the order in which they started following the account.
 
 <iframe width="800" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/90.embed"></iframe>
@@ -108,7 +108,7 @@ And this is exactly the pattern we see in the histogram.
 
 <br><br>
 
-#### Lee Jung-Hee (@heenews, 271K followers)
+#### Lee Jung-Hee ([@heenews](https://twitter.com/heenews), 271K followers)
 Here is a look at [Lee Jung-Hee (@heenews)](https://twitter.com/heenews) who was
 one of the candidates for the 18th presidential election and was also a member of the
 National Assembly. She and her party has been removed from the assembly in December 2014
@@ -132,18 +132,33 @@ with huge peaks at Dec 2011 and Dec 2012 that add up to 24K followers.
 Here are some other politicians with the two kinds of plots side by side.
 I rotated the histogram so it is easier to compare the streaky pattern to the histograms.
 
-#### Han Myeong-Sook (@HanMyeongSook, 240K followers)
+#### Moon Jae-In ([@moonriver365](https://twitter.com/moonriver365), 1.76M followers)
+Moon is the current president of South Korea and is active on Twitter with  1.76M followers.
+However, we can suspect that some portion of his followers are fake followers or bots as indicated by numerous horizontal streaks in the graph below. These horizontal patterns indicate tens of thousands of followers created in a very short time from each other which is very unnatural.
+
+<figure>
+<div style="text-align:center">
+  <a href="https://www.dropbox.com/s/i19t9hl8hffjovx/moonriver365.html?dl=1">
+  <img src="/assets/post12/moonriver365.svg" width="800">
+  <figcaption><p align="right"><i>Click image to download interactive graph</i>
+  </p></figcaption></a>
+</div>
+</figure>
+
+#### Rhyu Si-min ([@u_simin](https://twitter.com/u_simin), 712K followers)
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/118.embed"></iframe>
+
+#### Han Myeong-Sook ([@HanMyeongSook](https://twitter.com/HanMyeongSook), 240K followers)
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/114.embed"></iframe>
 
-#### Chun Jung-bae (@jb_1000, 202K followers)
+#### Chun Jung-bae ([@jb_1000](https://twitter.com/jb_1000), 202K followers)
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/104.embed"></iframe>
 
-#### Kang Gi-Gap (@kanggigap, 140K followers)
+#### Kang Gi-Gap ([@kanggigap](https://twitter.com/kanggigap), 140K followers)
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/106.embed"></iframe>
 
-Just like Lee Jung-Hee, also has surge of followers created on Dec 2012.
 
-#### Won Hee-Ryong (@wonheeryong, 45.1K followers)
+#### Won Hee-Ryong ([@wonheeryong](https://twitter.com/wonheeryong), 45.1K followers)
 <iframe width="800" height="600" frameborder="0" scrolling="no" src="//plot.ly/~jcheong0428/108.embed"></iframe>
 
 
