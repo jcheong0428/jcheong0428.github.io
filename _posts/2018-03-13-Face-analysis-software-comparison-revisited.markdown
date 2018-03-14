@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Face analysis software comparison: Affectiva vs OpenFace vs iMotion-Emotient (FACET)"
-date:   2018-03-13 11:24:14 -0400
+date:   2018-03-13 00:00:00 -0400
 categories: jekyll update
 ---
 
@@ -79,4 +79,4 @@ much more data and naturalistic data compared to OpenFace or FACET.
 However, one possibility is that the way I use their API as outlined in my [tutorial](http://jinhyuncheong.com/jekyll/update/2018/03/03/Tutorial_extract_fex_using_affectiva.html)
 may not be the optimal way to use their algorithm.
 
-If you are interested in validation of the algorithms, check out this [paper by Stockli and colleagues (2017)](https://link.springer.com/article/10.3758/s13428-017-0996-1) in Behavior Research Methods. They also find that the FACET engine outperforms Affectiva's AFFDEX. 
+If you are interested in validation of the algorithms, check out this [paper by Stockli and colleagues (2017)](https://link.springer.com/article/10.3758/s13428-017-0996-1) in Behavior Research Methods. They also find that the FACET engine outperforms Affectiva's AFFDEX.
