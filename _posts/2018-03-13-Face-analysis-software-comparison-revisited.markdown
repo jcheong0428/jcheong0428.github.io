@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Face analysis software comparison: Affectiva vs OpenFace vs iMotion-Emotient (FACET)"
+title:  "Face analysis software comparison: Affectiva (AFFDEX) vs OpenFace vs Emotient (FACET)"
 date:   2018-03-13 00:00:00 -0400
 categories: jekyll update
 ---
