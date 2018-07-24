@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using OpenFace-Cambridge Face Expression Toolbox [updated]"
-date:   2017-07-23 11:24:14 -0400
+date:   2018-07-23 11:24:14 -0400
 categories: jekyll update
 ---
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) is a powerful toolkit that provides facial landmark detection, pose tracking, action unit recognition, gaze tracking, and facial feature extractions. Here I share the simple way to setup OpenFace using a Docker container.
