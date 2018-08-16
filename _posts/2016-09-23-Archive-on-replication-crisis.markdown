@@ -3,6 +3,7 @@ layout: post
 title:  "Archive for articles on replication crisis"
 date:   2016-09-23 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 
 # Articles on psychology crisis
@@ -35,6 +36,3 @@ categories: jekyll update
 [Pre-registered natural observation shows self-control does not diminish in later time of day](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0182980)
 
 [APS description of RRR-Registered Replication Reports](http://www.psychologicalscience.org/index.php/replication)
-
-
-

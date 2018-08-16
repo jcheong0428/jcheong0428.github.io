@@ -3,6 +3,7 @@ layout: post
 title:  "Code repo for Git"
 date:   2016-12-15 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 
 # creating a new branch for making pull requests
@@ -34,7 +35,3 @@ python setup.py sdist upload -r pypitest
 python setup.py register -r pypi
 python setup.py sdist upload -r pypi
 ```
-
-
-
-

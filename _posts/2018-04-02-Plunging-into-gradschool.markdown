@@ -3,6 +3,7 @@ layout: post
 title:  "Taking the plunge into Dartmouth-shire"
 date:   2018-04-05 00:00:00 -0400
 categories: jekyll update
+comments: true
 ---
 
 When I applied to graduate schools in 2015, I was ready to spend the next

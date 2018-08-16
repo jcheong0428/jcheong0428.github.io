@@ -3,6 +3,7 @@ layout: post
 title:  "Setting up LabJack to trigger BIOPAC with MATLAB or Psychopy"
 date:   2016-06-16 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 <figure>
   <img src="/assets/post04/U3-labjack.JPG" width="1300">

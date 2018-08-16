@@ -3,12 +3,13 @@ layout: post
 title:  "Scripting in mricroGL for reproducible brain figures"
 date:   2017-03-16 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
-[mricroGL](http://www.mccauslandcenter.sc.edu/mricrogl/home) is a powerful program to produce high-resolution brain figures for posters and papaers. However the GUI is tricky to use and it doesn't provide numerical feedback so it is difficult to produce the same slice of a brain using different masks. 
+[mricroGL](http://www.mccauslandcenter.sc.edu/mricrogl/home) is a powerful program to produce high-resolution brain figures for posters and papaers. However the GUI is tricky to use and it doesn't provide numerical feedback so it is difficult to produce the same slice of a brain using different masks.
 
-One way to overcome this is to use scripting. The scripting terminal can be accessed by clicking on `View - Scripting`. Then you can input in some basic information through the following code. Be sure to replace the `/PATH/TO/OVERLAY/OVERALY.nii.gz` with an actual mask file. 
+One way to overcome this is to use scripting. The scripting terminal can be accessed by clicking on `View - Scripting`. Then you can input in some basic information through the following code. Be sure to replace the `/PATH/TO/OVERLAY/OVERALY.nii.gz` with an actual mask file.
 
-Here is a code to produce a coronal slice looking at the striatum. 
+Here is a code to produce a coronal slice looking at the striatum.
 
 ### Coronal Slice
 ```
@@ -29,16 +30,16 @@ END.
 After running the script I usually slide overAlpha from the GUI to 0 to get rid of the masks that remain protruding the brain. I don't think it's an option in scripting yet*.
 *Jeroen van Baar has notified me that you can actually also script the overAlpha by adding `SHADERADJUST('overAlpha', 0);`
 
-The output would look something like this. 
+The output would look something like this.
 
 <figure>
   <img src="/assets/post09/coronal.png" width="500">
 </figure>
 
-The `AZIMUTHELEVATION` controls the view angle and `CUTOUT` controls the slice. 
-The slice values are in ratios from the whole brain. Thus to change the view or slice you only need to modify the values for those two functions. 
+The `AZIMUTHELEVATION` controls the view angle and `CUTOUT` controls the slice.
+The slice values are in ratios from the whole brain. Thus to change the view or slice you only need to modify the values for those two functions.
 
-A lateral slice can be obtained by switching the last two lines with. 
+A lateral slice can be obtained by switching the last two lines with.
 
 ```
 	AZIMUTHELEVATION(0,90);
@@ -49,7 +50,7 @@ A lateral slice can be obtained by switching the last two lines with.
 </figure>
 
 
-A saggital slice can be obtained by switching the last two lines with. 
+A saggital slice can be obtained by switching the last two lines with.
 ```
 	AZIMUTHELEVATION(-90,0);
 	CUTOUT(1,0,0,0.5,1,1);

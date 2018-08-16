@@ -3,6 +3,7 @@ layout: post
 title:  "Tipping in NYC taxis"
 date:   2016-05-04 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 
 <figure>
@@ -11,12 +12,12 @@ categories: jekyll update
   </p></figcaption>
 </figure>
 
-This is a quick analysis on how people tipped NYC cabs in 2013. 
-The data was retrieved from [Chris Whong's blog](http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/). It's a sizeable dataset and an amazing visualization came out of it called [NYC Taxis: A Day in the Life](http://nyctaxi.herokuapp.com/). I got interested in the dataset and wanted to look at how people tip in NYC cabs. 
+This is a quick analysis on how people tipped NYC cabs in 2013.
+The data was retrieved from [Chris Whong's blog](http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/). It's a sizeable dataset and an amazing visualization came out of it called [NYC Taxis: A Day in the Life](http://nyctaxi.herokuapp.com/). I got interested in the dataset and wanted to look at how people tip in NYC cabs.
 
 # Tips by payment type
 
-After cleaning up the dataset, I first noticed that more than half the rides were paid by credit card. 
+After cleaning up the dataset, I first noticed that more than half the rides were paid by credit card.
 
 <figure>
   <img src="/assets/post01/CashCreditTipPercent.png" width="1300">
@@ -24,17 +25,17 @@ After cleaning up the dataset, I first noticed that more than half the rides wer
   </p></figcaption>
 </figure>
 
-When people pay by cash, it turns out tip is not recorded for 99% of the rides. I'm not sure if this is because drivers can't record tip into their meter or if they just don't bother. One thing I do know is that there are at least 6639 cases of tip recorded when paid in cash. 
+When people pay by cash, it turns out tip is not recorded for 99% of the rides. I'm not sure if this is because drivers can't record tip into their meter or if they just don't bother. One thing I do know is that there are at least 6639 cases of tip recorded when paid in cash.
 
 When people pay by card, the tip is automatically recorded. and it shows a nice distribution of tip percentage with about 40% of passengers paying tips of 20%.    
 <br>
 
 # Tips by group size
-The main question I wanted to examine was whether people's tip change as a function of group size. 
+The main question I wanted to examine was whether people's tip change as a function of group size.
 
-This is a question that one can easily see going two ways. I might be inclined to tip more in a group than alone because 1) I feel social pressure, or 2) I feel like I owe more service because the driver dealt with more people. 
+This is a question that one can easily see going two ways. I might be inclined to tip more in a group than alone because 1) I feel social pressure, or 2) I feel like I owe more service because the driver dealt with more people.
 
-Alternatively, I might tip less in a larger group because 1) diffusion of responsibility, or 2) I feel less connected to the driver since the service is distributed to the group than concentrated on me. 
+Alternatively, I might tip less in a larger group because 1) diffusion of responsibility, or 2) I feel less connected to the driver since the service is distributed to the group than concentrated on me.
 
 Here is the result:
 
@@ -44,7 +45,7 @@ Here is the result:
   </p></figcaption>
 </figure>
 
-Consistent with the second idea, tip percentage tends to decrease as group size gets larger. 
+Consistent with the second idea, tip percentage tends to decrease as group size gets larger.
 
 This is consistent with findings in [restaurants](http://scholarship.sha.cornell.edu/cgi/viewcontent.cgi?article=1036&context=articles), where larger groups tend to tip less than smaller groups.
 

@@ -3,9 +3,10 @@ layout: post
 title:  "Interpreting coefficients in regressions with continuous and categorical variable interactions"
 date:   2017-11-30 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 
-The ability to understand and interpret the results of regressions is fundamental for effective data analysis. Often however, it is difficult to fully understand what happens behind the scenes when we specify and estimate a model in softwares such as R. Understanding how each term was represented in estimating the model is critical to interpret the model results accurately. 
+The ability to understand and interpret the results of regressions is fundamental for effective data analysis. Often however, it is difficult to fully understand what happens behind the scenes when we specify and estimate a model in softwares such as R. Understanding how each term was represented in estimating the model is critical to interpret the model results accurately.
 
 Once common mistake is interpreting the coefficient of a continuous variable as the average main effect when you have a categorical variable that interacts with the continuous variable. Here I provide the R code to demonstrate and explain why you cannot simply interpret the coefficient as the main effect unless you have specified a contrast.
 
@@ -54,14 +55,14 @@ m <- lm('Income~Age*Gender',data=data)
 summary(m)
 ```
 
-    ## 
+    ##
     ## Call:
     ## lm(formula = "Income~Age*Gender", data = data)
-    ## 
+    ##
     ## Residuals:
-    ##     Min      1Q  Median      3Q     Max 
-    ## -3.4916 -0.4905 -0.0051  0.5044  3.2038 
-    ## 
+    ##     Min      1Q  Median      3Q     Max
+    ## -3.4916 -0.4905 -0.0051  0.5044  3.2038
+    ##
     ## Coefficients:
     ##                Estimate Std. Error t value Pr(>|t|)    
     ## (Intercept)     3.00000    0.02521  118.99   <2e-16 ***
@@ -70,9 +71,9 @@ summary(m)
     ## Age:GenderMale  0.50000    0.03567   14.02   <2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
+    ##
     ## Residual standard error: 0.7973 on 1996 degrees of freedom
-    ## Multiple R-squared:  0.4921, Adjusted R-squared:  0.4913 
+    ## Multiple R-squared:  0.4921, Adjusted R-squared:  0.4913
     ## F-statistic: 644.6 on 3 and 1996 DF,  p-value: < 2.2e-16
 
 The model summary prints coefficients for the Intercept, Age, GenderMale, Age:GenderMale. The effect of Age is .30 which is **NOT the average effect controlling for gender but the effect for the Female group**. The effect of GenderMale is $-1 which is how much Male earn less than Female which is the Intercept $3. Lastly, the interaction Age:GenderMale is how much more Income correlates with Age for Male in addition to Female.
@@ -96,14 +97,14 @@ m <- lm('Income~Age*Gender',data=data)
 summary(m)
 ```
 
-    ## 
+    ##
     ## Call:
     ## lm(formula = "Income~Age*Gender", data = data)
-    ## 
+    ##
     ## Residuals:
-    ##     Min      1Q  Median      3Q     Max 
-    ## -3.4916 -0.4905 -0.0051  0.5044  3.2038 
-    ## 
+    ##     Min      1Q  Median      3Q     Max
+    ## -3.4916 -0.4905 -0.0051  0.5044  3.2038
+    ##
     ## Coefficients:
     ##             Estimate Std. Error t value Pr(>|t|)    
     ## (Intercept)  2.50000    0.01783  140.23   <2e-16 ***
@@ -112,9 +113,9 @@ summary(m)
     ## Age:Gender1  0.50000    0.03567   14.02   <2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
+    ##
     ## Residual standard error: 0.7973 on 1996 degrees of freedom
-    ## Multiple R-squared:  0.4921, Adjusted R-squared:  0.4913 
+    ## Multiple R-squared:  0.4921, Adjusted R-squared:  0.4913
     ## F-statistic: 644.6 on 3 and 1996 DF,  p-value: < 2.2e-16
 
 We get four terms again but they are specified as Intercept, Age, Gender1, and Age:Gender1.   
@@ -154,14 +155,14 @@ m <- lm('Income~Age*Gender',data=data)
 summary(m)
 ```
 
-    ## 
+    ##
     ## Call:
     ## lm(formula = "Income~Age*Gender", data = data)
-    ## 
+    ##
     ## Residuals:
-    ##     Min      1Q  Median      3Q     Max 
-    ## -3.4916 -0.4905 -0.0051  0.5044  3.2038 
-    ## 
+    ##     Min      1Q  Median      3Q     Max
+    ## -3.4916 -0.4905 -0.0051  0.5044  3.2038
+    ##
     ## Coefficients:
     ##             Estimate Std. Error t value Pr(>|t|)    
     ## (Intercept)  3.00000    0.02521  118.99   <2e-16 ***
@@ -170,9 +171,9 @@ summary(m)
     ## Age:Gender2  0.50000    0.03567   14.02   <2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
+    ##
     ## Residual standard error: 0.7973 on 1996 degrees of freedom
-    ## Multiple R-squared:  0.4921, Adjusted R-squared:  0.4913 
+    ## Multiple R-squared:  0.4921, Adjusted R-squared:  0.4913
     ## F-statistic: 644.6 on 3 and 1996 DF,  p-value: < 2.2e-16
 
 If you run the model *without* the interaction, then even if your categorical variables are dummy coded, the main effect of Age is the **average effect controlling for Gender** as you would expect.
@@ -182,14 +183,14 @@ m <- lm('Income~Age+Gender',data=data)
 summary(m)
 ```
 
-    ## 
+    ##
     ## Call:
     ## lm(formula = "Income~Age+Gender", data = data)
-    ## 
+    ##
     ## Residuals:
-    ##     Min      1Q  Median      3Q     Max 
-    ## -3.5525 -0.5102 -0.0055  0.5424  3.2461 
-    ## 
+    ##     Min      1Q  Median      3Q     Max
+    ## -3.5525 -0.5102 -0.0055  0.5424  3.2461
+    ##
     ## Coefficients:
     ##             Estimate Std. Error t value Pr(>|t|)    
     ## (Intercept)  3.00000    0.02642  113.56   <2e-16 ***
@@ -197,7 +198,7 @@ summary(m)
     ## Gender2     -1.00000    0.03736  -26.77   <2e-16 ***
     ## ---
     ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-    ## 
+    ##
     ## Residual standard error: 0.8354 on 1997 degrees of freedom
-    ## Multiple R-squared:  0.4421, Adjusted R-squared:  0.4416 
+    ## Multiple R-squared:  0.4421, Adjusted R-squared:  0.4416
     ## F-statistic: 791.3 on 2 and 1997 DF,  p-value: < 2.2e-16

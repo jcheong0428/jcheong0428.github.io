@@ -3,6 +3,7 @@ layout: post
 title:  "How to use the Discovery cluster at Dartmouth"
 date:   2016-07-24 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 <figure>
   <img src="/assets/post05/Discovery.png" width="966">
@@ -10,9 +11,9 @@ categories: jekyll update
   </p></figcaption>
 </figure>
 
-Here is a quick memo on how to use the [Discovery Cluster](http://techdoc.dartmouth.edu/discovery/) at Dartmouth. 
+Here is a quick memo on how to use the [Discovery Cluster](http://techdoc.dartmouth.edu/discovery/) at Dartmouth.
 
-# How to log in 
+# How to log in
 
 ```
 ssh username@discovery.dartmouth.edu
@@ -38,7 +39,7 @@ myqstat
 ```
 
 # how to submit a job  
-You submit a job using the ```qsub``` command. 
+You submit a job using the ```qsub``` command.
 Couple of options
 -N : name of job
 -M : my email address
@@ -52,10 +53,10 @@ qsub -N <name of job> -M <my email> -m bea -l walltime=<hh:mm:ss> <job script>
 ```
 
 # how to make a job script
-You can either upload a job script by using rsync or create a bash script on Discovery by vim. 
+You can either upload a job script by using rsync or create a bash script on Discovery by vim.
 
 ```
-rsync -azvPh origin/filepath/filename username@discovery.dartmouth.edu:/destination/filepath/filename 
+rsync -azvPh origin/filepath/filename username@discovery.dartmouth.edu:/destination/filepath/filename
 ```
 
 Sample bash script that calls a python script to do things  
@@ -73,7 +74,7 @@ python <python job script>
 ```
 
 Sample python script that generates multiple bash scripts to distribute jobs onto separate cores (originally by [Luke Chang](cosanlab.com)).
-The module designates what version of python + packages you are using. 
+The module designates what version of python + packages you are using.
 
 
 ```
@@ -112,7 +113,7 @@ python FNL_DRSA_bootstrap_episode.py " + str(epn) + " \n\
 
 ```
 
-# How to kill all jobs 
+# How to kill all jobs
 ```qselect -u jcheong | xargs qdel```
 
 # How to start an interactive node

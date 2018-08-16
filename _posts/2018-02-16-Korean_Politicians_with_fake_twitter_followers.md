@@ -3,6 +3,7 @@ layout: post
 title:  "Korean Politicians with Fake Twitter Followers"
 date:   2018-02-15 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 
 Inspired by the New York Times article [The Follower Factory](https://www.nytimes.com/interactive/2018/01/27/technology/social-media-bots.html)

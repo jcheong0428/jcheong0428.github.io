@@ -3,10 +3,11 @@ layout: post
 title:  "Emotion Synchrony to Naturalistic Stimuli"
 date:   2017-03-15 11:24:14 -0400
 categories: jekyll update
+comments: true
 ---
 
 Here we present different facial expressions of participants watching a TV show.   
-You will need a password to view these videos. 
+You will need a password to view these videos.
 
 ## Joy
 <figure>
@@ -14,7 +15,7 @@ You will need a password to view these videos.
 </figure>
 [Joy Scene 1](https://www.dropbox.com/s/yhibitmxhapsplz/Joy_TomCruiseGetsScientological.mp4?dl=0)
 
-## Smirk 
+## Smirk
 <figure>
   <img src="/assets/post08/Smirk1.png" width="500">
 </figure>
@@ -26,7 +27,7 @@ You will need a password to view these videos.
 </figure>
 [Surprise Scene 1](https://www.dropbox.com/s/7bds5trey81tr5i/Surprise_StreetGoesDown.mp4?dl=0)
 
-## Surprise & Joy 
+## Surprise & Joy
 <figure>
   <img src="/assets/post08/SurpJoy1.png" width="500">
 </figure>
@@ -42,7 +43,7 @@ You will need a password to view these videos.
 </figure>
 [Disgust Scene 1](https://www.dropbox.com/s/0fprylvapl7ljhs/Disgust_StreetSurgery.mp4?dl=0)
 
-## Sadness 
+## Sadness
 <figure>
   <img src="/assets/post08/Sad1.png" width="500">
 </figure>
