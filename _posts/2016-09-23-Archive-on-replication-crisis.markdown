@@ -4,6 +4,7 @@ title:  "Archive for articles on replication crisis"
 date:   2016-09-23 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: archive replication
 ---
 
 # Articles on psychology crisis

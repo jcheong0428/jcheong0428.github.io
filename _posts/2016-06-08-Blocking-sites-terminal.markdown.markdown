@@ -4,6 +4,7 @@ title:  "Blocking Sites Using Mac Terminal"
 date:   2016-06-08 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: unix terminal 
 ---
 <figure>
   <img src="/assets/post02/Facebook-Wasting-Lives.png" width="1300" height="400">

@@ -4,6 +4,7 @@ title:  "How to use the Discovery cluster at Dartmouth"
 date:   2016-07-24 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: unix terminal cluster
 ---
 <figure>
   <img src="/assets/post05/Discovery.png" width="966">

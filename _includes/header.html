@@ -18,7 +18,9 @@
         {% assign sorted_pages = site.pages | sort:"order" %}
         {% for my_page in sorted_pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% if my_page.layout == "page" %}
+            <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% endif %}
           {% endif %}
         {% endfor %}
         <a class="page-link" href="{{ site.baseurl }}/affectiva-app/affectiva_emotion_detector_photo.html">EmotionDetector</a>

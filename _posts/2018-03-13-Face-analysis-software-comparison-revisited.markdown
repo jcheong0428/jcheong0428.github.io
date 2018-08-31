@@ -4,6 +4,7 @@ title:  "Face analysis software comparison: Affectiva (AFFDEX) vs OpenFace vs Em
 date:   2018-03-13 00:00:00 -0400
 categories: jekyll update
 comments: true
+tags: emotions facial-expressions affectiva affdex openface emotient facet imotions analysis data
 ---
 
 In my previous [post](http://jinhyuncheong.com/jekyll/update/2017/10/20/Face-analysis-software-comparison.html),

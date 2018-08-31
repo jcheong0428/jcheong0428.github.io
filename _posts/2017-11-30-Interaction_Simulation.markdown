@@ -4,6 +4,7 @@ title:  "Interpreting coefficients in regressions with continuous and categorica
 date:   2017-11-30 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: statistics regression r simulation
 ---
 
 The ability to understand and interpret the results of regressions is fundamental for effective data analysis. Often however, it is difficult to fully understand what happens behind the scenes when we specify and estimate a model in softwares such as R. Understanding how each term was represented in estimating the model is critical to interpret the model results accurately.

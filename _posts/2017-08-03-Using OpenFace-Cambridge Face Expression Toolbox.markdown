@@ -4,6 +4,7 @@ title:  "Using OpenFace-Cambridge Face Expression Toolbox"
 date:   2017-08-03 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: emotion openface docker facial-expressions emotions
 ---
 [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) is a powerful toolkit that provides facial landmark detection, pose tracking, action unit recognition, gaze tracking, and facial feature extractions. Here I share the simple way to setup OpenFace using a Docker container.
 

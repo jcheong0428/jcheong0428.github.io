@@ -4,6 +4,7 @@ title:  "Code repo for Git"
 date:   2016-12-15 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: git github
 ---
 
 # creating a new branch for making pull requests
