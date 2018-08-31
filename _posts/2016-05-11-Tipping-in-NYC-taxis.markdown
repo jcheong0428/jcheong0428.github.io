@@ -4,6 +4,7 @@ title:  "Tipping in NYC taxis"
 date:   2016-05-04 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: data analysis python
 ---
 
 <figure>

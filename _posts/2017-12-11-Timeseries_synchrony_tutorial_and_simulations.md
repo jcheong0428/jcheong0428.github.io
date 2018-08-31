@@ -4,6 +4,7 @@ title:  "Signal processing tutorial on FFT, instantaneous phase synchrony, and r
 date:   2017-12-10 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: statistics python simulation timeseries fft phase-synchrony
 ---
 
 This notebook is designed to serve as an introduction to signal processing and synchrony measures between timeseries using instantaneous phase synchrony and rolling window correlations.

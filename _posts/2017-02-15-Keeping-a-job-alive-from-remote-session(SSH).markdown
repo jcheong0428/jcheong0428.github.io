@@ -4,6 +4,7 @@ title:  "Keeping a job alive from remote session (SSH)"
 date:   2017-02-15 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: unix terminal session
 ---
 
 # How to leave a session open so that the job

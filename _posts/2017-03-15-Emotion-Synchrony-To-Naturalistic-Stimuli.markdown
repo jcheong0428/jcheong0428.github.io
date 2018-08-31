@@ -4,6 +4,7 @@ title:  "Emotion Synchrony to Naturalistic Stimuli"
 date:   2017-03-15 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: data analysis python emotions videos
 ---
 
 Here we present different facial expressions of participants watching a TV show.   

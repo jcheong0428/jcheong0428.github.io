@@ -28,6 +28,15 @@ layout: default
     {{ content }}
   </div>
 
+  <span>
+  Tags:&nbsp;&nbsp;
+    {% for tag in page.tags %}
+      {% capture tag_name %}{{ tag }}{% endcapture %}
+      <a href="/tag/{{ tag_name }}"><code class="highligher-rouge"><nobr>{{ tag_name }}</nobr></code></a>
+      &nbsp;
+    {% endfor %}
+  </span>
+
   {% if page.comments %}
   <div id="disqus_thread"></div>
 

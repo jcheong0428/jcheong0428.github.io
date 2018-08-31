@@ -4,6 +4,7 @@ title:  "Affectiva JavaScript Emotion SDK Tutorial"
 date:   2018-03-03 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: affectiva facial-expressions emotions analysis data
 ---
 [Affectiva](https://www.affectiva.com/) is one of the leaders in emotion recognition technology.
 And they generously provide a version of their emotion recognition software (Affdex) in the form of [Emotion SDKs](https://affectiva.readme.io/docs/using-the-emotion-sdk). This means that people can use their patented technology to develop new apps and websites.

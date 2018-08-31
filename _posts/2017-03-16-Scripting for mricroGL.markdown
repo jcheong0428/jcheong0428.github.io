@@ -4,6 +4,7 @@ title:  "Scripting in mricroGL for reproducible brain figures"
 date:   2017-03-16 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: mricrogl fmri
 ---
 [mricroGL](http://www.mccauslandcenter.sc.edu/mricrogl/home) is a powerful program to produce high-resolution brain figures for posters and papaers. However the GUI is tricky to use and it doesn't provide numerical feedback so it is difficult to produce the same slice of a brain using different masks.
 

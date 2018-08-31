@@ -4,6 +4,7 @@ title:  "Face analysis software comparison: OpenFace vs iMotion-Emotient (FACET)
 date:   2017-10-20 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: openface imotions emotient facet facial-expressions emotions
 ---
 
 # Facial expression analysis software comparison: OpenFace vs iMotions-Emotient (FACET)

@@ -4,6 +4,7 @@ title:  "Summer school comparison: Neurohackademy vs Methods in Neuroscience at 
 date:   2018-07-29 11:24:14 -0400
 categories: jekyll update
 comments: true
+tags: grad-school life tips
 ---
 
 For graduate students, postdocs, and young faculty, summer schools are a
