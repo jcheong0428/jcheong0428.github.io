@@ -23,7 +23,7 @@ I would recommend MIND if you want to focus more on learning advanced analytic m
 that you were curious about or wanted to apply to your own data. The topics offered
 at MIND change from year to year but a core theme seems to be methods useful
 for analyzing naturalistic and multidimensional data with temporal, linguistic,
-and interpersonal dynamics. Personally, I would recommend go to Neurohackademy in
+and interpersonal dynamics. Personally, I would recommend going to Neurohackademy in
 the first/second year of grad school and then check out MIND in later years.**
 
 <br>
