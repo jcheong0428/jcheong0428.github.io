@@ -128,15 +128,16 @@ for train_ix, test_ix in logo.split(X,y,groups):
         clf.fit(X_train,y_train_shuffled)
         score = clf.score(X_test,y_test)
         permuted_scores.append(score)
+train_shuffled_score = np.mean(permuted_scores)
+score_percentile = np.mean(mean_score < permuted_scores)
+title = f'True score percentile : {score_percentile}'
 
 f, ax = plt.subplots()
 plt.hist(permuted_scores,bins=15)
-ax.axvline(np.mean(permuted_scores),color='k',linestyle='--',label='chance')
+ax.axvline(train_shuffled_score,color='k',linestyle='--',label='Chance')
 ax.axvline(mean_score,color='r',linestyle='--',label='True classification score')
-ax.set(xlim=[0.1,.9])
+ax.set(xlim=[0.1,.9],xlabel='Accuracy (%)',ylabel='Count',title = title)
 plt.legend()
-score_percentile = np.mean(mean_score < permuted_scores)
-print(f'\nPercentile : {score_percentile}')
 ```
 
 <div style="text-align:center">
