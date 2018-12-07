@@ -195,4 +195,4 @@ Here are some papers regarding this matter:
        Performance.  The Journal of Machine Learning Research (2010)
        vol. 11](http://www.jmlr.org/papers/volume11/ojala10a/ojala10a.pdf)
 
-*This post has also been published with (Towards Data Science on Medium)[https://towardsdatascience.com/chance-is-not-enough-evaluating-model-significance-with-permutations-e3b17de6ba04].*
+*This post has also been published with [Towards Data Science on Medium](https://towardsdatascience.com/chance-is-not-enough-evaluating-model-significance-with-permutations-e3b17de6ba04).*
