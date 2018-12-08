@@ -16,7 +16,7 @@ url: "http://jinhyuncheong.com" # the base hostname & protocol for your site
 twitter_username: jcheong0428
 github_username:  jcheong0428
 instagram_username: real_sage
-image: "http://jinhyuncheong.com/assets/JinHyunCheong.jpg"
+og:image: "http://jinhyuncheong.com/assets/JinHyunCheong.jpg"
 # Build settings
 markdown: kramdown
 plugins:
