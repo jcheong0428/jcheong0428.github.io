@@ -17,7 +17,7 @@ Here is a quick memo on how to use the [Discovery Cluster](http://techdoc.dartmo
 # How to log in
 
 ```
-ssh username@discovery.dartmouth.edu
+ssh username@discovery7.hpcc.dartmouth.edu
 ```
 
 # How to make an easier way to log in by setting an alias
@@ -25,7 +25,7 @@ Go into .bash_profile or .bashrc (using ```vim .bash_profile```) and add the fol
 
 ```
 # Alias for Discovery
-alias discovery="ssh username@discovery.dartmouth.edu"
+alias discovery="ssh username@discovery7.hpcc.dartmouth.edu"
 ```
 Restart your terminal or ```source .bash_profile``` and type ```discovery``` to quickly access the cluster
 
@@ -119,3 +119,10 @@ python FNL_DRSA_bootstrap_episode.py " + str(epn) + " \n\
 
 # How to start an interactive node
 ```qsub -I -l walltime=04:00:00```
+
+# How to use GPU node interactively
+```
+qsub -I -q gpuq -l feature=gpu -l walltime=00:10:00
+module add cuda/9.0-cuDNNv7
+source activate py36
+```
