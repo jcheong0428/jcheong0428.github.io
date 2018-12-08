@@ -5,7 +5,11 @@
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:image" content="http://jinhyuncheong.com/assets/JinHyunCheong.jpg">
+  {% if page.image %}
+    <meta property="og:image" content={{page.image}}>
+  {% else %}
+    <meta property="og:image" content={{site.image}}>
+  {% endif %}
   {% if site.tags != "" %}
     {% include collecttags.html %}
   {% endif %}
