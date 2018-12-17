@@ -122,7 +122,7 @@ python FNL_DRSA_bootstrap_episode.py " + str(epn) + " \n\
 
 # How to use GPU node interactively
 ```
-qsub -I -q gpuq -l feature=gpu -l walltime=00:10:00
+qsub -I -q gpuq -l feature=gpu -l gpus=4 -l walltime=00:10:00
 module add cuda/9.0-cuDNNv7
 source activate py36
 ```
