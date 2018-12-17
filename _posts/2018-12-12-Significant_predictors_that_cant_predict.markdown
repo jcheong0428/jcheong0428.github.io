@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Why models with significant variables can be useless predictors"
-date:   2018-12-05 11:24:14 -0400
+date:   2018-12-12 11:24:14 -0400
 categories: jekyll update
 comments: true
 tags: machine-learning significance permutations analysis data prediction
