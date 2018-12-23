@@ -4,13 +4,11 @@ title:  "Blocking Sites Using Mac Terminal"
 date:   2016-06-08 11:24:14 -0400
 categories: jekyll update
 comments: true
-tags: unix terminal 
+tags: unix terminal
 ---
-<figure>
-  <img src="/assets/post02/Facebook-Wasting-Lives.png" width="1300" height="400">
-  <figcaption><p align="right"><i>http://www.makeuseof.com/</i>
-  </p></figcaption>
-</figure>
+<div style="text-align:center">
+<img src="/assets/post02/main.jpg"  width="750">  
+</div><br>
 
 This is a quick way to block sites that cause distraction in workspace.
 I find it useful to stop myself from habitually checking websites at work.

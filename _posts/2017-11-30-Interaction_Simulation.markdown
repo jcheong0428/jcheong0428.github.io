@@ -7,6 +7,10 @@ comments: true
 tags: statistics regression r simulation
 ---
 
+<div style="text-align:center">
+<img src="/assets/post20171130/main.jpg" width="750">  
+</div><br>
+
 The ability to understand and interpret the results of regressions is fundamental for effective data analysis. Often however, it is difficult to fully understand what happens behind the scenes when we specify and estimate a model in softwares such as R. Understanding how each term was represented in estimating the model is critical to interpret the model results accurately.
 
 Once common mistake is interpreting the coefficient of a continuous variable as the average main effect when you have a categorical variable that interacts with the continuous variable. Here I provide the R code to demonstrate and explain why you cannot simply interpret the coefficient as the main effect unless you have specified a contrast.

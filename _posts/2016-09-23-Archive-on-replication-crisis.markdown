@@ -7,6 +7,10 @@ comments: true
 tags: archive replication
 ---
 
+<div style="text-align:center">
+<img src="/assets/post20160923/main.jpg" width="750">  
+</div><br>
+
 # Articles on psychology crisis
 [Mob Rule or Wisdom of Crowds by Susan Fiske](https://www.dropbox.com/s/9zubbn9fyi1xjcu/Fiske%20presidential%20guest%20column_APS%20Observer_copy-edited.pdf)
 
