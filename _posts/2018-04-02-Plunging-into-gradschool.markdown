@@ -7,6 +7,12 @@ comments: true
 tags: grad-school life tips
 ---
 
+<figure>
+<div style="text-align:center">
+  <img  src="/assets/post20180405/main.jpg" width="560">
+</div>
+</figure>
+
 When I applied to graduate schools in 2015, I was ready to spend the next
 five years of my life in sunshine California. Unfortunately, I was rejected by
 all [f](https://www.stanford.edu/)[o](https://www.berkeley.edu)[u](https://www.ucla.edu/

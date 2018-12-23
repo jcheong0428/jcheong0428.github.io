@@ -20,7 +20,7 @@ tags: ffmpeg code videos tips python archive
 ffmpeg is the powerhouse for simple processing of videos.
 You can use simple commands to resample, resize, cut, append, and combine videos.
 You can also break a video into frames or create a video from multiple images.
-Here are some basic useful commands to get started. 
+Here are some basic useful commands to get started.
 
 ## Converting frame rate of videos.
 ```

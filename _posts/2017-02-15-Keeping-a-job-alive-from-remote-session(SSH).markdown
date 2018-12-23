@@ -7,6 +7,10 @@ comments: true
 tags: unix terminal session
 ---
 
+<div style="text-align:center">
+<img src="/assets/post20170215/main.jpg" width="750">  
+</div><br>
+
 # How to leave a session open so that the job
 
 When using a cluster, I sometimes like to take advantage of the interactive nodes. Especially when prototyping, it is much better to debug in an interactive session rather than submitting a bunch of jobs and later realizing that it crashed. There are several options to do this such as using __screen__ or __tmux__. Screen has been around since 1987 so it can be considered the tried and true way and more stable. Tmux is a more modern solution with more bells and whistles such as multiple panes or an IDE look. I don't necessarily need a fancy solution so here is a simple tutorial on how to use screen.

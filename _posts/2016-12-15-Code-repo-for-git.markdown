@@ -7,6 +7,10 @@ comments: true
 tags: git github
 ---
 
+<div style="text-align:center">
+<img src="/assets/post20161215/main.jpg" width="750">  
+</div><br>
+
 # creating a new branch for making pull requests
 
 ```
