@@ -10,25 +10,27 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <table cellpadding="10px">
-        <tr>
-        <th style="margin: 20px 20px 20px 20px" >
+        <table >
+        <tr cellpadding="1px">
+        <th>
           {% assign foundImage = 0 %}
           {% assign images = post.content | split:"<img " %}
           {% for image in images %}
             {% if image contains 'src' %}
                 {% if foundImage == 0 %}
                     {% assign html = image | split:"/>" | first %}
-                    <img style="max-width:100px;width:100px;object-fit:cover;" {{ html }} />
+                    <div style="width:150px;height:100px;overflow:hidden;object-fit:cover;">
+                    <img style="width:150px;position:relative;top: 50%;transform: translateY(-50%);;" {{ html }} />
+                    </div>
                     {% assign foundImage = 1 %}
                 {% endif %}
             {% endif %}
           {% endfor %}
           {% if foundImage == 0 %}
-            <img style="max-width:100px;max-height:100px;width:100px;object-fit:cover;" src='assets/default/main.png'/>
+            <img style="max-width:150px;max-height:100px;width:150px;object-fit:cover;" src='assets/default/main.png'/>
           {% endif %}
         </th>
-        <th>
+        <th style="padding: 1px 1px 1px 20px;">
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
         <h2>
