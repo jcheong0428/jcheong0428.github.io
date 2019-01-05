@@ -37,7 +37,7 @@ layout: default
         <p style="line-height:1;vertical-align:top;">
           <span class="post-excerpt">
             {% if post.content contains '<!--excerpt.start-->' %}
-            	{{ (post.content | split:'<!--excerpt.start-->' | last) | strip_html | truncatewords: 35 }}
+            	{{ post.content | split:'<!--excerpt.start-->' | last | strip_html | truncatewords: 35 }}
             {% else %}
             	{{ post.content | strip_html | truncatewords: 35 }}
             {% endif %}
