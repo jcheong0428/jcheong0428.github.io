@@ -12,7 +12,7 @@ tags: data analysis python
   <figcaption><p align="right"><i>http://becomeanewyorker.com/</i>
   </p></figcaption>
 </figure>
-
+<!--excerpt.start-->
 This is a quick analysis on how people tipped NYC cabs in 2013.
 The data was retrieved from [Chris Whong's blog](http://chriswhong.com/open-data/foil_nyc_taxi/comment-page-1/). It's a sizeable dataset and an amazing visualization came out of it called [NYC Taxis: A Day in the Life](http://nyctaxi.herokuapp.com/). I got interested in the dataset and wanted to look at how people tip in NYC cabs.
 

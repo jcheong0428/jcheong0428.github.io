@@ -11,7 +11,7 @@ tags: unix terminal cluster
   <figcaption><p align="right"><i>http://techdoc.dartmouth.edu/discovery/</i>
   </p></figcaption>
 </figure>
-
+<!--excerpt.start-->
 Here is a quick memo on how to use the [Discovery Cluster](http://techdoc.dartmouth.edu/discovery/) at Dartmouth.
 
 # How to log in

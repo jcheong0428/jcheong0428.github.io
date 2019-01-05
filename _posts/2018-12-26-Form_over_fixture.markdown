@@ -6,9 +6,6 @@ categories: jekyll update
 comments: true
 tags: fantasy-premier-league sports sports-analytics data-science football
 ---
-
-# Using historical match data
-
 <figure>
 <div style="text-align:center">
   <img src="/assets/post20181226/main.png" width="750">
@@ -16,7 +13,7 @@ tags: fantasy-premier-league sports sports-analytics data-science football
   </p></figcaption>
   </div><br>
 </figure>
-
+<!--excerpt.start-->
 Over 6 million compete in the [Fantasy Premier League (FPL)](https://fantasy.premierleague.com/) trying to assemble the best 11 player squad to score the highest over 38 weeks of the English Premier League football. Each player's score is determined by their performance from actual games such that goal keepers and defenders earn 4 points for finishing a match without conceding a goal (clean sheet) and goal scorers earn 3 to 6 points for each goal or assists depending on their position. To maximize their team's score, managers must make an informed decision in selecting the players who are most likely to keep clean sheets or score goals every week.
 
 Two popular metrics often discussed among mangers managers often are the player's form and upcoming fixture difficulty. Choosing players based on form means preferring players who have been scoring well or keeping clean sheets in recent matches. However, it is also important to consider fixture difficulty because a player who has been scoring against weaker opponents may not be as likely to score against tougher teams.
@@ -93,4 +90,4 @@ Similar to the clean sheet analysis, we can also test whether form or fixture co
 Here I tested the popular myth in FPL that player form is more important than fixture. It turns out that at least for defenders, fixture was more important than form. Nonetheless, the myth turned out to be true for midfielders and forwards that form was indeed more predictive of attacking points but fixture difficulty was also an important factor.
 
 # Conclusion
-There are several assumptions that leaked into the model. For example, fixture difficulty and fixture difficulty difference can be considered more as an ordinal variable such that assuming equal spacing between the differences could be disadvantageous to the model. Moreover, the prediction accuracies are poor which is probably near the noise level if the models were permuted (see my previous post about the importance of permuting models). We could also see if other variables are better predictors of attacking points than form and fixture but that would be another post. Thank you for reading and feel free to leave any comments or suggestions. 
+There are several assumptions that leaked into the model. For example, fixture difficulty and fixture difficulty difference can be considered more as an ordinal variable such that assuming equal spacing between the differences could be disadvantageous to the model. Moreover, the prediction accuracies are poor which is probably near the noise level if the models were permuted (see my previous post about the importance of permuting models). We could also see if other variables are better predictors of attacking points than form and fixture but that would be another post. Thank you for reading and feel free to leave any comments or suggestions.

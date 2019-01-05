@@ -18,7 +18,7 @@ tags: machine-learning significance permutations analysis data prediction simula
 # Significant variables in a statistical model does not guarantee prediction performance
 
 [*This post was also published in Towards Data Science at Medium*](https://towardsdatascience.com/why-models-with-significant-variables-can-be-useless-predictors-3354722a4c05)<br>
-
+<!--excerpt.start-->
 One of the first things you learn (or should learn) in a data science or experimental science program is the difference between explanation models and prediction models.  Explanation models test relationships between variables such as whether they significantly covary or if there is a significant numerical difference between groups. On the other hand, prediction models focus on how well a trained model can estimate the outcome that was not used in training.  
 
 Unfortunately, the two types of modeling are often conflated such as describing an independent variable in a regression model as "predicting" the dependent variable. Researchers who focus on statistical modeling may also assume that high significance (e.g. p<.001) in their variables may be an indicator of prediction ability of the model.  This confusion permeates not only in the [social sciences](http://science.sciencemag.org/content/355/6324/486) but also in other scientific disciplines such as [genetics](https://www.pnas.org/content/112/45/13892) and [neuroscience](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5761318/).

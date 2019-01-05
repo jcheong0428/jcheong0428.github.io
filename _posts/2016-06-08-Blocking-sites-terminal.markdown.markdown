@@ -9,7 +9,7 @@ tags: unix terminal
 <div style="text-align:center">
 <img src="/assets/post02/main.jpg"  width="750">  
 </div><br>
-
+<!--excerpt.start-->
 This is a quick way to block sites that cause distraction in workspace.
 I find it useful to stop myself from habitually checking websites at work.
 

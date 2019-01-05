@@ -11,7 +11,7 @@ tags: hack python matlab labjack
   <figcaption><p align="right"><i>https://labjack.com/products/u3</i>
   </p></figcaption>
 </figure>
-
+<!--excerpt.start-->
 Here is a tutorial on how to setup your LabJack to send triggers from MATLAB to BIOPAC.
 This is an extension to [Luke's labjack tutorial](https://dubioussentiments.wordpress.com/)
 

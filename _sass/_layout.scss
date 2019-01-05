@@ -208,13 +208,27 @@ height: 11em;
 }
 
 .post-meta {
+    font-size: $very-small-font-size;
+    color: $grey-color-dark;
+    line-height: 0.1;
+}
+
+.post-excerpt {
     font-size: $small-font-size;
     color: $grey-color;
+    line-height: 0.1;
+}
+
+.post-date {
+    font-size: $small-font-size;
+    color: $grey-color-dark;
+    line-height: 0.5;
 }
 
 .post-link {
     display: block;
     font-size: 18px;
+    margin: 1px 0;
 }
 
 
@@ -265,5 +279,5 @@ height: 11em;
 }
 
 .post-class {
-  font-size: 10px;
+  font-size: $very-small-font-size;
 }
