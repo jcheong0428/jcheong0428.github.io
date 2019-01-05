@@ -216,12 +216,14 @@ height: 11em;
 .post-excerpt {
     font-size: $small-font-size;
     color: $grey-color;
+    font-weight: 500;
     line-height: 0.1;
 }
 
 .post-date {
     font-size: $small-font-size;
     color: $grey-color-dark;
+    font-weight: 500;
     line-height: 0.5;
 }
 
