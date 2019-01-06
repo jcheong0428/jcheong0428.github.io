@@ -7,6 +7,12 @@ comments: true
 tags: emotions facial-expressions affectiva affdex openface emotient facet imotions analysis data
 ---
 
+<figure>
+<div style="text-align:center">
+  <img src="/assets/post14/main.png" width="750">
+  </div><br>
+</figure>
+
 In my previous [post](http://jinhyuncheong.com/jekyll/update/2017/10/20/Face-analysis-software-comparison.html),
 I compared emotion recognition performance between OpenFace and FACET which suggested that OpenFace provides a better face detection algorithm but slightly less accurate action unit detection.
 
