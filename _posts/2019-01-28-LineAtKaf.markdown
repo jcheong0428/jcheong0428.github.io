@@ -46,3 +46,10 @@ To make our app possible, we use a combination of tools including computer visio
 While we are currently testing our services at the King Arthur Flour cafe located at Baker-Berry library,
 we look forward to extending our services to multiple locations on campus and in the community where students,
 customers, and businesses can all benefit from knowing the line.
+
+<br><br>
+<div style='width:100%'>
+    <div style='width:50%;margin:0px auto'>
+<blockquote class="twitter-tweet tw-align-center" data-lang="en" width="800" style="text-align:center;"><p lang="en" dir="ltr">Hey <a href="https://twitter.com/dartmouth?ref_src=twsrc%5Etfw">@Dartmouth</a> students!  Hate being surprised by the long lines at KAF? Want to know the best times to get your caffein fix? Check out <a href="https://t.co/LBPZZFyfVV">https://t.co/LBPZZFyfVV</a> to know the line before you go! Mobile app coming soon! <a href="https://twitter.com/thedartmouth?ref_src=twsrc%5Etfw">@thedartmouth</a> <a href="https://twitter.com/DartmouthLib?ref_src=twsrc%5Etfw">@DartmouthLib</a> <a href="https://twitter.com/DALI_Lab?ref_src=twsrc%5Etfw">@DALI_Lab</a> <a href="https://twitter.com/cosanlab?ref_src=twsrc%5Etfw">@cosanlab</a> <a href="https://twitter.com/DartmouthGRAD?ref_src=twsrc%5Etfw">@DartmouthGRAD</a> <a href="https://t.co/e4fAIS6R4R">pic.twitter.com/e4fAIS6R4R</a></p>&mdash; line@KAF (@LineAtKAF) <a href="https://twitter.com/LineAtKAF/status/1095004369723015169?ref_src=twsrc%5Etfw">February 11, 2019</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div></div>
