@@ -14,7 +14,7 @@ tags: app machine-learning ios data-science
 </figure>
 
 <br><br>
-
+<!--excerpt.start-->
 For the past year I've been working on the Line@KAF project with [Eshin Jolly](http://eshinjolly.com) with the support from [COSAN lab](http://cosanlab.com), [DALI lab](http://dali.dartmouth.edu/projects-blog/kaf), and [Magnuson Center of Entrepreneurship](https://magnuson.dartmouth.edu/).
 
 Line@KAF allows real-time tracking of the length of the queue at KAF, a popular cafe at Dartmouth College. Users can browse the menu and prices, see data on popular times by hour, and submit their requests and feedback to the KAF team!
