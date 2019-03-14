@@ -42,6 +42,10 @@ import subprocess
 command = f"ffmpeg -r 30 -start_number 0 -i screenshot_%04d.png -pix_fmt yuv420p -y {output_video}"
 subprocess.call(command, shell=True)
 ```
+Use a glob pattern in a bash terminal
+```
+ffmpeg -r 120 -pattern_type glob -i "20180326*.jpg" -pix_fmt yuv420p -y 20180326.mp4
+```
 
 ## Trim video
 Trimming videos are tricky if you want to be super accurate, see these references:
