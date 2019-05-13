@@ -10,7 +10,6 @@ tags: app machine-learning ios data-science
 <div style="text-align:center">
   <img src="/assets/post20190128/main.png" width="750">
   </div>
-  <i>This blog post was co-written with Eshin.</i><br>
 </figure>
 
 <br><br>
