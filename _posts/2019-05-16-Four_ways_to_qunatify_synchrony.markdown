@@ -15,17 +15,15 @@ tags: machine-learning python data-science synchrony tutorials
   </div><br>
 </figure>
 
-# Four ways to quantify synchrony between time series data
-
 [*This post was also published in Towards Data Science at Medium*](https://towardsdatascience.com/four-ways-to-quantify-synchrony-between-time-series-data-b99136c4a9c9?source=friends_link&sk=be40ac198690b885928d7853abcc2aed)<br>
 <!--excerpt.start-->
-## Sample code and data to compute synchrony metrics including Pearson correlation, time-lagged cross correlations, dynamic time warping, and instantaneous phase synchrony.
+### Sample code and data to compute synchrony metrics including Pearson correlation, time-lagged cross correlations, dynamic time warping, and instantaneous phase synchrony.
 
 In psychology, synchrony between individuals can be an important signal that provides information about the social dynamics and potential outcomes of social interactions. Synchrony between individuals has been observed in numerous domains including bodily movement (Ramseyer & Tschacher, 2011), facial expressions (Riehle, Kempkensteffen, & Lincoln, 2017), pupil dilations (Kang & Wheatley, 2015), and neural signals (Stephens, Silbert, & Hasson, 2010). However, the term synchrony can take on many meanings as there are various ways to quantify synchrony between two signals.
 
 In this article, I survey the pros and cons of some of the most common synchrony metrics and measurement techniques including the Pearson correlation, time lagged cross correlation (TLCC) and windowed TLCC, dynamic time warping, and instantaneous phase synchrony. To illustrate, the metrics are calculated using sample data in which smiling facial expressions were extracted from a video footage of two participants engaging in a 3 minute conversation (screenshot below). To follow along, feel free to [download the sample extracted face data](https://gist.github.com/jcheong0428/c6d6111ee1b469cf39683bd70fab1c93/archive/b2546c195e6793e00ed23c97a982ce439f4f95aa.zip) and the [Jupyter notebook containing all the example codes](https://gist.github.com/jcheong0428/4a74f801e770c6fdb08e81a906902832#file-synchrony_tutorial-ipynb).
 
-Outline
+### Outline
 1. Pearson correlation
 2. Time Lagged Cross Correlation (TLCC) & Windowed TLCC
 3. Dynamic Time Warping (DTW)
