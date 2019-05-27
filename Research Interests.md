@@ -23,6 +23,9 @@ Python toolbox for streamlined analysis of facial expression data.
 #### [Affectiva-API-APP](https://github.com/cosanlab/affectiva-api-app)
 Web tool to extract facial expressions from videos using Affectiva's JavaScript API.
 
+#### [PaperWiki](https://paperwiki.herokuapp.com/)
+Free online summaries for scientific articles, created and edited by readers around the world.
+
 #### [nltools](https://github.com/ljchang/nltools)
 Python toolbox designed for streamlined analysis of neuroimaging data.
 
