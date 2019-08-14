@@ -126,3 +126,9 @@ qsub -I -q gpuq -l feature=gpu -l gpus=4 -l walltime=00:10:00
 module add cuda/9.0-cuDNNv7
 source activate py36
 ```
+
+# Working with python3 & conda environments.
+```
+module load python
+module load python/3.6-Miniconda
+```
