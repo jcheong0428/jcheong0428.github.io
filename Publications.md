@@ -12,11 +12,7 @@ customjs:
 <table cellpadding="10">
 <p></p>
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-<<<<<<< HEAD
 Chen, P.H.A, Jolly, E., **Cheong, J.H.**, and Chang, L.J. (Under Review). Inter-subject representational similarity analysis reveals individual variations in affective experience when watching erotic movies. [[Preprint Link]](https://www.biorxiv.org/content/10.1101/726570v1)
-=======
-Chen, P.H.A, Jolly, E., **Cheong, J.H.**, and Chang, L.J. (Under Review). EInter-subject representational similarity analysis reveals individual variations in affective experience when watching erotic movies. [[Preprint Link]](https://www.biorxiv.org/content/10.1101/726570v1)
->>>>>>> d55c57afab5f37ed9ef957539a929e58044e1cd6
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1101/726570"></div>
