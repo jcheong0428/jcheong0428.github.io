@@ -26,7 +26,14 @@ Chang, L.J., Jolly, E., **Cheong, J.H.**, Rapuano, K., Greenstein, N., Chen, P.A
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-**Cheong, J.H.**, Brooks, S., and Chang, L.J. (Under Review). FaceSync: Automated video synchronization for analysis of facial expressions. [[Preprint Link]](https://psyarxiv.com/p5293/)
+Chen, P.H.A., **Cheong, J.H.**, Jolly, E., Elhence, H., Wager, T.D., & Chang, L.J. (In Press). Socially transmitted placebo effects. Nature Human Behavior.
+</div></th>
+<th style="width:15%;margin: 20px 20px 20px 20px">
+<!-- <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1101/487892"></div> -->
+</th></tr>
+
+<tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
+**Cheong, J.H.**, Brooks, S., and Chang, L.J. (2019). FaceSync: Automated video synchronization for analysis of facial expressions. <i>F1000</i>. [[Preprint]](https://psyarxiv.com/p5293/)[[PDF]](https://f1000research.com/articles/8-702/v1)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.17605/osf.io/p5293"></div>
