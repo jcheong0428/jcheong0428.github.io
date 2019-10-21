@@ -26,10 +26,10 @@ Chang, L.J., Jolly, E., **Cheong, J.H.**, Rapuano, K., Greenstein, N., Chen, P.A
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-Chen, P.H.A., **Cheong, J.H.**, Jolly, E., Elhence, H., Wager, T.D., & Chang, L.J. (In Press). Socially transmitted placebo effects. Nature Human Behavior.
+Chen, P.H.A., **Cheong, J.H.**, Jolly, E., Elhence, H., Wager, T.D., & Chang, L.J. (2019). Socially transmitted placebo effects. Nature Human Behavior. [[Link]](https://www.nature.com/articles/s41562-019-0749-5)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
-<!-- <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1101/487892"></div> -->
+<div class='altmetric-embed' data-badge-type='donut' data-doi="10.1038/s41562-019-0749-5"></div>
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
