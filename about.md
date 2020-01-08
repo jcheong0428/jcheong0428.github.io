@@ -8,7 +8,7 @@ order: 2
 ---
 <table cellpadding="10">
     <tr>
-      <td><img src="/assets/JinHyunCheong.jpg" width="1300"></td>
+      <td><img src="/assets/JinHyunCheong.jpg" width="2000px"></td>
     	<td style="padding: 10px 15px; vertical-align: top;"> I am a Cognitive Neuroscience PhD candidate in the <a href="http://pbs.dartmouth.edu/">Psychological Brain Sciences Department</a> at Dartmouth College. I work with <a href="https://scholar.google.com/citations?user=nCCXMZoAAAAJ&hl=en">Dr. Luke Chang</a> in the <a href ="http://www.cosanlab.com/">Computational Social and Affective Neuroscience Lab</a> studying group decision making, social interactions, and emotional experiences using tools such as neuroimaging, facial expressions of emotions, and psychophysiology. Previously, I completed my BA in Psychology with certificates in Neuroscience and Finance at Princeton University and worked as a lab manager for <a href="https://scholar.google.com/citations?user=eM916YMAAAAJ">Dr. Matthew Botvinick</a> at the Princeton Neuroscience Institute. </td>
     </tr>
 </table>
