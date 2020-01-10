@@ -53,6 +53,7 @@ Complex emotions such as regret, guilt, pain, and empathy are difficult to elici
 </tr>
 </table>
 <br>
+</div>
 
 In the process, I have authored and contributed to research tools that may be also useful to others.
 
@@ -69,5 +70,3 @@ In the process, I have authored and contributed to research tools that may be al
 * [nltools](https://github.com/ljchang/nltools): Python toolbox designed for streamlined analysis of neuroimaging data.
 
 * [pyMedoc](https://github.com/cosanlab/pymedoc): Python class to remotely communicate with Medoc Pathway Thermode over WiFi.
-
-</div>
