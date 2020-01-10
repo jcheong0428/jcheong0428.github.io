@@ -8,8 +8,8 @@ order: 3
 ---
 <p></p>
 ## Areas of Interest
-<div id="anim">
 # 1. Understanding how groups make decisions.
+<div id="anim">
 <table cellpadding="10">
 	<tr>
 		<th style="width:35%;margin: 20px 20px 20px 20px" >
@@ -22,10 +22,11 @@ Many real life decisions don't have right or wrong answers but often depend on *
 </td>
 </tr>
 </table>
-
+</div>
 <br>
 
 # 2. Shared affective experiences and social connection.
+<div id="anim">
 <table cellpadding="10">
 	<tr>
 		<th style="width:50%;margin: 20px 20px 20px 20px" >
@@ -34,10 +35,11 @@ Many real life decisions don't have right or wrong answers but often depend on *
 </table>
 
 Why do we feel connected to another person after we watch a movie together, eat together, or take a same bus ride together? To answer this, we created a shared experience in which participants watched a TV show either alone or with another participant. By recording and analyzing their facial expressions elicited during the show, we find that more synchronized facial expressions both in time and in shape lead to greater social affiliation. This shows interpersonal metrics based on dynamics of facial expressions can be used to gauge the development of social relationships.
-
+</div>
 <br>
 
 # 3. Building facial expression models of complex emotions.
+<div id="anim">
 <table cellpadding="10">
 	<tr>
 		<th style="width:35%;margin: 20px 20px 20px 20px" >
