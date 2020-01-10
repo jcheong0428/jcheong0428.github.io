@@ -6,6 +6,7 @@ order: 2
 ---
 
 ---
+<div id="anim">
 <table cellpadding="10">
     <tr>
       <td><img src="/assets/JinHyunCheong.jpg" width="2000px"></td>
@@ -18,3 +19,4 @@ order: 2
     </td>
     </tr>
 </table>
+</div>

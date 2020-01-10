@@ -8,7 +8,7 @@ order: 3
 ---
 <p></p>
 ## Areas of Interest
-
+<div id="anim">
 # 1. Understanding how groups make decisions.
 <table cellpadding="10">
 	<tr>
@@ -67,3 +67,5 @@ In the process, I have authored and contributed to research tools that may be al
 * [nltools](https://github.com/ljchang/nltools): Python toolbox designed for streamlined analysis of neuroimaging data.
 
 * [pyMedoc](https://github.com/cosanlab/pymedoc): Python class to remotely communicate with Medoc Pathway Thermode over WiFi.
+
+</div>

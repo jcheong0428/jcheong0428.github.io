@@ -9,6 +9,7 @@ customjs:
 <script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 ---
 
+<div id="anim">
 <table cellpadding="10">
 <p></p>
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
@@ -61,3 +62,4 @@ Oud, B., Krajbich, I., Miller, K., **Cheong, J. H.**, Botvinick, M., & Fehr, E. 
 </th></tr>
 
 </table>
+</div>
