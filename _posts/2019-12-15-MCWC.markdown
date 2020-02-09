@@ -1,0 +1,77 @@
+---
+layout: post
+title:  "Three lessons I learned from meeting 28 west coast venture capitalists and startup founders"
+date:   2019-12-15 11:24:14 -0400
+categories: jekyll update
+comments: true
+tags: conference entrepreneurship startup MagnusonCenter
+---
+<figure>
+<div style="text-align:center">
+  <img src="/assets/post20191215/main_ClarkTibbs_Unsplash.jpeg" width="750">
+  </div>
+</figure>
+
+<br><br>
+[This post was also published on Medium.com.](https://medium.com/magnuson-center-student-programs/three-lessons-i-learned-from-meeting-west-coast-venture-capitalists-and-startup-founders-57994146921d)
+
+<!--excerpt.start-->
+I took a 9-day trip to Seattle and San Francisco to meet west coast venture capitalists and founders of big and small startup companies. I spoke with the founders/executives of startups such as College Pulse, Remitly, Rover.com, Goodly, Kigo Kitchen, Armoire, AdaptiLab, Spruce Up, Far Niente Winery, and Amazon.com (because it’s always day one) as well as venture capitalists/accelerators such as Y Combinator, Madrona Venture Group, Pioneer Square Labs, and Norwest Venture Partners. I learned a lot about what it means to be an entrepreneur, the experience of building a company, and general life lessons to live by, and here are the three key points I’ll forever remember from the trip.
+
+# 1. “Build something people want.”
+“Build something people want” is the motto of Y Combinator, a seed accelerator that has successfully nurtured companies such as Airbnb, Dropbox, Stripe, Reddit, Twitch, and Docker, but we heard this in many flavors throughout the trip. For example, Amazon prides themselves in customer obsession and have structured their product development framework to start with the customers and work backward to define the product. It begins with questions like “Who is your customer?”, “What problems are they facing and what are the opportunities?”, “What would benefit the customers the most?”, “How do you know what they need and want?”, and “What does the experience look like?” After sketching out answers to these questions they draft a mock press release that includes details on what the product is, what problems it solves, quotes from developers and customers, ways to get started, and a call to action describing what to do next, in addition to FAQs and visuals anticipating and guiding the users for the optimal experience. Sometimes it seems too many projects start with a vague “Wouldn’t it be cool if XXX existed?” although that may not be something that is needed nor wanted by people. This customer obsession framework for building the product can be a great way to avoid such pitfalls.
+
+<div style="text-align:center">
+  <img src="/assets/post20191215/amazon_wiatr.jpeg" width="750">
+  </div>
+  <figcaption>Visual of Amazon.com at PSL by Guillaume Wiatr</figcaption>
+</figure>
+
+Pioneer Square Labs (PSL) also abides by this principle and have designed their curriculum to quickly iterate different ideas to figure out what works (speed over perfection). Greg Gottesman, Managing Director of PSL and founder of Rover.com, gave us really important advice to always be testing your market and knowing what your customers are looking for. This could be as simple as looking at Google Trends search words or keyword tools that suggest associated search terms, or running a short survey on the web. Some of these services may cost you a hundred bucks or so but if you are serious about starting a company, then knowing the demand for the thing you are about to build for a hundred bucks could save you months from building a product that turns out nobody is interested in.
+All of this boils down to the importance of understanding the customers’ needs, wants, and experiences with current products. Once you have that, then many other things such as finding investors and expanding are bound to fall into place. In short, I think YC definitely nailed the importance of this point succinctly with “Build something people want”.
+
+# 2. Invest in people, not products.
+When a few us were preparing to pitch to Geoff Ralston at Y Combinator, he suddenly mentioned that he prefers to rather not look at the slides because he is more interested in “you”, the founders, than the slides. While many of us were bewildered that we won’t have our visuals guiding our presentations, it actually made sense after hearing different versions of this phrase throughout the trip.
+
+<div style="text-align:center">
+  <img src="/assets/post20191215/yc_pitch.jpeg" width="750">
+  </div>
+  <figcaption>Pitching my startup project at YC with slides…</figcaption>
+</figure>
+
+YC attributes its success to not having the shrewdness for picking good products but for picking good founders. Take Airbnb for example, which was funded by YC although they initially thought it was a bad idea. Nevertheless, they liked the founders enough to support them for their character, dedication, and grit, which is well demonstrated in their story of how they raised funds in their early days by selling boxes of breakfast cereal.
+
+“We thought Airbnb was a bad idea. We funded it because we liked the founders.” — Paul Graham, co-founder Y Combinator
+
+Surprisingly, this idea that choosing the right people to work with can be more important than choosing the right product to work on applies beyond the startup world. For example, a senior executive we met at Amazon.com attributed his prolonged love for the company to the joy and intellectual stimulation he gets from working with and being surrounded by intelligent, smart, and motivated individuals. Surrounding yourself with smart people motivates you to be a better person and work hard because you don’t want to let your peers down and ultimately leads to a better you and better outcomes.
+
+Also, we’ve heard stories about how 7 out of 10 startups are likely to fail and how they often fail not because of bad products but because of hiring the wrong people. An unmotivated founder or a team leader can lead even the best team of engineers to inaction, bad decisions, and failure, while motivated and dedicated people can overcome those hardships. Moreover, people with different values and missions can also lead to the demise of companies. For example, a co-founder optimizing for profit will always be in contention with a co-founder who cares more about employee wages which can be difficult to resolve unlike decisions on whether to include feature A or B in a product. Products can be rebuilt and companies can pivot but differences in personal values and vision between individuals can lead even the most productive partnerships to eventually fall apart.
+
+“Partnerships break not because of hardships but when partners have different values and principles.”
+
+Lastly, great products are often built by great people. If you have a chance to visit the beautiful Far Niente Winery, you will see the impeccably aligned barrels of Cabernet Sauvignons and Chardonnays in their wine caves. Although whether they are perfectly aligned or not may not have the slightest effect on the taste and chemical processes inside the barrels, it speaks to the values and principles upheld by the winemakers who believe that this attention to detail all adds up to crafting the perfect bottle of wine that can be shared with great people.
+
+<div style="text-align:center">
+  <img src="/assets/post20191215/farniente.jpeg" width="750">
+  </div>
+  <figcaption>Impeccably aligned barrels at the Far Niente wine caves.</figcaption>
+</figure>
+
+
+# 3. Ideas are cheap.
+This phrase came up all the time in almost every meeting. Ideas are cheap. Anybody can come up with a cool sounding idea but not everyone can build it. and not everyone who can build it are able to pursue that idea and build a company. Building something good is difficult and you need the right people working on the right problem and it takes time and persistence. This phrase also emphasizes the importance of the entrepreneurial drive over entrepreneurial thoughts. As we all know from stories of Facebook and Microsoft, some people can be determined enough to drop out of prestigious schools to pursue their projects. Although this doesn’t mean everyone should drop out of school to build a great company, it really speaks to their entrepreneurial drive and the obsessions and determination towards solving a certain problem and building a certain product to justify taking such big risks.
+As a graduate student who still has one foot in academia, I was particularly surprised to hear this because I’ve often heard that you want to be the idea person to be successful. I’ve heard people say programmers or technicians can be hired or replaced while people with novel and important ideas are the ones who win the grants and funding. However, just as the industry realizes the importance of not just the ideas but the ability to make ideas into a reality, I think more and more emphasis should be and will be placed in their capabilities, whether it’s the actual ability to build something oneself or the ability to gather a team that can make the idea a reality.
+
+
+# Conclusions
+Once again, the three core lessons I took away from my trip is that it is important to be mindful of building what people want, investing in people, not products, and realizing that actions are more important than ideas. I think these principles apply not just to building great products and companies but also to life in general and being mindful of these principles can lead you to be successful in many aspects of your entrepreneurial endeavors.
+
+One last piece of advice, read Paul Graham’s essays.
+I’m sure many of you may already know who Paul Graham is and may have already read his essays but I only learned about him from our trip to YC. When I read a few of his essays , my mind was blown. He had so many ideas that deeply resonated with me in so many ways. For example, “The Lesson to Unlearn” on how school exams are teaching students to hack knowledge rather than truly understanding materials has led me to think about and understand why I felt dissatisfied after completing my undergraduate degree and why I wanted to attend graduate school to study psychology in more depth. Moreover, “The Bus Ticket Theory of Genius” also led me to think about my colleagues who have exactly the obsessive character towards random topics and projects which may not seem particularly productive but may pay off at the end. Here are the links to those articles:
+
+[The Lesson to Unlearn](http://www.paulgraham.com/lesson.html)
+December 2019 The most damaging thing you learned in school wasn't something you learned in any specific class. It was…
+[The Bus Ticket Theory of Genius](http://www.paulgraham.com/genius.html)
+November 2019 Everyone knows that to do great work you need both natural ability and determination. But there's a third…
+
+Thanks to the Magnuson center for Entrepreneurship at Dartmouth College for organizing this trip and my fellow aspiring undergraduate and graduate student entrepreneurs with whom I travelled. Also thanks to the Student Professional Development Support Fund of the Guarini School of Graduate and Advanced Studies for partially funding this trip.
