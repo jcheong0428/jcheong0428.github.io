@@ -20,7 +20,7 @@ I took a 9-day trip to Seattle and San Francisco to meet west coast venture capi
 
 # 1. “Build something people want.”
 “Build something people want” is the motto of Y Combinator, a seed accelerator that has successfully nurtured companies such as Airbnb, Dropbox, Stripe, Reddit, Twitch, and Docker, but we heard this in many flavors throughout the trip. For example, Amazon prides themselves in customer obsession and have structured their product development framework to start with the customers and work backward to define the product. It begins with questions like “Who is your customer?”, “What problems are they facing and what are the opportunities?”, “What would benefit the customers the most?”, “How do you know what they need and want?”, and “What does the experience look like?” After sketching out answers to these questions they draft a mock press release that includes details on what the product is, what problems it solves, quotes from developers and customers, ways to get started, and a call to action describing what to do next, in addition to FAQs and visuals anticipating and guiding the users for the optimal experience. Sometimes it seems too many projects start with a vague “Wouldn’t it be cool if XXX existed?” although that may not be something that is needed nor wanted by people. This customer obsession framework for building the product can be a great way to avoid such pitfalls.
-
+<figure>
 <div style="text-align:center">
   <img src="/assets/post20191215/amazon_wiatr.jpeg" width="750">
   </div>
@@ -32,7 +32,7 @@ All of this boils down to the importance of understanding the customers’ needs
 
 # 2. Invest in people, not products.
 When a few us were preparing to pitch to Geoff Ralston at Y Combinator, he suddenly mentioned that he prefers to rather not look at the slides because he is more interested in “you”, the founders, than the slides. While many of us were bewildered that we won’t have our visuals guiding our presentations, it actually made sense after hearing different versions of this phrase throughout the trip.
-
+<figure>
 <div style="text-align:center">
   <img src="/assets/post20191215/yc_pitch.jpeg" width="750">
   </div>
@@ -50,9 +50,9 @@ Also, we’ve heard stories about how 7 out of 10 startups are likely to fail an
 “Partnerships break not because of hardships but when partners have different values and principles.”
 
 Lastly, great products are often built by great people. If you have a chance to visit the beautiful Far Niente Winery, you will see the impeccably aligned barrels of Cabernet Sauvignons and Chardonnays in their wine caves. Although whether they are perfectly aligned or not may not have the slightest effect on the taste and chemical processes inside the barrels, it speaks to the values and principles upheld by the winemakers who believe that this attention to detail all adds up to crafting the perfect bottle of wine that can be shared with great people.
-
+<figure>
 <div style="text-align:center">
-  <img src="/assets/post20191215/farniente.jpeg" width="750">
+  <img src="/assets/post20191215/farniente.png" width="750">
   </div>
   <figcaption>Impeccably aligned barrels at the Far Niente wine caves.</figcaption>
 </figure>
