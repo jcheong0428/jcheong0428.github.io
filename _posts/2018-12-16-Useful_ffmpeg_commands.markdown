@@ -80,3 +80,8 @@ ffmpeg -i "concat:intermediate1.ts|intermediate2.ts" -c copy -bsf:a aac_adtstoas
 ```
 ffmpeg -i Input.mov Output.mp4
 ```
+
+## Extract audio from video
+```
+ffmpeg -i videofile.mp4 -vn -acodec copy audiofile.mp3
+```
