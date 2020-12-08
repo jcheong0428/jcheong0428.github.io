@@ -4,7 +4,7 @@ title:  "Using face-api.js to build an app that overlays a mask on face images"
 date:   2020-05-29 11:24:14 -0400
 categories: jekyll update
 comments: true
-tags: machine-learning javascript data-science face-api.js tutorials
+tags: machine-learning javascript data-science face-api tutorials
 ---
 
 <figure>
