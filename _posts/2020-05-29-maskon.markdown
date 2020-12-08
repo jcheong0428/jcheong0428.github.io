@@ -1,0 +1,140 @@
+---
+layout: post
+title:  "Using face-api.js to build an app that overlays a mask on face images"
+date:   2020-05-29 11:24:14 -0400
+categories: jekyll update
+comments: true
+tags: machine-learning javascript data-science face-api.js Colab tutorials
+---
+
+<figure>
+<div style="text-align:center">
+  <img src="/assets/post20200529/main.jpeg" width="750">
+  <figcaption><p align="right"><i>Photo by Tim Mossholder from Pexels</i>
+  </p></figcaption>
+  </div><br>
+</figure>
+
+[*This post was also published in Towards Data Science at Medium*](https://towardsdatascience.com/using-face-api-js-to-build-an-app-that-overlays-a-mask-on-face-images-9de9b4848c09)<br>
+<!--excerpt.start-->
+### Here’s how I made an app that automatically adds a mask to your profile photos. #maskon
+
+Have you heard? [CDC](https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/cloth-face-cover.html) and the [Surgeon General](https://twitter.com/Surgeon_General/status/1264166726230573057?s=20)now recommends and encourages everyone to wear a mask when going out in public. Unfortunately, there’s still a lot of stigma associated with wearing a mask. “What if people think I’m sick?” “What if they yell at me to stay home?” These thoughts can prevent one from wearing a mask even though that could help protect oneself and others. To help promote the idea that wearing masks is the smart and right thing to do and make it common enough so that it becomes a new social norm, [I decided to make an application that automatically adds a mask to your profile photo](https://maskonme.herokuapp.com/). This is how I made it.
+
+
+<div style="text-align:center">
+<img src="/assets/post20200529/fig1.gif" width="500">  
+<figcaption><p align="right"><i>Screenshot of the app to be built at https://maskonme.herokuapp.com/
+</i>
+</p></figcaption>
+</div>
+
+
+# First, the plan
+I first thought about the core features of the application. This included:
+1. Users upload own photos or paste a link to photos
+2. Website detects face(s) and their landmarks in the photo
+3. Website overlays a mask over the nose, mouth, and jaw area
+4. Users download the final image.
+After some Googling, I landed on two options: 1) build an app in Python using Flask & OpenCV, or 2) use [face-api.js](https://github.com/justadudewhohacks/face-api.js/) and build a stand-alone app in JavaScript. Although I’m more comfortable with Python, I decided to go with face-api.js & JavaScript because it could run on modern browsers without requiring a backend server for heavy lifting. Also, [Vincent Mühler](https://itnext.io/@muehler.v) already had a great [example of face and landmark detection](https://justadudewhohacks.github.io/face-api.js/face_and_landmark_detection/) that would easily cover steps 1 and 2.
+
+
+<div style="text-align:center">
+<img src="/assets/post20200529/fig2-1.png" width="350">  
+<img src="/assets/post20200529/fig2-2.png" width="350">  
+<figcaption><p align="right"><i>Left) Face & landmark detection app at face-api.js; Right) Spooky masks
+</i>
+</p></figcaption>
+</div>
+
+<br>
+
+___
+
+<br>
+
+# Putting it all together
+
+I took some time to understand how the face-api.js works in the [faceLandmarkDetection demo](https://github.com/justadudewhohacks/face-api.js/blob/master/examples/examples-browser/views/faceLandmarkDetection.html). Some basics included loading face-api.js in the head section with `<script src=”face-api.js”></script>` and finding sections loading the input image and drawing overlays.
+
+```
+<div style="position: relative" class="margin">      
+    <img id="inputImg" src="" style="max-width: 800px;" />      
+    <canvas id="overlay" />    
+</div>
+```
+
+Also, here’s the section where the call to faceapi was made to detect faces in the input image inputImgEl and save the results.
+
+```
+async function updateResults() {
+const results = await faceapi.detectAllFaces(inputImgEl, options).withFaceLandmarks()
+}
+```
+
+I also identified how the masks were manipulated and adjusted to be place on top of faces in [maskify.js](https://github.com/jlengstorf/spooky-masks-facial-recognition/blob/master/src/util/maskify.js) from the Spookymasks tutorial. It used methods from face-api.js to get the coordinates of landmarks. For example to get the nose you could run `onst nose = landmarks.getNose();` or to get the jawline use `const jawline = landmarks.getJawOutline();`. [See the original code here](https://github.com/jlengstorf/spooky-masks-facial-recognition/blob/master/src/util/maskify.js). Using this I was able to quickly whip up a prototype that will detect the face and overlay it with a mask. See the full code here!
+
+<br>
+
+___
+
+<br>
+
+Unfortunately, I quickly realized that this automatic overlay of the mask was not going to be perfect. Little rotations and yaws of the face would lead the slightly inaccurate jawlines that would til the mask too much one way or another. Thus I decided to add a few controls to shift the mask.
+
+<div style="text-align:center">
+<img src="/assets/post20200529/fig3.png" width="500">  
+<figcaption><p align="right"><i>Left) Not bad but could certainly use a little manual tweaks. The jawline estimation is not 100% accurate.</i>
+</p></figcaption>
+</div>
+
+Turns out that manual adjustments was going to be necessary anyways because landmarks may not always detect the entire contours fo the chin.
+So I decided to add buttons that will shift the position of the mask in small increments.
+For example to make a button that moves the mask to the right, I added
+
+```
+<button class=”waves-effect waves-light btn” onclick=”moveright_mask();”>Zoom In</button>
+```
+
+defined by the function
+
+```
+function moveright_mask() {
+    const myNode = document.getElementById("maskdiv").children;
+    for (var i = 0; i < myNode.length; i++) {
+      var tableChild = myNode[i];
+      // Do stuff
+      var left = parseFloat(tableChild.style.left)+2;
+      tableChild.style.left = `${left}px`;
+    };
+  }
+```
+
+which would update the mask in the `maskdiv`.
+
+[Try it out for yourself](https://maskonme.herokuapp.com/) or see a video of it in action:
+
+
+[![Sample video](https://img.youtube.com/vi/K1z4U1hhchw/0.jpg)](https://youtu.be/K1z4U1hhchw)  
+
+<br>
+
+___
+
+<br>
+
+# Next steps
+This was a pretty fun project to work on to distract myself as the pandemic started. As I was building this, I eventually also found [https://socialdistancing.works/](https://socialdistancing.works/) which practically does the same thing except that it is purely manual adjustments. Another nice feature of [MaskOnMe](http://maskonme.herokuapp.com/) is that it can also detect multiple faces at once so you can post group photos with everyone with a mask!
+
+<div style="text-align:center">
+<img src="/assets/post20200529/fig4-1.png" width="350">  
+<img src="/assets/post20200529/fig4-2.png" width="350">  
+<figcaption><p align="right"><i>Left) Face & landmark detection app at face-api.js; Right) Spooky masks
+</i>
+</p></figcaption>
+</div>
+
+
+The next step for me when I have time is to work on an AR version where one would overlay a mask from a webcam feed! Thank you for reading and feel free to check out my other posts if you want to read more about face image processing.
+
+
