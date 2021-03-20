@@ -127,8 +127,8 @@ ___
 This was a pretty fun project to work on to distract myself as the pandemic started. As I was building this, I eventually also found [https://socialdistancing.works/](https://socialdistancing.works/) which practically does the same thing except that it is purely manual adjustments. Another nice feature of [MaskOnMe](http://maskonme.herokuapp.com/) is that it can also detect multiple faces at once so you can post group photos with everyone with a mask!
 
 <div style="text-align:center">
-<img src="/assets/post20200529/fig4-1.png" width="350">  
-<img src="/assets/post20200529/fig4-2.png" width="350">  
+<img src="/assets/post20200529/fig4-1.jpeg" width="350">  
+<img src="/assets/post20200529/fig4-2.jpeg" width="350">  
 <figcaption><p align="right"><i>Left) Face & landmark detection app at face-api.js; Right) Spooky masks
 </i>
 </p></figcaption>
