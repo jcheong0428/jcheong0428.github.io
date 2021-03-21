@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Three ways to run Linear Mixed Effects Models in Python Jupyter Notebooks"
-date:   2020-12-20 11:24:14 -0400
+date:   2021-03-20 11:24:14 -0400
 categories: jekyll update
 comments: true
 tags: machine-learning statistics data-science python r
