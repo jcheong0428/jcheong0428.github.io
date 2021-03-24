@@ -10,9 +10,12 @@ tags: machine-learning statistics data-science python r
 <figure>
   <div style="text-align:center">
   <img src="/assets/post20210520/main.jpeg" width="750">
-  <figcaption><p align="right"><i>Photo by Kameron Kincade on Unsplash</i></p></figcaption>
+  <figcaption><p align="right"><i>Photo by Forest Simon on Unsplash</i></p></figcaption>
   </div><br>
 </figure>
+
+[*This post was also published in Towards Data Science on Medium*](https://towardsdatascience.com/how-to-run-linear-mixed-effects-models-in-python-jupyter-notebooks-4f8079c4b589?source=friends_link&sk=cff92ebc214e826e1f5c46ab00e8af2a)<br>
+
 
 <!--excerpt.start-->
 ### Tutorial  on how to run Linear Mixed Effects Regressions (LMER) models in Python and Jupyter Notebooks
