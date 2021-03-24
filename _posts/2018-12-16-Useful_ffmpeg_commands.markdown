@@ -46,6 +46,15 @@ Use a glob pattern in a bash terminal
 ```
 ffmpeg -r 120 -pattern_type glob -i "20180326*.jpg" -pix_fmt yuv420p -y 20180326.mp4
 ```
+Remove the frame rate -r for equal number of images to frames. 
+```
+ffmpeg -pattern_type glob -i "20180326*.jpg" -pix_fmt yuv420p -y 20180326.mp4
+```
+
+# Check the number of frames in a video
+```
+ffmpeg -i video.mp4 -map 0:v:0 -c copy -f null -
+```
 
 ## Trim video
 Trimming videos are tricky if you want to be super accurate, see these references:
