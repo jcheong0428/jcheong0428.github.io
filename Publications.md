@@ -16,7 +16,7 @@ customjs:
 **Cheong, J.H.**, Xie, T., Byrne, S., and Chang, L.J. (Submitted). Py-Feat: Python Facial Expression Analysis Toolbox. [[Toolbox Link]](https://py-feat.org/)[[Preprint Link]](https://arxiv.org/abs/2104.03509)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
-<div class='altmetric-embed' data-badge-type='donut' data-doi="10.31234/osf.io/bd9wn"></div>
+<div class='altmetric-embed' data-badge-type='donut' data-altmetric-id="103541923"></div>
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
