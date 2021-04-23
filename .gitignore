@@ -3,3 +3,6 @@
 /_site
 /_Notebooks/*
 .sass-cache
+.DS_Store
+*.DS_Store
+.sass-cache/*
