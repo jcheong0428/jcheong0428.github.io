@@ -27,7 +27,7 @@ customjs:
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-Chang, L.J., Jolly, E., **Cheong, J.H.**, Rapuano, K., Greenstein, N., Chen, P.A., and Manning, J.R. (Under Review). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. Science Advances. [[Preprint Link]](https://www.biorxiv.org/content/early/2018/12/16/487892) [[Article]](https://advances.sciencemag.org/content/7/17/eabf7129)
+Chang, L.J., Jolly, E., **Cheong, J.H.**, Rapuano, K., Greenstein, N., Chen, P.A., and Manning, J.R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. Science Advances. [[Preprint Link]](https://www.biorxiv.org/content/early/2018/12/16/487892) [[Article]](https://advances.sciencemag.org/content/7/17/eabf7129)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.1101/487892"></div>
