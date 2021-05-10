@@ -23,7 +23,7 @@ customjs:
 Xie, T., **Cheong, J.H.**, Manning, J.R., Brandt, A.M., Aronson, J.P., Jobst, B.C., Bujarski, K.A., and Chang, L.J. (Under Review). Minimal functional alignment of ventromedial prefrontal cortex intracranial EEG signals during naturalistic viewing. [[Preprint]](https://www.biorxiv.org/content/10.1101/2021.05.10.443308v1)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
-<div class='altmetric-embed' data-badge-type='donut' data-altmetric-id="105633438"></div>
+<div class='altmetric-embed' data-badge-type='donut' data-altmetric-id="104724810"></div>
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
@@ -37,7 +37,7 @@ Xie, T., **Cheong, J.H.**, Manning, J.R., Brandt, A.M., Aronson, J.P., Jobst, B.
 Chang, L.J., Jolly, E., **Cheong, J.H.**, Rapuano, K., Greenstein, N., Chen, P.A., and Manning, J.R. (2021). Endogenous variation in ventromedial prefrontal cortex state dynamics during naturalistic viewing reflects affective experience. Science Advances. [[Preprint Link]](https://www.biorxiv.org/content/early/2018/12/16/487892) [[Article]](https://advances.sciencemag.org/content/7/17/eabf7129)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
-<div class='altmetric-embed' data-badge-type='donut' data-doi="104724810"></div>
+<div class='altmetric-embed' data-badge-type='donut' data-doi="10.1101/487892"></div>
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
