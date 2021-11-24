@@ -9,8 +9,8 @@ tags: app flask python better-science
 
 <figure>
   <div style="text-align:center">
-  <img src="/assets/post20211124/paperwiki1.png" width="550">
-  <figcaption><p align="right"><i>Screenshot of <a href="http://www.paperwiki.org/">paperwiki.org</a></i></p></figcaption>
+  <img src="/assets/post20211124/paperwiki0.png" width="550">
+  <figcaption><p align="right"><i><a href="http://www.paperwiki.org/">Paperwiki.org</a> logo</i></p></figcaption>
   </div><br>
 </figure>
 
@@ -34,6 +34,13 @@ I thought it would be great to have something like this for academic papers. The
 ___
 
 <br>
+
+<div style="text-align:center">
+<img src="/assets/post20211124/paperwiki1.png" width="600">  
+</div>
+<figcaption><p align="center"><i>Screenshot of <a href="http://www.paperwiki.org/">paperwiki.org</a>
+</i>
+</p></figcaption>
 
 # The features
 Paperwiki required two key features: 1) search for a science article, and 2) create or edit notes attached to that article.
