@@ -13,17 +13,20 @@
       <div class="footer-col footer-col-2">
         <ul class="contact-list">
           <!-- <li>{{ site.title }}</li> -->
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-          <li>Jin Hyun Cheong © 2020</li>
-          <li>Powered by: <a href="https://jekyllrb.com/">Jekyll</a></li>
+          <!-- <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li> -->
+          <li>Jin Hyun Cheong © 2022</li>
+          <!-- <li>Powered by: <a href="https://jekyllrb.com/">Jekyll</a></li> -->
         </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
         <ul class="social-media-list">
-          {% if site.github_username %}
+          {% if site.linkedin_username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-linkedin.html username=site.linkedin_username %}
+          </li>
+          {% endif %}
+
+          {% if site.medium_username %}
+          <li>
+            {% include icon-medium.html username=site.medium_username %}
           </li>
           {% endif %}
 
@@ -33,11 +36,23 @@
           </li>
           {% endif %}
 
+          {% if site.github_username %}
+          <li>
+            {% include icon-github.html username=site.github_username %}
+          </li>
+          {% endif %}
+
           {% if site.instagram_username %}
           <li>
             {% include icon-instagram.html username=site.instagram_username %}
           </li>
           {% endif %}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <ul class="social-media-list">
+
         </ul>
       </div>
 
