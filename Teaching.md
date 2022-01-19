@@ -35,7 +35,7 @@ List of courses, tutorials, lectures, and labs I've taught and TA'ed.
 <div markdown="1">
 # Behavior of groups  
 
-Guest lectured and helped students record and analyze group interactions of them engaging in a creative problem-solving task. [Slides](http://jinhyuncheong.com/assets/PSYC53_SynchronyLecture&Tutorial.pdf)
+Guest lectured and helped students record and analyze group interactions of them engaging in a creative problem-solving task. [Slides](http://jinhyuncheong.com/assets/Teaching/PSYC53_SynchronyLecture&Tutorial.pdf)
 </div>
 </th>
 </tr>
