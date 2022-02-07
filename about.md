@@ -1,22 +1,20 @@
 ---
 layout: page
-title: About
+title: Jin
 permalink: /about/
 order: 2
 ---
 
 ---
 <div id="anim">
-<table cellpadding="10">
-    <tr>
-      <td><img src="/assets/JinHyunCheong.jpg" width="2000px"></td>
-    	<td style="padding: 10px 15px; vertical-align: top;"> I received a Cognitive Neuroscience PhD from the <a href="http://pbs.dartmouth.edu/">Psychological Brain Sciences Department</a> at Dartmouth College. I worked with <a href="https://scholar.google.com/citations?user=nCCXMZoAAAAJ&hl=en">Dr. Luke Chang</a> in the <a href ="http://www.cosanlab.com/">Computational Social and Affective Neuroscience Lab</a> studying group decision making, social interactions, and emotional experiences using tools such as neuroimaging, facial expressions of emotions, and psychophysiology. Previously, I completed my BA in Psychology with certificates in Neuroscience and Finance at Princeton University and worked as a lab manager for <a href="https://scholar.google.com/citations?user=eM916YMAAAAJ">Dr. Matthew Botvinick</a> at the Princeton Neuroscience Institute. </td>
-    </tr>
-</table>
-<table cellpadding="10">
-    <tr><td>  
-    I enjoy using data analytics and machine learning to solve real world problems. I've won the <a href="https://dartmouthtcc.weebly.com/">2019 Thayer Consulting Case Competition</a> for pitching a personalized meal recommendation system to solve Amazon's e-grocery business. I've also received the <a href="https://devpost.com/software/line-at-kaf">Dartmouth Entrepreneurship Network (DEN) Business and Innovation Award</a>, <a href="https://devpost.com/software/coheal">Best Dartmouth Community Hack</a>, and <a href="https://devpost.com/software/line-at-kaf">Second Best Hack award</a> at Dartmouth hackathons. I initiated, developed, and deployed project <a href="http://lineatkaf.com">Line@KAF</a> that uses computer vision and neural network models to provide a virtual view of the line at a notoriously busy campus café on mobile and web applications. I enjoy working with others while brainstorming how to solve interesting problems and prototyping apps and ideas into effective solutions.
-    </td>
-    </tr>
-</table>
+<img style="float: right; margin-left:3em;margin-top:0em; width: 200px" src="/assets/JinHyunCheong.jpg" >
+
+<h4>I enjoy building products that improve social interactions.</h4>  
+<ul>
+<li>I am a <a href="https://medium.com/@jinhyuncheong">writer</a>, <a href="https://jinhyuncheong.com/jekyll/update/2019/01/28/LineAtKaf.html">builder</a>, and <a href="https://scholar.google.com/citations?user=68MHpG4AAAAJ&hl=en">behavioral scientist</a>.</li>
+<li>Currently, I'm a quantitative user researcher in the bay area.</li>
+<li>I have 5+ years of research experience analyzing in-motion facial expressions from social interactions (e.g. group decision making, watching TV together).</li>
+<li>I have a cat named <a href="https://www.instagram.com/siru_the_calico">Siru</a>.
+</li>
+</ul>
 </div>
