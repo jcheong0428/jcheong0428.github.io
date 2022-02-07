@@ -1,0 +1,29 @@
+---
+layout: post
+title:  "Conference recap: Social and Affective Neuroscience Society 2019"
+date:   2019-05-08 11:24:14 -0400
+categories: jekyll update
+comments: true
+tags: conference social affect neuroscience
+---
+<figure>
+<div style="text-align:center">
+  <img src="/assets/post20190508/sans2019.png" width="750">
+  </div>
+</figure>
+
+<br><br>
+<!--excerpt.start-->
+With the generous support from the Dartmouth Graduate Student Council (GSC), I was able to attend the 2019 Social and Affective Neuroscience Society (SANS) annual conference in Miami, Florida. At the conference, I was able to present my poster "Transmission of placebo effects via social interaction" as well as listen to prominent speakers including Nancy Kanwisher, Jamil Zaki, Michael Tomasello, Frans de Waal, and many more.
+
+Among the many inspiring talks and posters I'd like to share few results that I found particularly interesting. I really enjoyed the talk by Michael Tomasello who presented the uniqueness of humans (compared the chimpanzees) in their understanding and development of social norms and social collaboration. Children as young as 2 years old understand "co-labor" in which each individual must perform their part for the group to complete a task. In addition, everyone seems to understand "equality" of labor as they tend to equally split the spoils of the task. This is in contrast to chimpanzee behavior in which the dominant chimpanzee takes all the spoils. I found this intriguing but at the same time also thought about how the children acquired such notions of fairness and cooperation. Tomasello seemed to allude that these were innate functions that were embedded from our evolutionary process but I couldn't help but think whether parenting reinforces these behaviors very early on.
+
+
+I also enjoyed the flash talk by Eliska Prochazkova (Leiden university) who shared results from a speed dating paradigm in which a female and male participant talk to each other for a total of about 6 minutes while they tracked physiological responses (heart rate, electrodermal activity), eye gaze, and facial expressions. They found that males tend to fixate more at the partner's face and body more than females while females were more likely to fixate at the backgrounds as if they were avoiding eye contact. They also found that arousal synchrony measured by skin conductance was the only measure that predicted attraction between individuals. However, I think this approach might be limited especially concerning the short duration of the task as our previous findings indicate the interpersonal connection develops over longer periods of time.
+
+Talk by Frans de Waal was also amazing who spoke about the amazing ability of chimpanzees in their cooperative, social, and emotion communication behavior. He presented many compelling evidence for their ability to understand fairness, including the viral video of an angered monkey who throws a cucumber at the experimenter when their friend in the next cell receives a sweet grape instead. I also found it quite interesting that his studies suggested a more advanced and complex social behavior for animals than was originally suggested by the previous speaker Mark Tomasello.
+
+With the funding I was also able to present my poster "Placebo effects transmitted via social interactions" and received many great feedbacks from the attendees. I would like to thank the GSC once again for their funding which made my visit possible and highly recommend checking out SANS conference next year, which will be held in Santa Barbara, CA, if your research involves a social, affective, or neural component.
+
+<br>
+<br>
