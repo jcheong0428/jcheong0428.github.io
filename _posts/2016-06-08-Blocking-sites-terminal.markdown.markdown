@@ -8,6 +8,7 @@ tags: unix terminal
 ---
 <div style="text-align:center">
 <img src="/assets/post02/main.jpg"  width="750">  
+Photo by <a href="https://unsplash.com/@ahskeed?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Deeksha Pahariya</a> on <a href="https://unsplash.com/s/photos/facebook?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </div><br>
 <!--excerpt.start-->
 This is a quick way to block sites that cause distraction in workspace.
