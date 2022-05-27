@@ -9,6 +9,7 @@ tags: archive replication
 
 <div style="text-align:center">
 <img src="/assets/post20160923/main.jpg" width="750">  
+Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Markus Winkler</a> on Unsplash
 </div><br>
 <!--excerpt.start-->
 # Articles on psychology crisis
