@@ -72,7 +72,7 @@ Action units covered are:
 </div>
 </th>
 <th style="width:60%;margin: 20px 20px 20px 20px" >
-<img style="float:left;vertical-align:top;" src="http://what-when-how.com/wp-content/uploads/2012/06/tmp7527313.png" align="left" />
+<img style="float:left;vertical-align:top;" src="/assets/post20170803/main.png" align="left" />
 </th>
 </tr>
 </table>
