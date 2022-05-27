@@ -8,8 +8,8 @@ tags: data analysis python
 ---
 
 <figure>
-  <img src="/assets/post01/nycab.jpeg" width="1300">
-  <figcaption><p align="right"><i>http://becomeanewyorker.com/</i>
+  <img src="/assets/post01/manoj-kulkarni-ceyweSEH_CQ-unsplash.jpg" width="1300">
+  <figcaption><p align="right"><i>Photo by <a href="https://unsplash.com/@mnjpkulkarni?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Manoj Kulkarni</a> on <a href="https://unsplash.com/s/photos/ny-cab?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></i>
   </p></figcaption>
 </figure>
 <!--excerpt.start-->
