@@ -13,7 +13,7 @@ customjs:
 <table cellpadding="10">
 <p></p>
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-**Cheong, J.H.**, Xie, T., Byrne, S., and Chang, L.J. (2023). Py-Feat: Python Facial Expression Analysis Toolbox. Affective Sciences. [[Link]](https://link.springer.com/article/10.1007/s42761-023-00191-4). [[Toolbox Link]](https://py-feat.org/)[[Preprint]](https://arxiv.org/abs/2104.03509)
+**Cheong, J.H.**, Jolly, E. , Xie, T., Byrne, S., and Chang, L.J. (2023). Py-Feat: Python Facial Expression Analysis Toolbox. Affective Sciences. [[Article]](https://link.springer.com/article/10.1007/s42761-023-00191-4) [[Toolbox Link]](https://py-feat.org/)[[Preprint]](https://arxiv.org/abs/2104.03509)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
 <div class='altmetric-embed' data-badge-type='donut' data-altmetric-id="103541923"></div>
@@ -27,7 +27,7 @@ Xie, T., **Cheong, J.H.**, Manning, J.R., Brandt, A.M., Aronson, J.P., Jobst, B.
 </th></tr>
 
 <tr><th style="text-align:left;font-weight:normal;"><div markdown="1">
-**Cheong, J.H.**, Molani, Z., Sadhukha, S., and Chang, L.J. (2023). Synchronized affect in shared experiences strengthens social connection. Nature Communications Biology. [[Link]](https://www.nature.com/articles/s42003-023-05461-2). [[Preprint Link]](https://psyarxiv.com/bd9wn)
+**Cheong, J.H.**, Molani, Z., Sadhukha, S., and Chang, L.J. (2023). Synchronized affect in shared experiences strengthens social connection. Nature Communications Biology. [[Article]](https://www.nature.com/articles/s42003-023-05461-2) [[Preprint Link]](https://psyarxiv.com/bd9wn)
 </div></th>
 <th style="width:15%;margin: 20px 20px 20px 20px">
 <div class='altmetric-embed' data-badge-type='donut' data-doi="10.31234/osf.io/bd9wn"></div>
